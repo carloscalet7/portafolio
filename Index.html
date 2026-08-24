@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAIMBXT - Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;800&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#070f0b;color:#cfe9d6;font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+:root{--green:#2ef59b;--green2:#a8ff53;--card:rgba(255,255,255,0.05);--border:rgba(255,255,255,0.08)}
+a{text-decoration:none;color:inherit}
+.cursor{position:fixed;width:20px;height:20px;border:2px solid var(--green);border-radius:50%;pointer-events:none;z-index:9999;transition:.08s;mix-blend-mode:screen;box-shadow:0 0 20px var(--green)}
+.cursor-dot{position:fixed;width:4px;height:4px;background:var(--green);border-radius:50%;pointer-events:none;z-index:9999}
+#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1}
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:rgba(7,15,11,0.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);animation:slideDown 1s ease}
+@keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;color:#fff;letter-spacing:2px;font-family:'JetBrains Mono'}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--green),var(--green2));border-radius:10px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:900;box-shadow:0 0 30px rgba(46,245,155,0.5);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 20px rgba(46,245,155,0.5)}50%{box-shadow:0 0 40px rgba(46,245,155,0.8)}}
+.nav-links{display:flex;gap:32px;font-family:'JetBrains Mono';font-size:13px}
+.nav-links a{color:#7fa48d;position:relative;transition:.3s}
+.nav-links a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--green);transition:.3s}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{width:100%}
+.btn-glow{background:linear-gradient(90deg,var(--green),var(--green2));color:#000;padding:14px 26px;border-radius:12px;font-weight:800;font-family:'JetBrains Mono';font-size:13px;position:relative;overflow:hidden;transition:.3s;box-shadow:0 0 30px rgba(46,245,155,0.4)}
+.btn-glow::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);transition:.5s}
+.btn-glow:hover::before{left:100%}
+.btn-glow:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 40px rgba(46,245,155,0.6)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;padding:140px 8% 80px;align-items:center;position:relative}
+.badge{display:inline-flex;align-items:center;gap:10px;background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.2);padding:10px 18px;border-radius:100px;font-family:'JetBrains Mono';font-size:11px;color:var(--green);letter-spacing:1px;animation:fadeIn 1s ease .3s both}
+.badge-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero h4{font-size:22px;color:#6b8d78;font-weight:300;font-family:'JetBrains Mono';margin-bottom:10px;animation:fadeIn 1s ease .5s both}
+.hero h1{font-size:100px;font-weight:900;line-height:.9;color:#fff;margin:10px 0 25px;animation:fadeIn 1s ease .7s both}
+.hero h1 span{background:linear-gradient(90deg,var(--green),var(--green2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative}
+.glitch{position:relative}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.8}
+.glitch::before{color:var(--green);z-index:-1;animation:glitch 3s infinite}
+.glitch::after{color:var(--green2);z-index:-2;animation:glitch 3s infinite reverse}
+@keyframes glitch{0%,100%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}}
+.typing{border-right:3px solid var(--green);animation:typing 4s steps(20) infinite, caret 0.75s step-end infinite;white-space:nowrap;overflow:hidden;display:inline-block;max-width:100%}
+@keyframes typing{0%,90%,100%{width:0}30%,70%{width:100%}}
+@keyframes caret{from,to{border-color:transparent}50%{border-color:var(--green)}}
+.hero-desc{font-size:17px;line-height:1.8;color:#9dbdaa;max-width:560px;margin-bottom:40px;animation:fadeIn 1s ease .9s both}
+.hero-btns{display:flex;gap:16px;animation:fadeIn 1s ease 1.1s both}
+.btn-outline{border:1px solid var(--border);background:var(--card);color:#fff;padding:14px 26px;border-radius:12px;font-family:'JetBrains Mono';font-size:13px;backdrop-filter:blur(10px);transition:.3s}
+.btn-outline:hover{background:rgba(255,255,255,0.08);border-color:var(--green);transform:translateY(-2px)}
+.card-stack{position:relative;height:500px;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.glass-card{position:absolute;background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02));border:1px solid var(--border);backdrop-filter:blur(20px);border-radius:20px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,0.4);transition:.4s}
+.glass-card:hover{transform:translateY(-10px) scale(1.02);border-color:rgba(46,245,155,0.3);box-shadow:0 30px 80px rgba(0,0,0,0.5),0 0 40px rgba(46,245,155,0.2)}
+.card1{top:0;left:0;width:78%;z-index:3}
+.card2{top:120px;right:0;width:65%;z-index:2;transform:rotate(-3deg)}
+.card3{bottom:0;left:20px;width:90%;z-index:1}
+.stats-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.mini{border:1px solid var(--border);background:rgba(0,0,0,0.2);border-radius:12px;padding:12px;text-align:center}
+.mini b{color:#fff;font-size:18px}
+.mini span{font-size:9px;color:#6b8d78;font-family:'JetBrains Mono';display:block;margin-top:4px}
+.section{padding:110px 8%;position:relative}
+.label{display:flex;align-items:center;gap:10px;color:var(--green);font-family:'JetBrains Mono';font-size:11px;letter-spacing:3px;margin-bottom:20px}
+.label::before{content:'';width:30px;height:1px;background:var(--green)}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.active{opacity:1;transform:translateY(0)}
+.section h2{font-size:56px;color:#fff;margin-bottom:50px;font-weight:800;line-height:1.1}
+.section h2 i{font-style:normal;color:var(--green2)}
+.numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.num-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;text-align:center;position:relative;overflow:hidden;transition:.4s}
+.num-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--green),var(--green2));transform:scaleX(0);transition:.4s}
+.num-card:hover::before{transform:scaleX(1)}
+.num-card:hover{transform:translateY(-8px);border-color:rgba(46,245,155,0.3);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.num-card b{font-size:42px;color:var(--green);display:block;font-weight:900}
+.num-card span{font-family:'JetBrains Mono';font-size:10px;color:#7fa48d;margin-top:14px;display:block;letter-spacing:1px;line-height:1.6}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.serv{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;transition:.4s}
+.serv::after{content:'';position:absolute;inset:0;background:radial-gradient(400px at var(--x,50%) var(--y,50%),rgba(46,245,155,0.1),transparent);opacity:0;transition:.4s;pointer-events:none}
+.serv:hover::after{opacity:1}
+.serv:hover{transform:translateY(-6px);border-color:rgba(46,245,155,0.2)}
+.serv-icon{width:52px;height:52px;background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.serv h3{color:#fff;font-size:18px;margin-bottom:12px}
+.serv p{font-size:14px;color:#8bb39a;line-height:1.7}
+.progress{margin-top:18px;background:rgba(0,0,0,0.3);height:6px;border-radius:10px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:10px;animation:load 2s ease forwards}
+@keyframes load{from{width:0}to{width:var(--w)}}
+.contact-box{background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:24px;padding:40px;display:flex;justify-content:space-between;align-items:center;position:relative;overflow:hidden}
+.contact-box::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,var(--green),transparent,var(--green2),transparent);animation:rotate 4s linear infinite;opacity:0.1}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.footer{padding:40px 8%;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:12px;color:#5a7a66}
+@media(max-width:1000px){body{cursor:auto}.cursor,.cursor-dot{display:none}.hero{grid-template-columns:1fr;padding-top:120px}.hero h1{font-size:56px}.numbers,.services{grid-template-columns:1fr 1fr}.card-stack{height:380px}}
+@media(max-width:600px){.numbers,.services{grid-template-columns:1fr}.nav-links{display:none}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="dot"></div>
+<canvas id="particles"></canvas>
+
+<nav>
+<div class="logo"><div class="logo-icon">I</div> IAIMBXT</div>
+<div class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a href="#stats">Stats</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+<a class="btn-glow" href="#contact">Hire Me →</a>
+</nav>
+
+<div class="hero" id="home">
+<div>
+<div class="badge"><span class="badge-dot"></span> MANAGER • AVAILABLE FOR PROJECTS • MEXICO</div>
+<h4>Hey, I'm</h4>
+<h1 class="glitch" data-text="IAIMBXT"><span>IAIMBXT</span></h1>
+<div style="font-size:28px;font-family:'JetBrains Mono';color:var(--green);margin-bottom:24px;height:40px"><span class="typing">Discord Manager & Community Lead</span></div>
+<p class="hero-desc">Construyo comunidades fuertes, lidero equipos de staff y transformo servidores en lugares donde la gente quiere quedarse. <b style="color:#fff">Gestión, moderación y crecimiento</b> con mentalidad de Manager, no solo de mod.</p>
+<div class="hero-btns"><a class="btn-glow" href="#services">View Services →</a><a class="btn-outline" href="#contact">💬 Contact Me</a></div>
+</div>
+<div class="card-stack">
+<div class="glass-card card1">
+<div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;gap:12px;align-items:center"><div style="width:44px;height:44px;background:linear-gradient(135deg,var(--green),var(--green2));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:900">I</div><div><b style="color:#fff">IAIMBXT • Manager</b><div style="font-size:11px;color:#6b8d78;font-family:'JetBrains Mono'">Discord + Community • Mexico</div></div></div><div style="color:var(--green)">● Online</div></div>
+<div class="stats-mini"><div class="mini"><b>2+</b><span>YEARS</span></div><div class="mini"><b>50+</b><span>STAFF LED</span></div><div class="mini"><b>24/7</b><span>ACTIVE</span></div></div>
+</div>
+<div class="glass-card card2">
+<div style="font-size:36px">🛡️</div><b style="color:#fff;font-size:20px;display:block;margin:10px 0">Moderation Expert</b><span style="color:#7fa48d;font-size:13px">Zero toxicity. Clear rules. Fair system.</span>
+<div class="progress"><div class="progress-bar" style="--w:98%;width:98%"></div></div>
+</div>
+<div class="glass-card card3">
+<div style="display:flex;gap:16px;align-items:center"><div style="font-size:28px">🚀</div><div><b style="color:#fff">Community Growth</b><p style="color:#7fa48d;font-size:13px;margin-top:4px">Building engaged communities with events, tickets and real leadership. Not just bots — people.</p></div></div>
+<div class="stats-mini" style="grid-template-columns:repeat(4,1fr)"><div class="mini"><b>1k+</b><span>MEMBERS</span></div><div class="mini"><b>100%</b><span>COMMIT</span></div><div class="mini"><b>Fast</b><span>SUPPORT</span></div><div class="mini"><b>Pro</b><span>SETUP</span></div></div>
+</div>
+</div>
+</div>
+
+<div class="section reveal" id="stats">
+<div class="label">STATISTICS</div>
+<h2>Numbers that <i>talk</i></h2>
+<div class="numbers">
+<div class="num-card"><b>2+</b><span>YEARS AS MANAGER EXPERIENCE</span></div>
+<div class="num-card"><b>50+</b><span>STAFF MEMBERS TRAINED</span></div>
+<div class="num-card"><b>1K+</b><span>MEMBERS MANAGED</span></div>
+<div class="num-card"><b>24/7</b><span>SUPPORT & MODERATION</span></div>
+</div>
+</div>
+
+<div class="section reveal" id="about">
+<div class="label">ABOUT ME</div>
+<h2>Who is <i>IAIMBXT?</i></h2>
+<div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:start">
+<div>
+<p style="line-height:1.9;color:#a8c5b2;font-size:16px;margin-bottom:20px">Soy <b style="color:#fff">IAIMBXT</b>, Manager de comunidades de Discord. Desde México, llevo más de 2 años creando y liderando equipos, configurando sistemas profesionales y manteniendo comunidades activas sin drama.</p>
+<p style="line-height:1.9;color:#a8c5b2;font-size:16px;margin-bottom:24px">No soy solo el que banea. Soy el que organiza, escucha, crea eventos, forma staff y hace que un servidor crezca de verdad. Mi trabajo es que tu comunidad funcione sola, con orden y con gente que quiera quedarse.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<span style="background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.2);color:var(--green);padding:8px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px">⚙️ Staff Management</span>
+<span style="background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.2);color:var(--green);padding:8px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px">🛡️ Moderation</span>
+<span style="background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.2);color:var(--green);padding:8px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px">🎫 Tickets System</span>
+<span style="background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.2);color:var(--green);padding:8px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px">📈 Growth</span>
+<span style="background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.2);color:var(--green);padding:8px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px">💬 Community</span>
+</div>
+</div>
+<div style="background:linear-gradient(180deg,#132a1d,#0a1f15);border:1px solid var(--border);border-radius:20px;min-height:420px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+<div style="position:absolute;inset:0;background:radial-gradient(400px at 50% 0%,rgba(46,245,155,0.2),transparent)"></div>
+<span style="font-family:'JetBrains Mono';color:#4a6a56">IAIMBXT / MANAGER<br>IMAGE HERE</span>
+</div>
+</div>
+</div>
+
+<div class="section reveal" id="services">
+<div class="label">SERVICES</div>
+<h2>What I can <i>do</i> for you</h2>
+<div class="services">
+<div class="serv"><div class="serv-icon">🎫</div><h3>Discord Setup Pro</h3><p>Setup completo profesional: tickets, bienvenida, roles, boost, auto-mod, categorías y diseño limpio. Como los grandes servers.</p><div class="progress"><div class="progress-bar" style="--w:100%;width:100%"></div></div></div>
+<div class="serv"><div class="serv-icon">👥</div><h3>Staff Recruitment</h3><p>Recluto, entrevisto y entreno tu staff con reglamento, jerarquía y sistema de evaluación. Staff que sí trabaja.</p><div class="progress"><div class="progress-bar" style="--w:95%;width:95%"></div></div></div>
+<div class="serv"><div class="serv-icon">🛡️</div><h3>Moderation 24/7</h3><p>Moderación activa anti-toxicidad, manejo de raids, conflictos y usuarios problemáticos. Servidor limpio siempre.</p><div class="progress"><div class="progress-bar" style="--w:98%;width:98%"></div></div></div>
+<div class="serv"><div class="serv-icon">📅</div><h3>Events & Activity</h3><p>Eventos semanales, sorteos, dinámicas y estrategias para mantener el chat vivo y subir la retención.</p><div class="progress"><div class="progress-bar" style="--w:90%;width:90%"></div></div></div>
+<div class="serv"><div class="serv-icon">📈</div><h3>Growth Strategy</h3><p>Plan de crecimiento: colaboraciones, anuncios, marketing y técnicas para pasar de 100 a 1k miembros.</p><div class="progress"><div class="progress-bar" style="--w:88%;width:88%"></div></div></div>
+<div class="serv"><div class="serv-icon">💎</div><h3>Full Manager Pack</h3><p>Me encargo de TODO: staff + moderación + eventos + crecimiento. Tú solo disfruta tu comunidad creciendo.</p><div class="progress"><div class="progress-bar" style="--w:100%;width:100%"></div></div></div>
+</div>
+<div class="contact-box" id="contact">
+<div style="position:relative;z-index:2">
+<div style="font-family:'JetBrains Mono';font-size:12px;color:var(--green);letter-spacing:2px;margin-bottom:12px">CONTACTO</div>
+<h3 style="color:#fff;font-size:28px;margin-bottom:12px">¿Listo para llevar tu server al siguiente nivel?</h3>
+<p style="color:#7fa48d;font-size:14px;margin-bottom:20px">Escríbeme por Discord. Respondo rápido.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<div style="background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:10px 16px;border-radius:12px;font-family:'JetBrains Mono';font-size:13px;display:flex;gap:10px;align-items:center"><span style="color:#5a7a66">Discord:</span> <b style="color:#fff">Dcxiaimbxt</b></div>
+<div style="background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:10px 16px;border-radius:12px;font-family:'JetBrains Mono';font-size:13px;display:flex;gap:10px;align-items:center"><span style="color:#5a7a66">Name:</span> <b style="color:#fff">IAIMBXT</b></div>
+</div>
+</div>
+<a class="btn-glow" style="position:relative;z-index:2;font-size:15px;padding:18px 32px" href="https://discord.com" target="_blank">💬 Contactar en Discord</a>
+</div>
+</div>
+
+<div class="footer"><span>© 2026 IAIMBXT — Manager</span><span>Made with 💚 in Mexico • Available 24/7</span></div>
+
+<script>
+// Cursor effect
+const cursor=document.getElementById('cursor'),dot=document.getElementById('dot');
+document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX-10+'px';cursor.style.top=e.clientY-10+'px';dot.style.left=e.clientX-2+'px';dot.style.top=e.clientY-2+'px'});
+document.querySelectorAll('a,.btn-glow,.serv,.num-card').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.transform='scale(1.8)';cursor.style.borderColor='var(--green2)'});el.addEventListener('mouseleave',()=>{cursor.style.transform='scale(1)';cursor.style.borderColor='var(--green)'})});
+// Particles
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight}
+resize();window.addEventListener('resize',resize);
+let parts=[];for(let i=0;i<80;i++)parts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+1,vx:(Math.random()-0.5)*0.5,vy:(Math.random()-0.5)*0.5});
+function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>canvas.width)p.vx*=-1;if(p.y<0||p.y>canvas.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(46,245,155,0.15)';ctx.fill();});requestAnimationFrame(anim)}anim();
+// Reveal on scroll
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')})},{threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Mouse gradient for cards
+document.querySelectorAll('.serv').forEach(card=>{card.addEventListener('mousemove',e=>{const rect=card.getBoundingClientRect();card.style.setProperty('--x',e.clientX-rect.left+'px');card.style.setProperty('--y',e.clientY-rect.top+'px')})});
+</script>
+</body>
+</html>
