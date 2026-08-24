@@ -3,265 +3,308 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KRAVEX STUDIO x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏 — Portfolios $2-$10 💎 100FPS 4K</title>
+<title>KRAVEX STUDIO x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏 — Portfolios $2-$10 | 100FPS NO LAG</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-/* ========== BASE 4K ULTRA 100FPS ========== */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#030a06;color:#cde9d6;font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased;will-change:transform}
-:root{--g:#2ef59b;--g2:#a8ff53;--p:#9d5cff;--p2:#ff5cbe;--o:#ff8a3d;--card:rgba(255,255,255,0.05);--border:rgba(255,255,255,0.09)}
+body{background:#030a06;color:#cde9d6;font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{--g:#2ef59b;--g2:#a8ff53;--p:#9d5cff;--p2:#ff5cbe;--o:#ff8a3d;--card:rgba(255,255,255,0.045);--border:rgba(255,255,255,0.08)}
 a{color:inherit;text-decoration:none}
-/* ========== EMOJIS 3D HD REAL 100% ========== */
-.emoji-3d{display:inline-block;filter:drop-shadow(0 7px 14px rgba(46,245,155,0.45)) drop-shadow(0 0 22px rgba(46,245,155,0.32));transform:perspective(600px) translateZ(22px);animation:emojiFloat 3.2s ease-in-out infinite;transform-style:preserve-3d;will-change:transform}
-.emoji-3d-big{font-size:56px;filter:drop-shadow(0 12px 24px rgba(46,245,155,0.55)) drop-shadow(0 0 32px rgba(46,245,155,0.42));animation:emojiFloatBig 4.2s ease-in-out infinite;will-change:transform}
-.emoji-3d-p{filter:drop-shadow(0 7px 14px rgba(157,92,255,0.5)) drop-shadow(0 0 22px rgba(157,92,255,0.35))}
-@keyframes emojiFloat{0%,100%{transform:perspective(600px) translateZ(22px) translateY(0) rotateX(6deg)}50%{transform:perspective(600px) translateZ(34px) translateY(-9px) rotateX(-6deg)}}
-@keyframes emojiFloatBig{0%,100%{transform:translateY(0) scale(1) rotate(0deg)}50%{transform:translateY(-16px) scale(1.1) rotate(3.5deg)}}
-/* ========== CURSOR 4K 100FPS ========== */
-.cursor{position:fixed;width:32px;height:32px;border:2.8px solid var(--g);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;transition:transform.12s ease;box-shadow:0 0 28px var(--g),inset 0 0 14px var(--g);will-change:transform}
-.dot{position:fixed;width:8px;height:8px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9999;box-shadow:0 0 20px var(--g)}
-/* ========== BG 4K ULTRA ========== */
-#bg,#matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-2}
-#matrix{z-index:-1;opacity:0.16}
+img{max-width:100%;display:block}
+/* EMOJIS 3D LITE - NO LAG */
+.emoji-3d{display:inline-block;filter:drop-shadow(0 4px 8px rgba(46,245,155,0.3));animation:emojiFloat 3.5s ease-in-out infinite}
+.emoji-3d-big{font-size:42px;filter:drop-shadow(0 6px 14px rgba(46,245,155,0.35));animation:emojiFloatBig 4.5s ease-in-out infinite}
+@keyframes emojiFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes emojiFloatBig{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.05)}}
+/* CURSOR OPTIMIZADO - SE OCULTA EN MOVIL */
+.cursor{position:fixed;width:28px;height:28px;border:2px solid var(--g);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;transition:transform.12s;box-shadow:0 0 18px var(--g)}
+.dot{position:fixed;width:6px;height:6px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9999}
+@media(pointer:coarse){.cursor,.dot{display:none!important} body{cursor:auto!important}}
+/* BG OPTIMIZADO - BLUR REDUCIDO PARA NO LAG */
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-2;opacity:0.6}
+#matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-1;opacity:0.08}
 #orbs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.orb{position:absolute;border-radius:50%;filter:blur(85px);opacity:0.55;animation:floatOrb 24s infinite alternate;will-change:transform}
-.orb1{width:760px;height:760px;background:radial-gradient(circle,var(--g),transparent 70%);top:-160px;left:-160px}
-.orb2{width:640px;height:640px;background:radial-gradient(circle,var(--p),transparent 70%);bottom:-160px;right:-160px;animation-delay:-7s}
-.orb3{width:540px;height:540px;background:radial-gradient(circle,var(--g2),transparent 70%);top:50%;left:50%;animation-delay:-14s;transform:translate(-50%,-50%)}
-@keyframes floatOrb{0%{transform:translate(0,0) scale(1)}100%{transform:translate(130px,-110px) scale(1.35)}}
-/* ========== NAV 4K ========== */
-nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 7%;background:rgba(5,12,8,0.8);backdrop-filter:blur(36px) saturate(1.9);border-bottom:1px solid var(--border);animation:navIn 1s ease}
-@keyframes navIn{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
-.logo{display:flex;gap:14px;align-items:center;font-family:'JetBrains Mono';font-weight:800;letter-spacing:3px;color:#fff;font-size:15px}
-.logo-box{width:50px;height:50px;background:linear-gradient(135deg,var(--g),var(--p));border-radius:15px;display:grid;place-items:center;color:#000;font-weight:900;box-shadow:0 0 40px rgba(46,245,155,0.7);animation:spinPulse 3s infinite}
-@keyframes spinPulse{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(8deg) scale(1.12);box-shadow:0 0 70px rgba(46,245,155,0.95)}}
-.links{display:flex;gap:30px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:1px}
-.links a{color:#6d8f7b;transition:.35s;position:relative}
-.links a::before{content:'//';color:var(--g);opacity:0;margin-right:6px;transition:.35s}
-.links a:hover{color:#fff;transform:translateX(7px)}
-.links a:hover::before{opacity:1}
-/* ========== BUTTONS 100FPS ========== */
-.btn{position:relative;background:linear-gradient(105deg,var(--g),var(--g2));color:#000;padding:16px 32px;border-radius:16px;font-weight:800;font-family:'JetBrains Mono';font-size:13px;transition:.35s;box-shadow:0 0 38px rgba(46,245,155,0.48);display:inline-block;cursor:pointer;border:none;isolation:isolate;overflow:hidden}
-.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,var(--g2),var(--g));opacity:0;transition:.35s;z-index:-1}
-.btn:hover::before{opacity:1}
-.btn:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 18px 55px rgba(46,245,155,0.7)}
-.btn-p{background:linear-gradient(105deg,var(--p),var(--p2));color:#fff;box-shadow:0 0 38px rgba(157,92,255,0.48)}
-.btn-p:hover{box-shadow:0 18px 55px rgba(157,92,255,0.7)}
-.btn-o{background:linear-gradient(105deg,var(--o),#ffcc3d);color:#000;box-shadow:0 0 38px rgba(255,138,61,0.48)}
-.btn-glow{animation:btnGlow 2.2s infinite}
-@keyframes btnGlow{0%,100%{box-shadow:0 0 38px rgba(46,245,155,0.48)}50%{box-shadow:0 0 68px rgba(46,245,155,0.88)}}
-.outline{border:1px solid var(--border);background:rgba(255,255,255,0.04);color:#fff;padding:16px 30px;border-radius:16px;font-family:'JetBrains Mono';font-size:13px;backdrop-filter:blur(16px);transition:.35s;cursor:pointer;display:inline-block}
-.outline:hover{border-color:var(--g);background:rgba(46,245,155,0.12);transform:translateY(-4px);box-shadow:0 0 28px rgba(46,245,155,0.28)}
-/* ========== HERO ========== */
-.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;padding:170px 7% 100px;align-items:center}
-.badge{display:inline-flex;gap:12px;align-items:center;background:rgba(46,245,155,0.09);border:1px solid rgba(46,245,155,0.22);padding:12px 22px;border-radius:999px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:2px;color:var(--g);animation:fadeUp.9s.2s both;backdrop-filter:blur(12px)}
-.badge i{width:10px;height:10px;background:var(--g);border-radius:50%;box-shadow:0 0 14px var(--g);animation:blink 1s infinite}
+.orb{position:absolute;border-radius:50%;filter:blur(50px);opacity:0.35;animation:floatOrb 28s infinite alternate}
+.orb1{width:600px;height:600px;background:radial-gradient(circle,var(--g),transparent 70%);top:-120px;left:-120px}
+.orb2{width:500px;height:500px;background:radial-gradient(circle,var(--p),transparent 70%);bottom:-120px;right:-120px;animation-delay:-7s}
+.orb3{width:400px;height:400px;background:radial-gradient(circle,var(--g2),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:-14s}
+@keyframes floatOrb{0%{transform:translate(0,0) scale(1)}100%{transform:translate(60px,-50px) scale(1.15)}}
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:rgba(5,12,8,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo{display:flex;gap:12px;align-items:center;font-family:'JetBrains Mono';font-weight:800;letter-spacing:2px;color:#fff;font-size:14px}
+.logo-box{width:44px;height:44px;background:linear-gradient(135deg,var(--g),var(--p));border-radius:12px;display:grid;place-items:center;color:#000;font-weight:900;box-shadow:0 0 25px rgba(46,245,155,0.5)}
+.links{display:flex;gap:26px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:1px}
+.links a{color:#6d8f7b;transition:.3s}
+.links a:hover{color:#fff}
+/* BUTTONS */
+.btn{background:linear-gradient(105deg,var(--g),var(--g2));color:#000;padding:14px 28px;border-radius:14px;font-weight:800;font-family:'JetBrains Mono';font-size:12px;transition:.3s;box-shadow:0 0 25px rgba(46,245,155,0.35);display:inline-block;cursor:pointer;border:none}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 35px rgba(46,245,155,0.5)}
+.btn-p{background:linear-gradient(105deg,var(--p),var(--p2));color:#fff;box-shadow:0 0 25px rgba(157,92,255,0.35)}
+.btn-o{background:linear-gradient(105deg,var(--o),#ffcc3d);color:#000}
+.btn-glow{animation:btnGlow 2.5s infinite}
+@keyframes btnGlow{0%,100%{box-shadow:0 0 25px rgba(46,245,155,0.35)}50%{box-shadow:0 0 45px rgba(46,245,155,0.6)}}
+.outline{border:1px solid var(--border);background:rgba(255,255,255,0.03);color:#fff;padding:14px 26px;border-radius:14px;font-family:'JetBrains Mono';font-size:12px;backdrop-filter:blur(10px);transition:.3s;cursor:pointer;display:inline-block}
+.outline:hover{border-color:var(--g);background:rgba(46,245,155,0.08);transform:translateY(-2px)}
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;padding:140px 6% 80px;align-items:center}
+.badge{display:inline-flex;gap:10px;align-items:center;background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);padding:10px 18px;border-radius:999px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:2px;color:var(--g)}
+.badge i{width:8px;height:8px;background:var(--g);border-radius:50%;box-shadow:0 0 10px var(--g);animation:blink 1s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(45px)}to{opacity:1;transform:translateY(0)}}
-.hero h4{font-family:'JetBrains Mono';font-weight:300;font-size:21px;color:#5f7f6d;margin-top:26px;animation:fadeUp.9s.4s both}
-.hero h1{font-size:86px;font-weight:900;line-height:.88;letter-spacing:-3px;margin:16px 0 24px;animation:fadeUp.9s.6s both}
-.hero h1 span{background:linear-gradient(90deg,#fff 5%,var(--g) 45%,var(--p) 95%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 35px rgba(46,245,155,0.45))}
-.glitch{position:relative}
-.glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0;mix-blend-mode:screen}
-.glitch::before{color:var(--g);clip-path:polygon(0 0,100% 0,100% 45%,0 45%);animation:gl1 2.5s infinite linear alternate-reverse}
-.glitch::after{color:var(--p);clip-path:polygon(0 55%,100% 55%,100% 100%,0 100%);animation:gl2 2.5s infinite linear alternate-reverse}
-@keyframes gl1{0%{transform:translate(2px,0)}100%{transform:translate(-4px,1px)}}
-@keyframes gl2{0%{transform:translate(-2px,0)}100%{transform:translate(4px,-1px)}}
-.desc{color:#8fb39e;line-height:1.95;font-size:17px;max-width:620px;margin:32px 0 40px;animation:fadeUp.9s 1s both}
-.hero-actions{display:flex;gap:14px;animation:fadeUp.9s 1.2s both;flex-wrap:wrap}
-/* ========== CARDS 3D ========== */
-.stack{position:relative;height:640px;perspective:1400px}
-.card{position:absolute;background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0.03));border:1px solid var(--border);backdrop-filter:blur(32px);border-radius:28px;padding:24px;box-shadow:0 40px 100px rgba(0,0,0,0.65);transition:.7s cubic-bezier(.23,1,.32,1);transform-style:preserve-3d;overflow:hidden;will-change:transform}
-.card:hover{border-color:rgba(46,245,155,0.55);box-shadow:0 50px 130px rgba(0,0,0,0.75),0 0 70px rgba(46,245,155,0.32)}
-.c1{top:0;left:0;width:90%;z-index:3;animation:float 6s ease-in-out infinite}
-.c2{top:150px;right:0;width:76%;z-index:2;transform:rotate(-4deg);animation:float 6s ease-in-out infinite reverse}
+.hero h4{font-family:'JetBrains Mono';font-weight:300;font-size:19px;color:#5f7f6d;margin-top:20px}
+.hero h1{font-size:78px;font-weight:900;line-height:.88;letter-spacing:-2px;margin:14px 0 20px}
+.hero h1 span{background:linear-gradient(90deg,#fff 5%,var(--g) 45%,var(--p) 95%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.desc{color:#8fb39e;line-height:1.9;font-size:15.5px;max-width:600px;margin:26px 0 32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+/* CARDS */
+.stack{position:relative;height:600px;perspective:1000px}
+.card{position:absolute;background:linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));border:1px solid var(--border);backdrop-filter:blur(20px);border-radius:22px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,0.5);transition:.5s;overflow:hidden}
+.card:hover{border-color:rgba(46,245,155,0.35);transform:translateY(-5px)}
+.c1{top:0;left:0;width:88%;z-index:3;animation:float 6s ease-in-out infinite}
+.c2{top:140px;right:0;width:74%;z-index:2;transform:rotate(-3deg);animation:float 6s ease-in-out infinite reverse}
 .c3{bottom:0;left:6%;width:94%;z-index:1;animation:float 7s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
-.port-img{width:100%;height:185px;object-fit:cover;border-radius:18px;border:1px solid var(--border);transition:.55s;will-change:transform}
-.port-img:hover{transform:scale(1.06);border-color:var(--g)}
-.sec{padding:140px 7%}
-.label{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:4px;color:var(--g);display:flex;align-items:center;gap:13px;margin-bottom:22px}
-.label::before{content:'';width:40px;height:1px;background:linear-gradient(90deg,var(--g),transparent)}
-.sec h2{font-size:72px;font-weight:900;color:#fff;line-height:.9;margin-bottom:70px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.port-img{width:100%;height:170px;object-fit:cover;border-radius:14px;border:1px solid var(--border);transition:.4s;background:#0a1a12}
+.port-img:hover{transform:scale(1.03);border-color:var(--g)}
+.sec{padding:110px 6%}
+.label{font-family:'JetBrains Mono';font-size:11px;letter-spacing:4px;color:var(--g);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.label::before{content:'';width:36px;height:1px;background:linear-gradient(90deg,var(--g),transparent)}
+.sec h2{font-size:62px;font-weight:900;color:#fff;line-height:.9;margin-bottom:50px}
 .sec h2 em{font-style:normal;background:linear-gradient(90deg,var(--g),var(--p));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.reveal{opacity:0;transform:translateY(80px) scale(.95);transition:1.3s cubic-bezier(.23,1,.32,1);will-change:transform,opacity}
-.reveal.on{opacity:1;transform:translateY(0) scale(1)}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.item{background:var(--card);border:1px solid var(--border);border-radius:26px;padding:34px;text-align:center;transition:.6s;backdrop-filter:blur(12px);will-change:transform}
-.item:hover{transform:translateY(-14px) scale(1.02);border-color:rgba(46,245,155,0.35);box-shadow:0 40px 80px rgba(0,0,0,0.55)}
-.item b{font-size:52px;font-weight:900;color:var(--g);display:block}
-.item span{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:1px;color:#6b8d78;margin-top:15px;display:block;line-height:1.7}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.service{background:linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:26px;padding:30px;position:relative;overflow:hidden;transition:.6s;backdrop-filter:blur(14px);will-change:transform}
-.service::after{content:'';position:absolute;inset:0;background:radial-gradient(600px at var(--mx) var(--my),rgba(46,245,155,0.18),transparent 42%);opacity:0;transition:.5s;pointer-events:none}
-.service:hover::after{opacity:1}
-.service:hover{transform:translateY(-12px) scale(1.02);border-color:rgba(46,245,155,0.38)}
-.icon{width:64px;height:64px;background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.22);border-radius:16px;display:grid;place-items:center;font-size:30px;margin-bottom:20px;transition:.5s}
-.service h3{color:#fff;font-size:20px;margin-bottom:11px}
-.service p{color:#7fa48d;font-size:14px;line-height:1.85}
-.tag{background:rgba(46,245,155,0.1);border:1px solid rgba(46,245,155,0.22);color:var(--g);padding:11px 16px;border-radius:12px;font-family:'JetBrains Mono';font-size:11px;display:inline-block;margin:6px;transition:.4s;backdrop-filter:blur(6px)}
-.tag:hover{background:rgba(46,245,155,0.18);transform:translateY(-4px) scale(1.05)}
-.pricing{background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.018));border:1px solid var(--border);border-radius:26px;padding:34px;position:relative;overflow:hidden;transition:.6s;backdrop-filter:blur(14px);will-change:transform}
-.pricing:hover{transform:translateY(-14px) scale(1.04);border-color:var(--g);box-shadow:0 40px 90px rgba(0,0,0,0.6),0 0 50px rgba(46,245,155,0.25)}
-.pricing.popular{border-color:var(--g);box-shadow:0 0 50px rgba(46,245,155,0.2)}
-.pricing.popular::before{content:'🔥 MÁS VENDIDO';position:absolute;top:16px;right:-36px;background:linear-gradient(90deg,var(--g),var(--g2));color:#000;font-family:'JetBrains Mono';font-size:11px;font-weight:800;padding:8px 40px;transform:rotate(35deg);box-shadow:0 0 25px rgba(46,245,155,0.6)}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.gal-card{background:var(--card);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:.55s;backdrop-filter:blur(12px);will-change:transform}
-.gal-card:hover{transform:translateY(-10px) scale(1.03);border-color:var(--g);box-shadow:0 25px 60px rgba(0,0,0,0.45)}
-.gal-card img{width:100%;height:240px;object-fit:cover;transition:.6s}
-.gal-card:hover img{transform:scale(1.08)}
-.gal-info{padding:20px}
-.pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.pay-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center;transition:.45s;backdrop-filter:blur(10px)}
-.pay-card:hover{transform:translateY(-6px) scale(1.02);border-color:var(--g);box-shadow:0 15px 40px rgba(0,0,0,0.4)}
-.pay-card b{color:#fff;font-size:14px;display:block;margin-top:8px}
-.pay-card span{color:#7fa48d;font-size:11px;font-family:'JetBrains Mono';display:block;margin-top:4px}
-.contact{background:linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.015));border:1px solid var(--border);border-radius:32px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:28px;position:relative;overflow:hidden;isolation:isolate}
-.contact::before{content:'';position:absolute;inset:-2px;background:conic-gradient(from 0deg,var(--g),var(--p),var(--g),transparent,var(--g));animation:spin 4.5s linear infinite;z-index:-2;opacity:0.22)}
-.contact::after{content:'';position:absolute;inset:2px;background:#0a1a12;border-radius:30px;z-index:-1}
+.reveal{opacity:0;transform:translateY(40px);transition:.9s cubic-bezier(.23,1,.32,1)}
+.reveal.on{opacity:1;transform:translateY(0)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.item{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;text-align:center;transition:.4s;backdrop-filter:blur(8px)}
+.item:hover{transform:translateY(-8px);border-color:rgba(46,245,155,0.25)}
+.item b{font-size:44px;font-weight:900;color:var(--g);display:block}
+.item span{font-family:'JetBrains Mono';font-size:10px;color:#6b8d78;margin-top:10px;display:block;line-height:1.6}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:20px;padding:26px;transition:.4s;backdrop-filter:blur(10px)}
+.service:hover{transform:translateY(-8px);border-color:rgba(46,245,155,0.28)}
+.icon{width:56px;height:56px;background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);border-radius:13px;display:grid;place-items:center;font-size:26px;margin-bottom:16px}
+.service h3{color:#fff;font-size:18px;margin-bottom:8px}
+.service p{color:#7fa48d;font-size:13px;line-height:1.7}
+.tag{background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);color:var(--g);padding:8px 13px;border-radius:10px;font-family:'JetBrains Mono';font-size:10.5px;display:inline-block;margin:5px;transition:.3s}
+.tag:hover{background:rgba(46,245,155,0.14);transform:translateY(-2px)}
+.pricing{background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.01));border:1px solid var(--border);border-radius:22px;padding:28px;transition:.45s;backdrop-filter:blur(10px)}
+.pricing:hover{transform:translateY(-10px) scale(1.02);border-color:var(--g);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
+.pricing.popular{border-color:var(--g);box-shadow:0 0 30px rgba(46,245,155,0.15)}
+.pricing.popular::before{content:'🔥 MÁS VENDIDO';position:absolute;top:14px;right:-32px;background:linear-gradient(90deg,var(--g),var(--g2));color:#000;font-family:'JetBrains Mono';font-size:10px;font-weight:800;padding:6px 36px;transform:rotate(35deg)}
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.filter-btn{border:1px solid var(--border);background:var(--card);color:#7fa48d;padding:10px 18px;border-radius:12px;font-family:'JetBrains Mono';font-size:11px;cursor:pointer;transition:.3s}
+.filter-btn.active,.filter-btn:hover{background:rgba(46,245,155,0.12);border-color:var(--g);color:var(--g);transform:translateY(-2px)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal-card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.4s;backdrop-filter:blur(8px)}
+.gal-card:hover{transform:translateY(-6px);border-color:var(--g);box-shadow:0 15px 40px rgba(0,0,0,0.35)}
+.gal-card img{width:100%;height:200px;object-fit:cover;transition:.5s;background:#0a1a12}
+.gal-card:hover img{transform:scale(1.05)}
+.gal-info{padding:16px}
+.pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.pay-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;text-align:center;transition:.35s}
+.pay-card:hover{transform:translateY(-5px);border-color:var(--g)}
+.contact{background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.01));border:1px solid var(--border);border-radius:28px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:24px;position:relative;overflow:hidden;isolation:isolate}
+.contact::before{content:'';position:absolute;inset:-2px;background:conic-gradient(from 0deg,var(--g),var(--p),var(--g),transparent,var(--g));animation:spin 5s linear infinite;z-index:-2;opacity:0.15)}
+.contact::after{content:'';position:absolute;inset:2px;background:#0a1a12;border-radius:26px;z-index:-1}
 @keyframes spin{to{transform:rotate(360deg)}}
-.foot{padding:44px 7%;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px;color:#4a6656;letter-spacing:1px;flex-wrap:wrap;gap:16px}
-.toast{position:fixed;bottom:34px;left:50%;transform:translateX(-50%) translateY(120px);background:#0e2216;border:1px solid var(--g);color:var(--g);padding:16px 26px;border-radius:14px;font-family:'JetBrains Mono';font-size:12.5px;z-index:9999;transition:.6s cubic-bezier(.23,1,.32,1);box-shadow:0 0 40px rgba(46,245,155,0.5);opacity:0;will-change:transform}
+.foot{padding:36px 6%;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px;color:#4a6656;letter-spacing:1px;flex-wrap:wrap;gap:12px}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);background:#0e2216;border:1px solid var(--g);color:var(--g);padding:14px 22px;border-radius:12px;font-family:'JetBrains Mono';font-size:12px;z-index:9999;transition:.5s;box-shadow:0 0 30px rgba(46,245,155,0.4);opacity:0}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
-@media(max-width:1100px){body{cursor:auto}.cursor,.dot{display:none}.hero{grid-template-columns:1fr}.hero h1{font-size:62px}.grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.pay-grid{grid-template-columns:1fr 1fr}.contact{flex-direction:column;text-align:center}}
-@media(max-width:650px){.grid4,.grid3,.pay-grid{grid-template-columns:1fr}.links{display:none}.hero h1{font-size:50px}.sec h2{font-size:44px}}
+@media(max-width:1100px){.cursor,.dot{display:none!important}.hero{grid-template-columns:1fr}.hero h1{font-size:58px}.grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.pay-grid{grid-template-columns:1fr 1fr}.contact{flex-direction:column;text-align:center}}
+@media(max-width:650px){.grid4,.grid3,.gallery,.pay-grid{grid-template-columns:1fr}.links{display:none}.hero h1{font-size:44px}.sec h2{font-size:38px}.stack{height:500px}}
 </style>
 </head>
 <body>
 <div class="cursor" id="cur"></div><div class="dot" id="dot"></div>
 <canvas id="bg"></canvas><canvas id="matrix"></canvas>
 <div id="orbs"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
-<div class="toast" id="toast">✅ Copiado!</div>
+<div class="toast" id="toast"></div>
 
 <nav>
 <div class="logo"><div class="logo-box">K</div> KRAVEX STUDIO x <span style="color:var(--g)">𝙄𝘼𝙄𝙈𝘽𝙓𝙏</span> <span class="emoji-3d">👑</span></div>
-<div class="links"><a href="#home">🏠 HOME</a><a href="#portfolio">🎨 PORTFOLIO</a><a href="#precios">💰 PRECIOS $2-$10</a><a href="#pagos">💳 PAGOS</a><a href="#studio">🏢 STUDIO</a><a href="#contact">📩 CONTACT</a></div>
+<div class="links"><a href="#home">🏠 HOME</a><a href="#portfolio">🎨 PORTFOLIO</a><a href="#precios">💰 PRECIOS $2-$10</a><a href="#pagos">💳 PAGOS</a><a href="#contact">📩 CONTACT</a></div>
 <a class="btn btn-glow" href="#precios">COMPRAR <span class="emoji-3d">🛒</span>→</a>
 </nav>
 
 <section class="hero" id="home">
 <div>
-<div class="badge"><i></i> <span class="emoji-3d">🔥</span> KRAVEX STUDIO • 100+ FPS • 4K ULTRA HD • DESDE $2 <span class="emoji-3d">💎</span> • SIN PAYPAL</div>
-<h4>// Portfolio Seller <span class="emoji-3d">👋</span> 100% Optimizado</h4>
-<h1 class="glitch" data-text="KRAVEX x IAIMBXT"><span>KRAVEX<br>x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏</span></h1>
-<p class="desc">Soy <b style="color:#fff">𝙄𝘼𝙄𝙈𝘽𝙓𝙏 <span class="emoji-3d">👑</span></b> fundador de <b style="color:var(--g)">KRAVEX STUDIO <span class="emoji-3d">🏢</span></b><br>Vendo <b style="color:#fff">portfolios, logos, banners, presentaciones y animaciones optimizadas a 100+ FPS <span class="emoji-3d">⚡</span></b> en 4K HD <span class="emoji-3d">🎥</span><br>Precios ultra bajos <b style="color:#fff">$2 a $10 USD <span class="emoji-3d">💰</span></b> • Sin PayPal, pagos fáciles<br><br><span class="emoji-3d">🎨</span> Logos HD • <span class="emoji-3d">🖼️</span> Banners 4K • <span class="emoji-3d">📊</span> Presentaciones • <span class="emoji-3d">🎬</span> Animaciones 100FPS • <span class="emoji-3d">📦</span> Entrega en 24h</p>
+<div class="badge"><i></i> <span class="emoji-3d">⚡</span> 100+ FPS OPTIMIZED • NO LAG • 4K HD • DESDE $2 <span class="emoji-3d">💎</span></div>
+<h4>// Portfolio Seller <span class="emoji-3d">👋</span> Optimizado</h4>
+<h1><span>KRAVEX<br>x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏</span></h1>
+<p class="desc">Soy <b style="color:#fff">𝙄𝘼𝙄𝙈𝘽𝙓𝙏 <span class="emoji-3d">👑</span></b> fundador de <b style="color:var(--g)">KRAVEX STUDIO <span class="emoji-3d">🏢</span></b><br>Portfolios, logos, banners, presentaciones y animaciones <b style="color:#fff">optimizadas a 100+ FPS <span class="emoji-3d">⚡</span> • 4K HD <span class="emoji-3d">🎥</span> • Sin lag</b><br>Precios bajos <b style="color:#fff">$2 a $10 USD <span class="emoji-3d">💰</span></b> • Sin PayPal<br><br><span class="emoji-3d">🎨</span> Logos HD • <span class="emoji-3d">🖼️</span> Banners 4K • <span class="emoji-3d">📊</span> Presentaciones • <span class="emoji-3d">🎬</span> Animaciones • <span class="emoji-3d">🌐</span> Web Portfolio</p>
 <div class="hero-actions">
-<a class="btn btn-glow" href="#portfolio"><span class="emoji-3d">🎨</span> Ver Portfolio Real →</a>
-<a class="outline" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20comprar%20en%20KRAVEX%20STUDIO%20💎%20Desde%20$2&body=Hola%20IAIMBXT%20👋"><span class="emoji-3d">📧</span> Gmail: iaimbxtcontacted@gmail.com</a>
+<a class="btn btn-glow" href="#portfolio"><span class="emoji-3d">🎨</span> Ver Portfolio Completo →</a>
+<a class="outline" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20comprar%20en%20KRAVEX%20STUDIO%20💎"><span class="emoji-3d">📧</span> Gmail: iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span></a>
 <a class="outline" onclick="copyDiscord()"><span class="emoji-3d">💬</span> DC: iaimbxt <span class="emoji-3d">📋</span></a>
-<a class="outline" href="https://www.tiktok.com/@iaimbxt" target="_blank"><span class="emoji-3d">🎵</span> TikTok: @iaimbxt <span class="emoji-3d">✨</span></a>
+<a class="outline" href="https://www.tiktok.com/@iaimbxt" target="_blank"><span class="emoji-3d">🎵</span> TikTok: @iaimbxt</a>
 </div>
-<div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap">
-<span class="tag"><span class="emoji-3d">⚡</span> 100+ FPS OPTIMIZED</span><span class="tag"><span class="emoji-3d">🎥</span> 4K ULTRA HD</span><span class="tag"><span class="emoji-3d">💰</span> Desde $2 USD</span><span class="tag"><span class="emoji-3d">🏢</span> KRAVEX STUDIO</span><span class="tag"><span class="emoji-3d">💳</span> Sin PayPal • Pagos fáciles</span><span class="tag"><span class="emoji-3d">📦</span> Entrega 24h</span>
+<div style="margin-top:22px;display:flex;gap:8px;flex-wrap:wrap">
+<span class="tag"><span class="emoji-3d">⚡</span> 100+ FPS NO LAG</span><span class="tag"><span class="emoji-3d">🎥</span> 4K ULTRA HD</span><span class="tag"><span class="emoji-3d">💰</span> Desde $2</span><span class="tag"><span class="emoji-3d">💳</span> Sin PayPal</span><span class="tag"><span class="emoji-3d">🏢</span> KRAVEX STUDIO</span>
 </div>
 </div>
 <div class="stack">
-<div class="card c1"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><b style="color:#fff">KRAVEX STUDIO <span class="emoji-3d">🏢</span> <span class="emoji-3d">💎</span></b><span style="color:var(--g);font-family:'JetBrains Mono';font-size:11px">● 100 FPS <span class="emoji-3d">⚡</span> 4K</span></div><img class="port-img" src="https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg?ex=6a8d7476&is=6a8c22f6&hm=4999f50fe940896195e6fff506c49a583ddb8e816fad0ceb89ea43c45ba45a28&" alt="Logo 1"><div style="display:flex;gap:8px;margin-top:12px"><span class="tag"><span class="emoji-3d">👑</span> LOGO 3D $3</span><span class="tag"><span class="emoji-3d">⚡</span> 100 FPS</span><span class="tag"><span class="emoji-3d">🎥</span> 4K</span></div></div>
-<div class="card c2"><img class="port-img" src="https://cdn.discordapp.com/attachments/1541397475418574858/1541400521099710515/IMG-20260823-WA5491.jpg?ex=6a8d749a&is=6a8c231a&hm=bf8a48be6345af9a233a464861bb2c5eae75cfe645e11a044f4&" alt="Banner 1" style="height:155px"><div style="margin-top:12px"><b style="color:#fff">Banner 4K HD <span class="emoji-3d">🖼️</span> <span class="emoji-3d">🔥</span></b><p style="color:#7fa48d;font-size:12.5px;margin-top:4px">Optimizado 100+ FPS • Desde $4 • 4K ULTRA</p><div style="display:flex;gap:6px;margin-top:8px"><span class="tag">$5</span><span class="tag">4K HD</span></div></div></div>
-<div class="card c3"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><img class="port-img" src="https://cdn.discordapp.com/attachments/1541397398562017320/1541399951240859659/IMG-20260818-WA0149.jpg?ex=6a8d7412&is=6a8c2292&hm=0d92fad92c22a433ef739cb25101b133c8f0f619118e03314708272c11d18be7&" style="height:115px"><img class="port-img" src="https://cdn.discordapp.com/attachments/1541397475418574858/1541400638779428864/IMG-20260818-WA8363.jpg?ex=6a8d74b6&is=6a8c2336&hm=11e332868af2a8016894f40080865d53a3299d4a53d8caf8d878db1ea7a0379c&" style="height:115px"></div><div style="margin-top:14px;display:flex;justify-content:space-between;align-items:center"><b style="color:#fff">KRAVEX PORTFOLIO <span class="emoji-3d">💎</span></b><span style="color:var(--g);font-family:'JetBrains Mono';font-size:11px">$2 - $10 • 100 FPS</span></div><div style="margin-top:10px;display:flex;gap:6px"><span class="tag"><span class="emoji-3d">🎨</span> Logos</span><span class="tag"><span class="emoji-3d">🖼️</span> Banners</span><span class="tag"><span class="emoji-3d">📊</span> Pres</span><span class="tag"><span class="emoji-3d">🎬</span> Anim</span></div></div>
+<div class="card c1"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><b style="color:#fff">KRAVEX <span class="emoji-3d">🏢</span> <span class="emoji-3d">💎</span></b><span style="color:var(--g);font-family:'JetBrains Mono';font-size:10px">100 FPS <span class="emoji-3d">⚡</span></span></div><img class="port-img" loading="lazy" src="https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg?ex=6a8d7476&is=6a8c22f6&hm=4999f50fe940896195e6fff506c49a583ddb8e816fad0ceb89ea43c45ba45a28&" alt="Logo 1"><div style="display:flex;gap:6px;margin-top:10px"><span class="tag">LOGO $3</span><span class="tag">4K</span><span class="tag">NO LAG</span></div></div>
+<div class="card c2"><img class="port-img" loading="lazy" src="https://cdn.discordapp.com/attachments/1541397475418574858/1541400521099710515/IMG-20260823-WA5491.jpg?ex=6a8d749a&is=6a8c231a&hm=bf8a48be6345af9a233a464861bb2c5eae75cfe645e11a044f4&" alt="Banner 1" style="height:140px"><div style="margin-top:10px"><b style="color:#fff">Banner 4K <span class="emoji-3d">🖼️</span></b><p style="color:#7fa48d;font-size:11.5px">100+ FPS • $5 • 4K</p></div></div>
+<div class="card c3"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><img class="port-img" loading="lazy" src="https://cdn.discordapp.com/attachments/1541397398562017320/1541399951240859659/IMG-20260818-WA0149.jpg?ex=6a8d7412&is=6a8c2292&hm=0d92fad92c22a433ef739cb25101b133c8f0f619118e03314708272c11d18be7&" style="height:100px"><img class="port-img" loading="lazy" src="https://cdn.discordapp.com/attachments/1541397475418574858/1541400638779428864/IMG-20260818-WA8363.jpg?ex=6a8d74b6&is=6a8c2336&hm=11e332868af2a8016894f40080865d53a3299d4a53d8caf8d878db1ea7a0379c&" style="height:100px"></div><div style="margin-top:12px;display:flex;justify-content:space-between"><b style="color:#fff">PORTFOLIO <span class="emoji-3d">💎</span></b><span style="color:var(--g);font-family:'JetBrains Mono';font-size:10px">$2-$10 • 100FPS</span></div></div>
 </div>
 </section>
 
-<section class="sec reveal" id="stats"><div class="label"><span class="emoji-3d">📊</span> STATS KRAVEX STUDIO • 100 FPS</div><h2>Mi estudio en <em>números <span class="emoji-3d">📈</span></em></h2><div class="grid4"><div class="item"><div class="emoji-3d-big" style="font-size:44px">🎨</div><b class="counter" data-target="150">0</b><span>LOGOS CREADOS HD 4K ULTRA</span></div><div class="item"><div class="emoji-3d-big" style="font-size:44px">🖼️</div><b class="counter" data-target="80">0</b><span>BANNERS 4K ENTREGADOS 100 FPS</span></div><div class="item"><div class="emoji-3d-big" style="font-size:44px">👥</div><b class="counter" data-target="300">0</b><span>CLIENTES FELICES SATISFECHOS</span></div><div class="item"><div class="emoji-3d-big" style="font-size:44px">⚡</div><b>100+ FPS</b><span>OPTIMIZADO GARANTIZADO 4K ULTRA HD</span></div></div>
-<div style="margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px"><div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center"><b style="color:#fff"><span class="emoji-3d">⏱️</span> Entrega</b><p style="color:#7fa48d;font-size:12px;margin-top:6px">24 horas máximo • Rápido <span class="emoji-3d">⚡</span></p></div><div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center"><b style="color:#fff"><span class="emoji-3d">🔄</span> Revisiones</b><p style="color:#7fa48d;font-size:12px;margin-top:6px">Hasta 5 revisiones gratis • Pro <span class="emoji-3d">💎</span></p></div><div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center"><b style="color:#fff"><span class="emoji-3d">💾</span> Archivos</b><p style="color:#7fa48d;font-size:12px;margin-top:6px">PNG, PSD, MP4 4K • Todo incluido <span class="emoji-3d">📦</span></p></div></div>
-</section>
+<section class="sec reveal" id="stats"><div class="label"><span class="emoji-3d">📊</span> STATS OPTIMIZADAS</div><h2>Stats <em>KRAVEX <span class="emoji-3d">📈</span></em></h2><div class="grid4"><div class="item"><div class="emoji-3d-big">🎨</div><b class="counter" data-target="150">0</b><span>LOGOS HD 4K • NO LAG</span></div><div class="item"><div class="emoji-3d-big">🖼️</div><b class="counter" data-target="80">0</b><span>BANNERS 4K • 100 FPS</span></div><div class="item"><div class="emoji-3d-big">👥</div><b class="counter" data-target="300">0</b><span>CLIENTES FELICES</span></div><div class="item"><div class="emoji-3d-big">⚡</div><b>100+ FPS</b><span>OPTIMIZADO • NO LAG • 4K</span></div></div></section>
 
-<section class="sec reveal" id="portfolio"><div class="label"><span class="emoji-3d">🎨</span> MI PORTFOLIO REAL • KRAVEX</div><h2>Trabajos <em>reales <span class="emoji-3d">💎</span></em> 4K</h2><div class="gallery">
-<div class="gal-card"><img src="https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg?ex=6a8d7476&is=6a8c22f6&hm=4999f50fe940896195e6fff506c49a583ddb8e816fad0ceb89ea43c45ba45a28&" alt="Logo KRAVEX 1"><div class="gal-info"><div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#fff">LOGO KRAVEX 1 <span class="emoji-3d">👑</span></b><span style="background:linear-gradient(90deg,var(--g),var(--g2));color:#000;padding:6px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;font-weight:800">$3</span></div><p style="color:#7fa48d;font-size:12.5px;margin-top:10px"><span class="emoji-3d">✨</span> Logo 3D HD • 4K • 100+ FPS • Entrega PNG + PSD + MP4</p><div style="display:flex;gap:6px;margin-top:10px"><span class="tag">100 FPS</span><span class="tag">4K HD</span><span class="tag">3D</span></div></div></div>
-<div class="gal-card"><img src="https://cdn.discordapp.com/attachments/1541397398562017320/1541399951240859659/IMG-20260818-WA0149.jpg?ex=6a8d7412&is=6a8c2292&hm=0d92fad92c22a433ef739cb25101b133c8f0f619118e03314708272c11d18be7&" alt="Logo KRAVEX 2"><div class="gal-info"><div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#fff">LOGO KRAVEX 2 <span class="emoji-3d">💎</span></b><span style="background:linear-gradient(90deg,var(--g),var(--g2));color:#000;padding:6px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;font-weight:800">$3</span></div><p style="color:#7fa48d;font-size:12.5px;margin-top:10px"><span class="emoji-3d">🎨</span> Logo minimalista pro • HD • Para Discord / Studio / YouTube</p><div style="display:flex;gap:6px;margin-top:10px"><span class="tag">Minimal</span><span class="tag">Pro</span><span class="tag">HD</span></div></div></div>
-<div class="gal-card"><img src="https://cdn.discordapp.com/attachments/1541397475418574858/1541400521099710515/IMG-20260823-WA5491.jpg?ex=6a8d749a&is=6a8c231a&hm=bf8a48be6345af9a233a464861bb2c5eae75cfe645e11a044f4&" alt="Banner 1"><div class="gal-info"><div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#fff">BANNER 4K 1 <span class="emoji-3d">🖼️</span></b><span style="background:linear-gradient(90deg,var(--p),var(--p2));color:#fff;padding:6px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;font-weight:800">$5</span></div><p style="color:#7fa48d;font-size:12.5px;margin-top:10px"><span class="emoji-3d">🔥</span> Banner Discord / YouTube 4K HD • 100+ FPS • Animado opcional</p><div style="display:flex;gap:6px;margin-top:10px"><span class="tag">4K</span><span class="tag">100 FPS</span><span class="tag">Banner</span></div></div></div>
-<div class="gal-card"><img src="https://cdn.discordapp.com/attachments/1541397475418574858/1541400638779428864/IMG-20260818-WA8363.jpg?ex=6a8d74b6&is=6a8c2336&hm=11e332868af2a8016894f40080865d53a3299d4a53d8caf8d878db1ea7a0379c&" alt="Banner 2"><div class="gal-info"><div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#fff">BANNER 4K 2 <span class="emoji-3d">🔥</span></b><span style="background:linear-gradient(90deg,var(--p),var(--p2));color:#fff;padding:6px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;font-weight:800">$5</span></div><p style="color:#7fa48d;font-size:12.5px;margin-top:10px"><span class="emoji-3d">🏢</span> Banner studio / Gaming / Full HD 4K • Entrega 24h</p><div style="display:flex;gap:6px;margin-top:10px"><span class="tag">Gaming</span><span class="tag">Studio</span><span class="tag">4K</span></div></div></div>
+<section class="sec reveal" id="portfolio">
+<div class="label"><span class="emoji-3d">🎨</span> PORTFOLIO COMPLETO VARIABLE</div>
+<h2>Portfolio <em>completo <span class="emoji-3d">💎</span></em></h2>
+<p style="color:#8fb39e;margin-bottom:24px;max-width:600px;line-height:1.7">Todo mi trabajo es variable, puedes filtrar por categoría <span class="emoji-3d">👇</span> Agrego cosas nuevas cada semana <span class="emoji-3d">🔥</span></p>
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all"><span class="emoji-3d">🌟</span> Todo</button>
+<button class="filter-btn" data-filter="logo"><span class="emoji-3d">🎨</span> Logos</button>
+<button class="filter-btn" data-filter="banner"><span class="emoji-3d">🖼️</span> Banners</button>
+<button class="filter-btn" data-filter="presentacion"><span class="emoji-3d">📊</span> Presentaciones</button>
+<button class="filter-btn" data-filter="animacion"><span class="emoji-3d">🎬</span> Animaciones</button>
+<button class="filter-btn" data-filter="web"><span class="emoji-3d">🌐</span> Web Portfolio</button>
 </div>
-<div style="margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center;transition:.5s" class="service"><div class="emoji-3d-big" style="font-size:38px">📊</div><b style="color:#fff;display:block;margin-top:12px">Presentaciones <span class="emoji-3d">📊</span></b><p style="color:#7fa48d;font-size:12.5px;margin-top:8px">Slides pro para tu server • Animadas 100 FPS • Desde $4 • 4K HD</p><div class="bar"><div class="fill" style="width:92%"></div></div></div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center;transition:.5s" class="service"><div class="emoji-3d-big" style="font-size:38px">🎬</div><b style="color:#fff;display:block;margin-top:12px">Animaciones <span class="emoji-3d">🎬</span></b><p style="color:#7fa48d;font-size:12.5px;margin-top:8px">100+ FPS garantizado • 4K • Logo animado • Desde $8 • Loop perfecto</p><div class="bar"><div class="fill" style="width:100%"></div></div></div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center;transition:.5s" class="service"><div class="emoji-3d-big" style="font-size:38px">💎</div><b style="color:#fff;display:block;margin-top:12px">Portfolio Full <span class="emoji-3d">🌐</span></b><p style="color:#7fa48d;font-size:12.5px;margin-top:8px">Web como esta • Logos + Banners + Pres • $10 • Full Pack 4K</p><div class="bar"><div class="fill" style="width:100%"></div></div></div>
+<div class="gallery" id="galleryContainer">
+<!-- JS INJECTA AQUI -->
 </div>
-</section>
-
-<section class="sec reveal" id="precios"><div class="label"><span class="emoji-3d">💰</span> PRECIOS KRAVEX STUDIO - DESDE $2 USD</div><h2>Precios <em>bajos <span class="emoji-3d">💸</span></em> 100% calidad</h2>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
-<div class="pricing"><div class="emoji-3d-big" style="font-size:38px">🖼️</div><h3 style="color:#fff;margin-top:12px">LOGO SIMPLE</h3><div style="font-size:38px;font-weight:900;color:var(--g);margin:16px 0">$2 <span style="font-size:13px;color:#6b8d78">USD</span></div><div style="color:#7fa48d;font-size:12.5px;line-height:2.2"><span class="emoji-3d">✅</span> Logo HD 4K<br><span class="emoji-3d">✅</span> PNG transparente<br><span class="emoji-3d">✅</span> Entrega 24h <span class="emoji-3d">⚡</span><br><span class="emoji-3d">✅</span> 1 revisión<br><span class="emoji-3d">✅</span> 100+ FPS</div><a class="outline" style="width:100%;text-align:center;margin-top:20px" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20LOGO%20SIMPLE%20$2%20🖼️&body=Hola%20IAIMBXT%20quiero%20logo%20$2"><span class="emoji-3d">🛒</span> Comprar $2 <span class="emoji-3d">💬</span>→</a></div>
-<div class="pricing"><div class="emoji-3d-big" style="font-size:38px">👑</div><h3 style="color:#fff;margin-top:12px">LOGO 3D PRO</h3><div style="font-size:38px;font-weight:900;color:var(--g);margin:16px 0">$3 <span style="font-size:13px;color:#6b8d78">USD</span></div><div style="color:#7fa48d;font-size:12.5px;line-height:2.2"><span class="emoji-3d">✅</span> Logo 3D 4K HD<br><span class="emoji-3d">✅</span> PNG + PSD + MP4<br><span class="emoji-3d">✅</span> 100+ FPS <span class="emoji-3d">⚡</span><br><span class="emoji-3d">✅</span> 3 revisiones<br><span class="emoji-3d">✅</span> Efectos 3D</div><a class="outline" style="width:100%;text-align:center;margin-top:20px" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20LOGO%203D%20PRO%20$3%20👑"><span class="emoji-3d">🛒</span> Comprar $3 <span class="emoji-3d">👑</span>→</a></div>
-<div class="pricing"><div class="emoji-3d-big" style="font-size:38px">🖼️</div><h3 style="color:#fff;margin-top:12px">BANNER / PRES</h3><div style="font-size:38px;font-weight:900;color:var(--p);margin:16px 0">$5 <span style="font-size:13px;color:#6b8d78">USD</span></div><div style="color:#7fa48d;font-size:12.5px;line-height:2.2"><span class="emoji-3d">✅</span> Banner 4K HD<br><span class="emoji-3d">✅</span> Presentación pro<br><span class="emoji-3d">✅</span> 100+ FPS <span class="emoji-3d">⚡</span><br><span class="emoji-3d">✅</span> Animado<br><span class="emoji-3d">✅</span> Entrega rápida</div><a class="btn-p" style="width:100%;text-align:center;margin-top:20px" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20BANNER%20$5%20🖼️"><span class="emoji-3d">🛒</span> Comprar $5 <span class="emoji-3d">🖼️</span>→</a></div>
-<div class="pricing popular"><div class="emoji-3d-big" style="font-size:38px">💎</div><h3 style="color:#fff;margin-top:12px">PACK FULL PORTFOLIO</h3><div style="font-size:38px;font-weight:900;color:var(--g);margin:16px 0">$10 <span style="font-size:13px;color:#6b8d78">USD</span></div><div style="color:#a8c5b2;font-size:12.5px;line-height:2.2"><span class="emoji-3d">✅</span> Logo 3D + Banner<br><span class="emoji-3d">✅</span> Presentación 4K<br><span class="emoji-3d">✅</span> Portfolio web<br><span class="emoji-3d">✅</span> Animación 100 FPS<br><span class="emoji-3d">✅</span> Soporte VIP <span class="emoji-3d">👑</span><br><span class="emoji-3d">✅</span> Todo en 4K</div><a class="btn" style="width:100%;text-align:center;margin-top:20px" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20PACK%20FULL%20$10%20💎%20KRAVEX%20STUDIO&body=Hola%20IAIMBXT%20quiero%20el%20PACK%20FULL%20$10%20💎"><span class="emoji-3d">🔥</span> Comprar $10 <span class="emoji-3d">💎</span>→</a></div>
-</div>
-<div style="margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-<div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center"><b style="color:#fff"><span class="emoji-3d">🎬</span> Animación Simple - $8</b><p style="color:#7fa48d;font-size:12px;margin-top:8px">Logo animado 100+ FPS • 4K • Loop perfecto • MP4 + GIF</p></div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center"><b style="color:#fff"><span class="emoji-3d">🌐</span> Portfolio Web - $7</b><p style="color:#7fa48d;font-size:12px;margin-top:8px">Web como esta • 100+ FPS • 4K HD • Optimizada</p></div>
-<div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center"><b style="color:#fff"><span class="emoji-3d">🏢</span> Branding Full - $10</b><p style="color:#7fa48d;font-size:12px;margin-top:8px">Todo tu studio completo • Logo + Banner + Pres + Web • KRAVEX</p></div>
+<div style="margin-top:30px;text-align:center">
+<button class="outline" onclick="loadMorePortfolio()"><span class="emoji-3d">➕</span> Cargar más trabajos <span class="emoji-3d">🔥</span></button>
 </div>
 </section>
 
-<section class="sec reveal" id="pagos"><div class="label"><span class="emoji-3d">💳</span> MÉTODOS DE PAGO • SIN PAYPAL</div><h2>Pagos <em>fáciles <span class="emoji-3d">💰</span></em></h2><p style="color:#8fb39e;margin-bottom:30px;max-width:700px;line-height:1.8;font-size:16px">No uso PayPal <span class="emoji-3d">❌</span> — acepto métodos más rápidos y sin comisiones altas <span class="emoji-3d">✅</span> Elige el que prefieras y escríbeme por <span class="emoji-3d">📧</span> Gmail o <span class="emoji-3d">💬</span> Discord <b style="color:#fff">iaimbxt</b></p>
+<section class="sec reveal" id="precios"><div class="label"><span class="emoji-3d">💰</span> PRECIOS $2-$10 • OPTIMIZADO</div><h2>Precios <em>bajos <span class="emoji-3d">💸</span></em></h2>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+<div class="pricing"><div class="emoji-3d-big" style="font-size:34px">🖼️</div><h3 style="color:#fff;margin-top:10px">LOGO SIMPLE</h3><div style="font-size:36px;font-weight:900;color:var(--g);margin:14px 0">$2</div><div style="color:#7fa48d;font-size:12px;line-height:2"><span class="emoji-3d">✅</span> Logo HD<br><span class="emoji-3d">✅</span> PNG<br><span class="emoji-3d">✅</span> 24h • 100 FPS<br><span class="emoji-3d">✅</span> NO LAG</div><a class="outline" style="width:100%;text-align:center;margin-top:16px" href="mailto:iaimbxtcontacted@gmail.com?subject=LOGO%20$2"><span class="emoji-3d">🛒</span> Comprar $2 →</a></div>
+<div class="pricing"><div class="emoji-3d-big" style="font-size:34px">👑</div><h3 style="color:#fff;margin-top:10px">LOGO 3D PRO</h3><div style="font-size:36px;font-weight:900;color:var(--g);margin:14px 0">$3</div><div style="color:#7fa48d;font-size:12px;line-height:2"><span class="emoji-3d">✅</span> Logo 3D 4K<br><span class="emoji-3d">✅</span> PNG+PSD+MP4<br><span class="emoji-3d">✅</span> 100 FPS • NO LAG<br><span class="emoji-3d">✅</span> 3 revisiones</div><a class="outline" style="width:100%;text-align:center;margin-top:16px" href="mailto:iaimbxtcontacted@gmail.com?subject=LOGO%203D%20$3%20👑"><span class="emoji-3d">🛒</span> Comprar $3 →</a></div>
+<div class="pricing"><div class="emoji-3d-big" style="font-size:34px">🖼️</div><h3 style="color:#fff;margin-top:10px">BANNER / PRES</h3><div style="font-size:36px;font-weight:900;color:var(--p);margin:14px 0">$5</div><div style="color:#7fa48d;font-size:12px;line-height:2"><span class="emoji-3d">✅</span> Banner 4K<br><span class="emoji-3d">✅</span> Presentación<br><span class="emoji-3d">✅</span> 100 FPS • NO LAG<br><span class="emoji-3d">✅</span> Animado</div><a class="btn-p" style="width:100%;text-align:center;margin-top:16px" href="mailto:iaimbxtcontacted@gmail.com?subject=BANNER%20$5"><span class="emoji-3d">🛒</span> Comprar $5 →</a></div>
+<div class="pricing popular"><div class="emoji-3d-big" style="font-size:34px">💎</div><h3 style="color:#fff;margin-top:10px">PACK FULL $10</h3><div style="font-size:36px;font-weight:900;color:var(--g);margin:14px 0">$10</div><div style="color:#a8c5b2;font-size:12px;line-height:2"><span class="emoji-3d">✅</span> Logo 3D + Banner<br><span class="emoji-3d">✅</span> Pres 4K + Web<br><span class="emoji-3d">✅</span> Anim 100 FPS<br><span class="emoji-3d">✅</span> VIP • NO LAG<br><span class="emoji-3d">✅</span> Todo 4K</div><a class="btn" style="width:100%;text-align:center;margin-top:16px" href="mailto:iaimbxtcontacted@gmail.com?subject=PACK%20FULL%20$10%20💎"><span class="emoji-3d">🔥</span> Comprar $10 →</a></div>
+</div>
+</section>
+
+<section class="sec reveal" id="pagos"><div class="label"><span class="emoji-3d">💳</span> PAGOS • SIN PAYPAL • NO LAG</div><h2>Pagos <em>fáciles <span class="emoji-3d">💰</span></em></h2>
 <div class="pay-grid">
-<div class="pay-card"><div class="emoji-3d-big" style="font-size:32px">🏦</div><b>Transferencia Bancaria</b><span>México • BBVA / Azteca<br>Rápido y sin comisión</span></div>
-<div class="pay-card"><div class="emoji-3d-big" style="font-size:32px">🏪</div><b>OXXO Pay</b><span>Paga en OXXO con código<br>Fácil y seguro</span></div>
-<div class="pay-card"><div class="emoji-3d-big" style="font-size:32px">💵</div><b>Mercado Pago</b><span>Link de pago<br>Tarjeta / Efectivo</span></div>
-<div class="pay-card"><div class="emoji-3d-big" style="font-size:32px">₿</div><b>Crypto USDT</b><span>Binance / Bybit<br>TRC20 / BEP20</span></div>
-<div class="pay-card"><div class="emoji-3d-big" style="font-size:32px">📱</div><b>Nequi / Daviplata</b><span>Colombia • Rápido<br>Para LATAM</span></div>
-<div class="pay-card"><div class="emoji-3d-big" style="font-size:32px">🎮</div><b>Robux / Gift Cards</b><span>Roblox / Xbox / Google Play<br>Valor equivalente</span></div>
+<div class="pay-card"><div class="emoji-3d-big" style="font-size:28px">🏦</div><b>Transferencia</b><span>BBVA / Azteca • México<br>Sin comisión</span></div>
+<div class="pay-card"><div class="emoji-3d-big" style="font-size:28px">🏪</div><b>OXXO Pay</b><span>Código OXXO<br>Fácil</span></div>
+<div class="pay-card"><div class="emoji-3d-big" style="font-size:28px">💵</div><b>Mercado Pago</b><span>Link • Tarjeta</span></div>
+<div class="pay-card"><div class="emoji-3d-big" style="font-size:28px">₿</div><b>Crypto USDT</b><span>TRC20 / BEP20<br>Binance</span></div>
+<div class="pay-card"><div class="emoji-3d-big" style="font-size:28px">📱</div><b>Nequi / Daviplata</b><span>LATAM • Rápido</span></div>
+<div class="pay-card"><div class="emoji-3d-big" style="font-size:28px">🎮</div><b>Robux / Gift</b><span>Roblox / Xbox / Google</span></div>
 </div>
-<div style="margin-top:24px;background:linear-gradient(135deg,rgba(46,245,155,0.08),rgba(157,92,255,0.08));border:1px solid rgba(46,245,155,0.2);border-radius:18px;padding:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px"><div><b style="color:#fff"><span class="emoji-3d">💬</span> ¿Cómo pagar?</b><p style="color:#7fa48d;font-size:12.5px;margin-top:6px">1. Elige tu producto • 2. Escríbeme por Gmail o DC iaimbxt • 3. Te paso datos de pago • 4. Entrega en 24h <span class="emoji-3d">⚡</span></p></div><a class="btn" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20pagar%20en%20KRAVEX%20STUDIO%20💳&body=Hola%20quiero%20pagar%20con%3A"><span class="emoji-3d">📧</span> Consultar pago →</a></div>
 </section>
 
-<section class="sec reveal" id="studio"><div class="label"><span class="emoji-3d">🏢</span> SOBRE KRAVEX STUDIO x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏</div><h2>KRAVEX <em>STUDIO <span class="emoji-3d">🚀</span></em></h2><div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:42px"><div><p style="color:#a8c5b2;line-height:1.95;font-size:16.5px;margin-bottom:20px">Soy <b style="color:#fff">𝙄𝘼𝙄𝙈𝘽𝙓𝙏 <span class="emoji-3d">👑</span></b> fundador de <b style="color:var(--g)">KRAVEX STUDIO <span class="emoji-3d">🏢</span></b> — studio de diseño elite de México <span class="emoji-3d">🇲🇽</span> especializado en <b style="color:#fff">logos 3D, banners 4K, portfolios y animaciones a 100+ FPS <span class="emoji-3d">⚡</span></b> optimizadas para que todo vaya fluido y se vea en 4K ULTRA HD <span class="emoji-3d">🎥</span></p><p style="color:#a8c5b2;line-height:1.95;font-size:16.5px;margin-bottom:24px">No vendo plantillas <span class="emoji-3d">❌</span>, todo es <b style="color:#fff">100% custom y optimizado para que se vea HD 4K y vaya fluido a 100+ FPS <span class="emoji-3d">🎥</span> • Entrega rápida 24h <span class="emoji-3d">⚡</span></b>. Mi meta es que tu marca se vea ELITE <span class="emoji-3d">💎</span> con precios bajos desde $2 <span class="emoji-3d">💰</span> • Sin PayPal, pagos fáciles para LATAM <span class="emoji-3d">🌎</span></p><div style="display:flex;flex-wrap:wrap;gap:6px"><span class="tag"><span class="emoji-3d">⚡</span> 100+ FPS</span><span class="tag"><span class="emoji-3d">🎥</span> 4K ULTRA HD</span><span class="tag"><span class="emoji-3d">🎨</span> Logos 3D</span><span class="tag"><span class="emoji-3d">🖼️</span> Banners</span><span class="tag"><span class="emoji-3d">📊</span> Presentaciones</span><span class="tag"><span class="emoji-3d">🎬</span> Animaciones</span><span class="tag"><span class="emoji-3d">💎</span> Portfolio Web</span><span class="tag"><span class="emoji-3d">🏢</span> KRAVEX STUDIO</span><span class="tag"><span class="emoji-3d">👑</span> 𝙄𝘼𝙄𝙈𝘽𝙓𝙏</span><span class="tag"><span class="emoji-3d">💳</span> Sin PayPal</span><span class="tag"><span class="emoji-3d">💰</span> Desde $2</span></div><div style="margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px"><div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px"><b style="color:#fff"><span class="emoji-3d">🎯</span> Misión KRAVEX</b><p style="color:#7fa48d;font-size:12.5px;margin-top:8px">Hacer que tu marca se vea ELITE con diseños 4K y animaciones 100 FPS <span class="emoji-3d">🚀</span> • Calidad premium</p></div><div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px"><b style="color:#fff"><span class="emoji-3d">👁️</span> Visión</b><p style="color:#7fa48d;font-size:12.5px;margin-top:8px">Ser el studio #1 de LATAM en calidad-precio, desde $2 <span class="emoji-3d">💰</span> • 100% confiable</p></div></div><div style="margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center"><b style="color:#fff"><span class="emoji-3d">⚡</span> 100+ FPS</b><p style="color:#7fa48d;font-size:11px;margin-top:4px">Todo optimizado para fluidez máxima</p></div><div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center"><b style="color:#fff"><span class="emoji-3d">🎥</span> 4K ULTRA HD</b><p style="color:#7fa48d;font-size:11px;margin-top:4px">Calidad máxima en cada pixel</p></div></div></div><div style="background:linear-gradient(180deg,#121a25,#070a12);border:1px solid var(--border);border-radius:28px;min-height:480px;display:grid;place-items:center;padding:24px;position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:radial-gradient(420px at 50% 0%,rgba(157,92,255,0.22),transparent)"></div><div style="text-align:center;z-index:1"><div class="emoji-3d-big" style="width:125px;height:125px;background:linear-gradient(135deg,var(--g),var(--p));border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;box-shadow:0 0 45px var(--p)">🏢</div><b style="color:#fff;font-size:19px">KRAVEX STUDIO x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏 <span class="emoji-3d">👑</span></b><br><span style="font-family:'JetBrains Mono';color:#a8c5b2;font-size:12.5px;line-height:2.2;display:block;margin-top:14px"><span class="emoji-3d">💬</span> Discord: iaimbxt <span class="emoji-3d">📋</span><br><span class="emoji-3d">📧</span> Gmail: iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span><br><span class="emoji-3d">🎵</span> TikTok: @iaimbxt <span class="emoji-3d">🎶</span><br><span class="emoji-3d">📍</span> México <span class="emoji-3d">🇲🇽</span> • <span class="emoji-3d">⚡</span> 24/7<br><span class="emoji-3d">⚡</span> 100+ FPS • <span class="emoji-3d">🎥</span> 4K HD<br><span class="emoji-3d">💰</span> Desde $2 USD • <span class="emoji-3d">💳</span> Sin PayPal</span><div style="margin-top:18px;display:grid;gap:10px"><a href="https://www.tiktok.com/@iaimbxt" target="_blank" style="background:linear-gradient(90deg,#ff0050,#00f2ea);color:#fff;padding:12px;border-radius:12px;font-family:'JetBrains Mono';font-size:11.5px;font-weight:800;display:block"><span class="emoji-3d">🎵</span> Ver TikTok @iaimbxt →</a><a href="mailto:iaimbxtcontacted@gmail.com" style="background:rgba(46,245,155,0.14);border:1px solid var(--g);color:var(--g);padding:12px;border-radius:12px;font-family:'JetBrains Mono';font-size:11.5px;display:block"><span class="emoji-3d">📧</span> Gmail Direct → <span class="emoji-3d">✉️</span></a><div onclick="copyDiscord()" style="background:rgba(157,92,255,0.14);border:1px solid var(--p);color:var(--p);padding:12px;border-radius:12px;font-family:'JetBrains Mono';font-size:11.5px;cursor:pointer"><span class="emoji-3d">💬</span> Copiar DC: iaimbxt <span class="emoji-3d">📋</span></div></div></div></div></div></section>
+<section class="sec reveal" id="contact"><div class="contact"><div style="position:relative;z-index:2;flex:1"><div style="font-family:'JetBrains Mono';font-size:11px;letter-spacing:3px;color:var(--g);margin-bottom:14px"><span class="emoji-3d">🚀</span> KRAVEX STUDIO • OPTIMIZADO 100 FPS • NO LAG</div><h3 style="color:#fff;font-size:38px;line-height:.9;margin-bottom:12px">Compra tu portfolio <em style="font-style:normal;background:linear-gradient(90deg,var(--g),var(--p));-webkit-background-clip:text;-webkit-text-fill-color:transparent">4K NO LAG <span class="emoji-3d">💎</span></em></h3><p style="color:#6b8d78;font-size:13.5px;margin-bottom:20px"><span class="emoji-3d">💬</span> iaimbxt • <span class="emoji-3d">📧</span> iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span> • <span class="emoji-3d">🎵</span> @iaimbxt • <span class="emoji-3d">⚡</span> 100 FPS • <span class="emoji-3d">🎥</span> 4K</p><div style="display:flex;gap:10px;flex-wrap:wrap"><div onclick="copyDiscord()" style="background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:11px 18px;border-radius:12px;font-family:'JetBrains Mono';font-size:12px;cursor:pointer"><span class="emoji-3d">💬</span> DC: <b style="color:#fff">iaimbxt <span class="emoji-3d">📋</span></b></div><a href="mailto:iaimbxtcontacted@gmail.com" style="background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:11px 18px;border-radius:12px;font-family:'JetBrains Mono';font-size:12px"><span class="emoji-3d">📧</span> Gmail: <b style="color:#fff">iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span></b></a></div></div><div style="z-index:2;display:flex;flex-direction:column;gap:12px;min-width:260px"><a class="btn btn-glow" style="padding:22px 36px;font-size:16px;text-align:center" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20comprar%20KRAVEX%20$2-$10&body=Hola%20IAIMBXT"><span class="emoji-3d">📧</span> Comprar por Gmail <span class="emoji-3d">✉️</span></a><a class="outline" style="text-align:center" onclick="copyDiscord()"><span class="emoji-3d">💬</span> Copiar DC: iaimbxt <span class="emoji-3d">📋</span></a><a class="btn-p" style="text-align:center" href="https://www.tiktok.com/@iaimbxt" target="_blank"><span class="emoji-3d">🎵</span> TikTok @iaimbxt →</a></div></div></section>
 
-<section class="sec reveal" id="contact"><div class="contact"><div style="position:relative;z-index:2;flex:1"><div style="font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:3px;color:var(--g);margin-bottom:16px"><span class="emoji-3d">🚀</span> KRAVEX STUDIO • COMPRA AHORA • 100 FPS • 4K HD</div><h3 style="color:#fff;font-size:40px;line-height:.92;margin-bottom:14px">Compra tu <em style="font-style:normal;background:linear-gradient(90deg,var(--g),var(--p));-webkit-background-clip:text;-webkit-text-fill-color:transparent">portfolio 4K <span class="emoji-3d">💎</span></em> desde $2</h3><p style="color:#6b8d78;font-size:14.5px;margin-bottom:22px;line-height:1.7"><span class="emoji-3d">💬</span> Discord: iaimbxt • <span class="emoji-3d">📧</span> Gmail: iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span> • <span class="emoji-3d">🎵</span> TikTok: @iaimbxt • <span class="emoji-3d">⚡</span> 100+ FPS • <span class="emoji-3d">🎥</span> 4K • <span class="emoji-3d">💳</span> Sin PayPal</p><div style="display:flex;gap:11px;flex-wrap:wrap"><div onclick="copyDiscord()" style="background:rgba(0,0,0,0.44);border:1px solid var(--border);padding:12px 20px;border-radius:14px;font-family:'JetBrains Mono';font-size:13px;cursor:pointer"><span class="emoji-3d">💬</span> DC: <b style="color:#fff">iaimbxt <span class="emoji-3d">📋</span></b></div><a href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20comprar%20en%20KRAVEX%20STUDIO%20💎" style="background:rgba(0,0,0,0.44);border:1px solid var(--border);padding:12px 20px;border-radius:14px;font-family:'JetBrains Mono';font-size:13px"><span class="emoji-3d">📧</span> Gmail: <b style="color:#fff">iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span>✨</b></a><a href="https://www.tiktok.com/@iaimbxt" target="_blank" style="background:rgba(0,0,0,0.44);border:1px solid var(--border);padding:12px 20px;border-radius:14px;font-family:'JetBrains Mono';font-size:13px"><span class="emoji-3d">🎵</span> TikTok: <b style="color:#fff">@iaimbxt <span class="emoji-3d">🎶</span></b></a></div><div style="margin-top:20px;display:flex;gap:9px;flex-wrap:wrap"><span class="tag"><span class="emoji-3d">⚡</span> 100+ FPS</span><span class="tag"><span class="emoji-3d">🎥</span> 4K ULTRA</span><span class="tag"><span class="emoji-3d">💰</span> Desde $2</span><span class="tag"><span class="emoji-3d">💳</span> Sin PayPal</span><span class="tag"><span class="emoji-3d">📦</span> Entrega 24h</span><span class="tag"><span class="emoji-3d">🏢</span> KRAVEX STUDIO</span></div></div><div style="z-index:2;display:flex;flex-direction:column;gap:13px;min-width:280px"><a class="btn btn-glow" style="padding:24px 38px;font-size:17px;text-align:center" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20comprar%20en%20KRAVEX%20STUDIO%20💎%20Desde%20$2%20-%20𝙄𝘼𝙄𝙈𝘽𝙓𝙏&body=Hola%20IAIMBXT%20👋%0A%0AQuiero%20comprar%3A%0A💰%20Producto%3A%0A💳%20Método%20de%20pago%3A%0A%0A📧%20Mi%20DC%3A%20iaimbxt"><span class="emoji-3d">📧</span> Comprar por Gmail <span class="emoji-3d">✉️</span> $2-$10</a><a class="outline" style="text-align:center;padding:19px" onclick="copyDiscord()"><span class="emoji-3d">💬</span> Copiar DC: iaimbxt <span class="emoji-3d">📋</span></a><a class="btn-p" style="text-align:center;padding:19px" href="https://www.tiktok.com/@iaimbxt" target="_blank"><span class="emoji-3d">🎵</span> Ver TikTok @iaimbxt <span class="emoji-3d">🎶</span>→</a><a class="btn-o" style="text-align:center;padding:16px;font-size:12px" href="mailto:iaimbxtcontacted@gmail.com?subject=Consulta%20KRAVEX%20STUDIO"><span class="emoji-3d">❓</span> Consultar Pagos <span class="emoji-3d">💳</span></a></div></div></section>
-
-<div class="foot"><span>© 2026 KRAVEX STUDIO x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏 — <span class="emoji-3d">🏢</span> / <span class="emoji-3d">💬</span> iaimbxt / <span class="emoji-3d">📧</span> iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span> / <span class="emoji-3d">🎵</span> @iaimbxt / 100+ FPS / 4K HD</span><span><span class="emoji-3d">⚡</span> DESDE $2 // <span class="emoji-3d">💎</span> 100+ FPS // <span class="emoji-3d">🎥</span> 4K ULTRA // <span class="emoji-3d">💳</span> SIN PAYPAL // <span class="emoji-3d">🏢</span> KRAVEX STUDIO</span></div>
+<div class="foot"><span>© 2026 KRAVEX STUDIO x 𝙄𝘼𝙄𝙈𝘽𝙓𝙏 — <span class="emoji-3d">💬</span> iaimbxt / <span class="emoji-3d">📧</span> iaimbxtcontacted@gmail.com <span class="emoji-3d">✉️</span> / <span class="emoji-3d">🎵</span> @iaimbxt / 100 FPS NO LAG</span><span><span class="emoji-3d">⚡</span> 100 FPS // <span class="emoji-3d">🎥</span> 4K // <span class="emoji-3d">💳</span> SIN PAYPAL // <span class="emoji-3d">🏢</span> KRAVEX</span></div>
 
 <script>
+// ====== CONFIG PORTFOLIO VARIABLE - EDITA AQUI LO QUE QUIERAS ======
+const portfolioData = [
+{ id:1, title:"LOGO KRAVEX 1 👑", cat:"logo", price:"$3", img:"https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg?ex=6a8d7476&is=6a8c22f6&hm=4999f50fe940896195e6fff506c49a583ddb8e816fad0ceb89ea43c45ba45a28&", desc:"Logo 3D HD • 4K • 100 FPS • PNG+PSD", tags:["3D","100 FPS","4K"]},
+{ id:2, title:"LOGO KRAVEX 2 💎", cat:"logo", price:"$3", img:"https://cdn.discordapp.com/attachments/1541397398562017320/1541399951240859659/IMG-20260818-WA0149.jpg?ex=6a8d7412&is=6a8c2292&hm=0d92fad92c22a433ef739cb25101b133c8f0f619118e03314708272c11d18be7&", desc:"Logo minimalista pro • HD • Discord", tags:["Minimal","Pro","HD"]},
+{ id:3, title:"BANNER 4K 1 🖼️", cat:"banner", price:"$5", img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541400521099710515/IMG-20260823-WA5491.jpg?ex=6a8d749a&is=6a8c231a&hm=bf8a48be6345af9a233a464861bb2c5eae75cfe645e11a044f4&", desc:"Banner Discord/YouTube 4K • 100 FPS", tags:["4K","100 FPS","Banner"]},
+{ id:4, title:"BANNER 4K 2 🔥", cat:"banner", price:"$5", img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541400638779428864/IMG-20260818-WA8363.jpg?ex=6a8d74b6&is=6a8c2336&hm=11e332868af2a8016894f40080865d53a3299d4a53d8caf8d878db1ea7a0379c&", desc:"Banner gaming studio • 4K HD • 24h", tags:["Gaming","Studio","4K"]},
+{ id:5, title:"PRESENTACIÓN PRO 📊", cat:"presentacion", price:"$4", img:"https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg?ex=6a8d7476&is=6a8c22f6&hm=4999f50fe940896195e6fff506c49a583ddb8e816fad0ceb89ea43c45ba45a28&", desc:"Presentación slides pro • Animada 100 FPS", tags:["Slides","Animada","Pro"]},
+{ id:6, title:"ANIMACIÓN LOGO 🎬", cat:"animacion", price:"$8", img:"https://cdn.discordapp.com/attachments/1541397398562017320/1541399951240859659/IMG-20260818-WA0149.jpg?ex=6a8d7412&is=6a8c2292&hm=0d92fad92c22a433ef739cb25101b133c8f0f619118e03314708272c11d18be7&", desc:"Logo animado loop • 100 FPS • MP4+GIF • 4K", tags:["100 FPS","Loop","4K"]},
+{ id:7, title:"PORTFOLIO WEB 🌐", cat:"web", price:"$7", img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541400521099710515/IMG-20260823-WA5491.jpg?ex=6a8d749a&is=6a8c231a&hm=bf8a48be6345af9a233a464861bb2c5eae75cfe645e11a044f4&", desc:"Web como esta • 100 FPS NO LAG • 4K HD", tags:["Web","100 FPS","4K"]},
+{ id:8, title:"BRANDING FULL 🏢", cat:"web", price:"$10", img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541400638779428864/IMG-20260818-WA8363.jpg?ex=6a8d74b6&is=6a8c2336&hm=11e332868af2a8016894f40080865d53a3299d4a53d8caf8d878db1ea7a0379c&", desc:"Pack full: Logo+Banner+Pres+Web • $10", tags:["Full Pack","$10","VIP"]},
+];
+let visibleCount = 6;
+let currentFilter = "all";
+
+function renderPortfolio(){
+const container = document.getElementById('galleryContainer');
+container.innerHTML = "";
+let filtered = currentFilter === "all"? portfolioData : portfolioData.filter(p=>p.cat===currentFilter);
+filtered.slice(0,visibleCount).forEach(item=>{
+const card = document.createElement('div');
+card.className = 'gal-card';
+card.innerHTML = `
+<img loading="lazy" src="${item.img}" alt="${item.title}" onerror="this.src='https://via.placeholder.com/400x220/0a1a12/2ef59b?text=KRAVEX+${item.cat.toUpperCase()}'">
+<div class="gal-info">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<b style="color:#fff;font-size:13px">${item.title}</b>
+<span style="background:linear-gradient(90deg,var(--g),var(--g2));color:#000;padding:5px 12px;border-radius:8px;font-family:'JetBrains Mono';font-size:11px;font-weight:800">${item.price}</span>
+</div>
+<p style="color:#7fa48d;font-size:11.5px;margin-top:8px">${item.desc}</p>
+<div style="display:flex;gap:5px;margin-top:8px;flex-wrap:wrap">${item.tags.map(t=>`<span class="tag" style="margin:2px;padding:5px 8px;font-size:9px">${t}</span>`).join('')}</div>
+<div style="display:flex;gap:8px;margin-top:12px">
+<a href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20${encodeURIComponent(item.title)}%20${item.price}&body=Hola%20IAIMBXT%20quiero%20${encodeURIComponent(item.title)}" class="btn" style="flex:1;text-align:center;padding:10px;font-size:11px"><span class="emoji-3d">📧</span> Comprar ✉️</a>
+<a class="outline" style="flex:1;text-align:center;padding:10px;font-size:11px" onclick="copyDiscord()"><span class="emoji-3d">💬</span> DC</a>
+</div>
+</div>`;
+container.appendChild(card);
+});
+}
+
+function loadMorePortfolio(){
+visibleCount += 6;
+renderPortfolio();
+showToast(`📦 Cargados ${Math.min(visibleCount, portfolioData.length)} trabajos 🔥`);
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+btn.addEventListener('click',()=>{
+document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+currentFilter = btn.dataset.filter;
+visibleCount = 6;
+renderPortfolio();
+});
+});
+renderPortfolio();
+
+// OPTIMIZED CANVAS - LOW LAG
 const cur=document.getElementById('cur'),dot=document.getElementById('dot');
-let mx=0,my=0,cx=0,cy=0,dx=0,dy=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-(function loop(){cx+=(mx-cx)*0.14;cy+=(my-cy)*0.14;dx+=(mx-dx)*0.32;dy+=(my-dy)*0.32;cur.style.left=cx-16+'px';cur.style.top=cy-16+'px';dot.style.left=dx-4+'px';dot.style.top=dy-4+'px';requestAnimationFrame(loop)})();
-document.querySelectorAll('a,.btn,.btn-p,.btn-o,.service,.item,.pricing,.gal-card,.pay-card').forEach(el=>{
-el.addEventListener('mouseenter',()=>{cur.style.transform='scale(2.1)';cur.style.borderColor='var(--p)';cur.style.boxShadow='0 0 35px var(--p)'});
-el.addEventListener('mouseleave',()=>{cur.style.transform='scale(1)';cur.style.borderColor='var(--g)';cur.style.boxShadow='0 0 28px var(--g)'})
-});
-const c=document.getElementById('bg'),x=c.getContext('2d');
-function rs(){c.width=innerWidth;c.height=innerHeight}rs();addEventListener('resize',rs);
-let pts=[];for(let i=0;i<120;i++)pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2.2+0.6,vx:(Math.random()-0.5)*0.8,vy:(Math.random()-0.5)*0.8});
-(function draw(){x.clearRect(0,0,c.width,c.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle='rgba(46,245,155,0.24)';x.fill();});pts.forEach((a,i)=>{pts.slice(i+1).forEach(b=>{let d=Math.hypot(a.x-b.x,a.y-b.y);if(d<135){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(46,245,155,'+(0.11*(1-d/135))+')';x.stroke();}})});requestAnimationFrame(draw)})();
-const m=document.getElementById('matrix'),mx2=m.getContext('2d');
+let mx=0,my=0,cx=0,cy=0,dx=0,dy=0, rafId;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+(function loop(){cx+=(mx-cx)*0.12;cy+=(my-cy)*0.12;dx+=(mx-dx)*0.3;dy+=(my-dy)*0.3;cur.style.left=cx-14+'px';cur.style.top=cy-14+'px';dot.style.left=dx-3+'px';dot.style.top=dy-3+'px';rafId=requestAnimationFrame(loop)})();
+document.addEventListener('visibilitychange',()=>{if(document.hidden) cancelAnimationFrame(rafId); else loop()});
+
+// PARTICLES OPTIMIZED - 45 ONLY + FPS LIMIT
+const c=document.getElementById('bg'),x=c.getContext('2d',{alpha:true});
+function rs(){c.width=innerWidth;c.height=innerHeight} rs(); addEventListener('resize',rs,{passive:true});
+let pts=[]; for(let i=0;i<45;i++) pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.5+0.5,vx:(Math.random()-0.5)*0.4,vy:(Math.random()-0.5)*0.4});
+let lastDraw=0;
+(function draw(t){
+if(t-lastDraw < 16){requestAnimationFrame(draw); return;} // cap 60fps
+lastDraw=t;
+x.clearRect(0,0,c.width,c.height);
+pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle='rgba(46,245,155,0.18)';x.fill();});
+pts.forEach((a,i)=>{pts.slice(i+1).forEach(b=>{let d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(46,245,155,'+(0.07*(1-d/110))+')';x.stroke();}});});
+requestAnimationFrame(draw)
+})(0);
+
+// MATRIX OPTIMIZED - 30 FPS
+const m=document.getElementById('matrix'),mx2=m.getContext('2d',{alpha:true});
 m.width=innerWidth;m.height=innerHeight;
-const cols=Math.floor(m.width/14),drops=Array(cols).fill(1);
-function matrix(){mx2.fillStyle='rgba(3,10,6,0.11)';mx2.fillRect(0,0,m.width,m.height);mx2.fillStyle='#2ef59b';mx2.font='13.5px JetBrains Mono';drops.forEach((y,i)=>{const txt=String.fromCharCode(0x30A0+Math.random()*96);mx2.fillText(txt,i*14,y*14);if(y*14>m.height&&Math.random()>0.975)drops[i]=0;drops[i]++});requestAnimationFrame(matrix)}matrix();
-const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');e.target.querySelectorAll('.fill').forEach(f=>{f.style.width=f.style.getPropertyValue('--w')||f.style.width})}})}, {threshold:0.1});
+const cols=Math.floor(m.width/16),drops=Array(cols).fill(1);
+let lastMatrix=0;
+function matrix(t){
+if(t-lastMatrix < 33){requestAnimationFrame(matrix); return;}
+lastMatrix=t;
+mx2.fillStyle='rgba(3,10,6,0.12)';mx2.fillRect(0,0,m.width,m.height);
+mx2.fillStyle='#2ef59b';mx2.font='12px JetBrains Mono';
+drops.forEach((y,i)=>{const txt=String.fromCharCode(0x30A0+Math.random()*96);mx2.fillText(txt,i*16,y*16);if(y*16>m.height&&Math.random()>0.975)drops[i]=0;drops[i]++});
+requestAnimationFrame(matrix)
+}
+requestAnimationFrame(matrix);
+
+// REVEAL
+const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>ob.observe(el));
-document.querySelectorAll('.service').forEach(s=>{s.addEventListener('mousemove',e=>{let r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')})});
-document.querySelectorAll('.card').forEach(card=>{card.addEventListener('mousemove',e=>{let r=card.getBoundingClientRect();let X=(e.clientX-r.left-r.width/2)/16;let Y=(e.clientY-r.top-r.height/2)/16;card.style.transform=`rotateY(${X}deg) rotateX(${-Y}deg) translateZ(28px)`});card.addEventListener('mouseleave',()=>{card.style.transform=''}})});
+
+// COUNTER
 let counted=false;
-const counterOb=new IntersectionObserver(es=>{
-if(es[0].isIntersecting &&!counted){
-counted=true;
-document.querySelectorAll('.counter').forEach(counter=>{
-const target=+counter.getAttribute('data-target');
-let current=0;
-const inc=target/70;
-const update=()=>{current+=inc;if(current<target){counter.innerText=Math.floor(current);requestAnimationFrame(update)}else{counter.innerText=target+'+'}};update();
-});
+const counterOb=new IntersectionObserver(es=>{if(es[0].isIntersecting &&!counted){counted=true;document.querySelectorAll('.counter').forEach(counter=>{const target=+counter.dataset.target;let current=0;const inc=target/60;const upd=()=>{current+=inc;if(current<target){counter.innerText=Math.floor(current);requestAnimationFrame(upd)}else counter.innerText=target+'+'};upd();})}},{threshold:0.3});
+const statsSec=document.getElementById('stats'); if(statsSec) counterOb.observe(statsSec);
+
+function showToast(msg){
+const t=document.getElementById('toast'); t.innerText=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2800);
 }
-},{threshold:0.4});
-const statsSec=document.getElementById('stats');
-if(statsSec) counterOb.observe(statsSec);
 function copyDiscord(){
-navigator.clipboard.writeText('iaimbxt');
-const t=document.getElementById('toast');
-t.innerText='✅ DC copiado: iaimbxt 📋 💬';
-t.classList.add('show');
-setTimeout(()=>t.classList.remove('show'),3000);
+navigator.clipboard.writeText('iaimbxt').then(()=>showToast('✅ DC copiado: iaimbxt 📋 💬')).catch(()=>showToast('📋 DC: iaimbxt'));
 }
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-a.addEventListener('click',e=>{
-e.preventDefault();
-const target=document.querySelector(a.getAttribute('href'));
-if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
-});
-});
-console.log('🏢 KRAVEX STUDIO x IAIMBXT - 800+ LINES - 100 FPS 4K HD - SIN PAYPAL - LOADED 💎🚀💳');
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const target=document.querySelector(a.getAttribute('href')); if(target) target.scrollIntoView({behavior:'smooth'})})});
+
+console.log('🏢 KRAVEX STUDIO x IAIMBXT - OPTIMIZED NO LAG 100+ FPS - 800+ LINES - LOADED 💎⚡');
 </script>
 </body>
 </html>
