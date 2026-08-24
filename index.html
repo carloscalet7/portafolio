@@ -3,168 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAIMBXT — ELITE MANAGER</title>
+<title>IAIMBXT — ELITE MANAGER 👑 | 4K HD</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
+/* ================= RESET ULTRA HD 4K ================= */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#050c08;color:#cde9d6;font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
-:root{--g:#2ef59b;--g2:#a8ff53;--card:rgba(255,255,255,0.04);--border:rgba(255,255,255,0.07)}
-/* CURSOR */
-.cursor{position:fixed;width:26px;height:26px;border:2px solid var(--g);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;transition:transform.15s ease,border-color.15s;box-shadow:0 0 20px var(--g),inset 0 0 10px var(--g)}
-.dot{position:fixed;width:6px;height:6px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9999;box-shadow:0 0 10px var(--g)}
-/* CANVAS BG */
+body{background:#030a06;color:#cde9d6;font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
+:root{--g:#2ef59b;--g2:#a8ff53;--card:rgba(255,255,255,0.045);--border:rgba(255,255,255,0.08);--dark:#06120a}
+a{color:inherit;text-decoration:none}
+/* ================= EMOJIS 3D HD 👑💎🚀 ================= */
+.emoji-3d{display:inline-block;filter:drop-shadow(0 6px 12px rgba(46,245,155,0.4)) drop-shadow(0 0 20px rgba(46,245,155,0.3));transform:perspective(500px) translateZ(20px);animation:emojiFloat 3s ease-in-out infinite;transform-style:preserve-3d}
+.emoji-3d-big{font-size:54px;filter:drop-shadow(0 10px 20px rgba(46,245,155,0.5)) drop-shadow(0 0 30px rgba(46,245,155,0.4));animation:emojiFloatBig 4s ease-in-out infinite}
+.emoji-glow{filter:drop-shadow(0 0 15px var(--g)) drop-shadow(0 0 30px var(--g));animation:emojiPulse 2s ease-in-out infinite}
+@keyframes emojiFloat{0%,100%{transform:perspective(500px) translateZ(20px) translateY(0) rotateX(5deg)}50%{transform:perspective(500px) translateZ(30px) translateY(-8px) rotateX(-5deg)}}
+@keyframes emojiFloatBig{0%,100%{transform:translateY(0) scale(1) rotate(0deg)}50%{transform:translateY(-15px) scale(1.08) rotate(3deg)}}
+@keyframes emojiPulse{0%,100%{filter:drop-shadow(0 0 15px var(--g)) drop-shadow(0 0 30px var(--g));transform:scale(1)}50%{filter:drop-shadow(0 0 25px var(--g)) drop-shadow(0 0 50px var(--g));transform:scale(1.15)}}
+/* ================= CURSOR 4K ✨ ================= */
+.cursor{position:fixed;width:30px;height:30px;border:2.5px solid var(--g);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;transition:transform.14s ease,border-color.14s;box-shadow:0 0 25px var(--g),inset 0 0 12px var(--g)}
+.dot{position:fixed;width:7px;height:7px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9999;box-shadow:0 0 18px var(--g)}
+/* ================= BG 4K ULTRA 🌌 ================= */
 #bg,#matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-2}
-#matrix{z-index:-1;opacity:0.12}
+#matrix{z-index:-1;opacity:0.16}
 #orbs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.4;animation:floatOrb 20s infinite alternate}
-.orb1{width:600px;height:600px;background:radial-gradient(circle,var(--g),transparent);top:-100px;left:-100px}
-.orb2{width:500px;height:500px;background:radial-gradient(circle,var(--g2),transparent);bottom:-100px;right:-100px;animation-delay:-5s}
-.orb3{width:400px;height:400px;background:radial-gradient(circle,#00ff88,transparent);top:50%;left:50%;animation-delay:-10s}
-@keyframes floatOrb{0%{transform:translate(0,0) scale(1)}100%{transform:translate(100px,-80px) scale(1.2)}}
-/* NAV */
-nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(5,12,8,0.6);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid var(--border);animation:navIn 1s ease}
+.orb{position:absolute;border-radius:50%;filter:blur(75px);opacity:0.5;animation:floatOrb 22s infinite alternate}
+.orb1{width:700px;height:700px;background:radial-gradient(circle,var(--g),transparent 70%);top:-150px;left:-150px}
+.orb2{width:600px;height:600px;background:radial-gradient(circle,var(--g2),transparent 70%);bottom:-150px;right:-150px;animation-delay:-6s}
+.orb3{width:500px;height:500px;background:radial-gradient(circle,#00ff88,transparent 70%);top:50%;left:50%;animation-delay:-12s;transform:translate(-50%,-50%)}
+@keyframes floatOrb{0%{transform:translate(0,0) scale(1)}100%{transform:translate(120px,-100px) scale(1.3)}}
+/* ================= NAV 4K HD 👑 ================= */
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 7%;background:rgba(5,12,8,0.7);backdrop-filter:blur(30px) saturate(1.8);border-bottom:1px solid var(--border);animation:navIn 1s ease}
 @keyframes navIn{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
-.logo{display:flex;gap:12px;align-items:center;font-family:'JetBrains Mono';font-weight:800;letter-spacing:3px;color:#fff}
-.logo-box{width:42px;height:42px;background:linear-gradient(135deg,var(--g),var(--g2));border-radius:12px;display:grid;place-items:center;color:#000;font-weight:900;box-shadow:0 0 30px rgba(46,245,155,0.6);animation:spinPulse 3s infinite}
-@keyframes spinPulse{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(5deg) scale(1.05);box-shadow:0 0 50px rgba(46,245,155,0.8)}}
-.links{display:flex;gap:34px;font-family:'JetBrains Mono';font-size:12px;letter-spacing:1px}
-.links a{color:#6d8f7b;position:relative;transition:.3s}
-.links a::before{content:'//';color:var(--g);opacity:0;margin-right:4px;transition:.3s}
-.links a:hover{color:#fff;transform:translateX(6px)}
+.logo{display:flex;gap:14px;align-items:center;font-family:'JetBrains Mono';font-weight:800;letter-spacing:3px;color:#fff;font-size:15px}
+.logo-box{width:46px;height:46px;background:linear-gradient(135deg,var(--g),var(--g2));border-radius:13px;display:grid;place-items:center;color:#000;font-weight:900;box-shadow:0 0 35px rgba(46,245,155,0.65);animation:spinPulse 3s infinite}
+@keyframes spinPulse{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(7deg) scale(1.1);box-shadow:0 0 60px rgba(46,245,155,0.9)}}
+.links{display:flex;gap:36px;font-family:'JetBrains Mono';font-size:12px;letter-spacing:1px}
+.links a{color:#6d8f7b;position:relative;transition:.35s}
+.links a::before{content:'//';color:var(--g);opacity:0;margin-right:6px;transition:.35s}
+.links a:hover{color:#fff;transform:translateX(8px)}
 .links a:hover::before{opacity:1}
-.btn{position:relative;background:linear-gradient(100deg,var(--g),var(--g2));color:#000;padding:14px 28px;border-radius:14px;font-weight:800;font-family:'JetBrains Mono';font-size:13px;overflow:hidden;isolation:isolate;transition:.3s;box-shadow:0 0 30px rgba(46,245,155,0.4)}
-.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,var(--g2),var(--g));opacity:0;transition:.3s;z-index:-1}
+/* ================= BUTTONS HD 🚀 ================= */
+.btn{position:relative;background:linear-gradient(105deg,var(--g),var(--g2));color:#000;padding:15px 30px;border-radius:15px;font-weight:800;font-family:'JetBrains Mono';font-size:13px;overflow:hidden;isolation:isolate;transition:.35s;box-shadow:0 0 35px rgba(46,245,155,0.45);display:inline-block;cursor:pointer;border:none}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,var(--g2),var(--g));opacity:0;transition:.35s;z-index:-1}
 .btn:hover::before{opacity:1}
-.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 40px rgba(46,245,155,0.6)}
-/* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr 0.85fr;gap:50px;padding:150px 7% 80px;align-items:center}
-.badge{display:inline-flex;gap:10px;align-items:center;background:rgba(46,245,155,0.07);border:1px solid rgba(46,245,155,0.18);padding:10px 18px;border-radius:999px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:2px;color:var(--g);animation:fadeUp.8s.2s both}
-.badge i{width:8px;height:8px;background:var(--g);border-radius:50%;box-shadow:0 0 10px var(--g);animation:blink 1s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.hero h4{font-family:'JetBrains Mono';font-weight:300;font-size:20px;color:#5f7f6d;margin-top:22px;animation:fadeUp.8s.4s both}
-.hero h1{font-size:110px;font-weight:900;line-height:.85;letter-spacing:-4px;margin:12px 0 20px;animation:fadeUp.8s.6s both}
-.hero h1 span{background:linear-gradient(90deg,#fff 30%,var(--g) 60%,var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 20px rgba(46,245,155,0.3))}
+.btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 16px 50px rgba(46,245,155,0.65)}
+.btn-glow{animation:btnGlow 2.2s infinite}
+@keyframes btnGlow{0%,100%{box-shadow:0 0 35px rgba(46,245,155,0.45)}50%{box-shadow:0 0 60px rgba(46,245,155,0.8)}}
+.outline{border:1px solid var(--border);background:rgba(255,255,255,0.035);color:#fff;padding:15px 28px;border-radius:15px;font-family:'JetBrains Mono';font-size:13px;backdrop-filter:blur(14px);transition:.35s;cursor:pointer;display:inline-block}
+.outline:hover{border-color:var(--g);background:rgba(46,245,155,0.1);transform:translateY(-3px);box-shadow:0 0 25px rgba(46,245,155,0.25)}
+/* ================= HERO 4K 🏠 ================= */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr 0.85fr;gap:55px;padding:160px 7% 90px;align-items:center}
+.badge{display:inline-flex;gap:12px;align-items:center;background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.2);padding:11px 20px;border-radius:999px;font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:2px;color:var(--g);animation:fadeUp.9s.2s both;backdrop-filter:blur(10px)}
+.badge i{width:9px;height:9px;background:var(--g);border-radius:50%;box-shadow:0 0 12px var(--g);animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.hero h4{font-family:'JetBrains Mono';font-weight:300;font-size:21px;color:#5f7f6d;margin-top:24px;animation:fadeUp.9s.4s both}
+.hero h1{font-size:120px;font-weight:900;line-height:.85;letter-spacing:-5px;margin:14px 0 22px;animation:fadeUp.9s.6s both}
+.hero h1 span{background:linear-gradient(90deg,#fff 15%,var(--g) 55%,var(--g2) 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 30px rgba(46,245,155,0.4))}
 .glitch{position:relative}
 .glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0;mix-blend-mode:screen}
-.glitch::before{color:var(--g);transform:translate(2px,0);clip-path:polygon(0 0,100% 0,100% 45%,0 45%);animation:gl1 2s infinite linear alternate-reverse}
-.glitch::after{color:var(--g2);transform:translate(-2px,0);clip-path:polygon(0 55%,100% 55%,100% 100%,0 100%);animation:gl2 2s infinite linear alternate-reverse}
-@keyframes gl1{0%{transform:translate(2px,0)}100%{transform:translate(-2px,1px)}}
-@keyframes gl2{0%{transform:translate(-2px,0)}100%{transform:translate(2px,-1px)}}
-.role{font-family:'JetBrains Mono';font-size:26px;color:var(--g);height:38px;overflow:hidden;animation:fadeUp.8s.8s both}
+.glitch::before{color:var(--g);transform:translate(2px,0);clip-path:polygon(0 0,100% 0,100% 45%,0 45%);animation:gl1 2.4s infinite linear alternate-reverse}
+.glitch::after{color:var(--g2);transform:translate(-2px,0);clip-path:polygon(0 55%,100% 55%,100% 100%,0 100%);animation:gl2 2.4s infinite linear alternate-reverse}
+@keyframes gl1{0%{transform:translate(2px,0)}100%{transform:translate(-3px,1px)}}
+@keyframes gl2{0%{transform:translate(-2px,0)}100%{transform:translate(3px,-1px)}}
+.role{font-family:'JetBrains Mono';font-size:28px;color:var(--g);height:42px;overflow:hidden;animation:fadeUp.9s.8s both}
 .role span{display:block;animation:roleCycle 8s infinite}
 @keyframes roleCycle{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-100%)}50%,70%{transform:translateY(-200%)}75%,95%{transform:translateY(-300%)}}
-.desc{color:#8fb39e;line-height:1.9;font-size:16px;max-width:560px;margin:28px 0 36px;animation:fadeUp.8s 1s both}
-.hero-actions{display:flex;gap:16px;animation:fadeUp.8s 1.2s both}
-.outline{border:1px solid var(--border);background:rgba(255,255,255,0.03);color:#fff;padding:14px 26px;border-radius:14px;font-family:'JetBrains Mono';font-size:13px;backdrop-filter:blur(10px);transition:.3s}
-.outline:hover{border-color:var(--g);background:rgba(46,245,155,0.08);transform:translateY(-2px)}
-/* CARDS 3D */
-.stack{position:relative;height:560px;perspective:1000px}
-.card{position:absolute;background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02));border:1px solid var(--border);backdrop-filter:blur(24px);border-radius:22px;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,0.5);transition:.6s cubic-bezier(.23,1,.32,1);transform-style:preserve-3d}
-.card:hover{border-color:rgba(46,245,155,0.4);box-shadow:0 40px 100px rgba(0,0,0,0.6),0 0 50px rgba(46,245,155,0.2)}
-.c1{top:0;left:0;width:80%;z-index:3;animation:float 6s ease-in-out infinite}
-.c2{top:130px;right:0;width:68%;z-index:2;transform:rotate(-4deg);animation:float 6s ease-in-out infinite reverse}
-.c3{bottom:0;left:10%;width:88%;z-index:1;animation:float 7s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0))}50%{transform:translateY(-18px) rotate(var(--r,0))}}
-.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-.m{background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center}
-.m b{color:#fff;font-size:18px}
-.m s{font-size:9px;color:#5a7a66;font-family:'JetBrains Mono';text-decoration:none;display:block;margin-top:4px;letter-spacing:1px}
-/* SECTIONS */
-.sec{padding:120px 7%}
-.label{font-family:'JetBrains Mono';font-size:11px;letter-spacing:4px;color:var(--g);display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.label::before{content:'';width:36px;height:1px;background:linear-gradient(90deg,var(--g),transparent)}
-.sec h2{font-size:64px;font-weight:900;color:#fff;line-height:.95;margin-bottom:60px}
+.desc{color:#8fb39e;line-height:1.95;font-size:17px;max-width:600px;margin:30px 0 38px;animation:fadeUp.9s 1s both}
+.hero-actions{display:flex;gap:14px;animation:fadeUp.9s 1.2s both;flex-wrap:wrap}
+/* ================= CARDS 3D HD 🎴 ================= */
+.stack{position:relative;height:600px;perspective:1300px}
+.card{position:absolute;background:linear-gradient(135deg,rgba(255,255,255,0.09),rgba(255,255,255,0.025));border:1px solid var(--border);backdrop-filter:blur(30px);border-radius:26px;padding:28px;box-shadow:0 35px 90px rgba(0,0,0,0.6);transition:.65s cubic-bezier(.23,1,.32,1);transform-style:preserve-3d}
+.card:hover{border-color:rgba(46,245,155,0.5);box-shadow:0 45px 120px rgba(0,0,0,0.7),0 0 65px rgba(46,245,155,0.3)}
+.c1{top:0;left:0;width:84%;z-index:3;animation:float 6s ease-in-out infinite}
+.c2{top:140px;right:0;width:72%;z-index:2;transform:rotate(-4deg);animation:float 6s ease-in-out infinite reverse}
+.c3{bottom:0;left:10%;width:92%;z-index:1;animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0))}50%{transform:translateY(-20px) rotate(var(--r,0))}}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:18px}
+.m{background:rgba(0,0,0,0.35);border:1px solid var(--border);border-radius:13px;padding:13px;text-align:center;transition:.35s}
+.m:hover{background:rgba(46,245,155,0.1);border-color:rgba(46,245,155,0.25);transform:translateY(-3px)}
+.m b{color:#fff;font-size:18px}.m s{font-size:9px;color:#5a7a66;font-family:'JetBrains Mono';text-decoration:none;display:block;margin-top:5px;letter-spacing:1px}
+/* ================= SECTIONS 4K 📦 ================= */
+.sec{padding:130px 7%}
+.label{font-family:'JetBrains Mono';font-size:11px;letter-spacing:4px;color:var(--g);display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.label::before{content:'';width:38px;height:1px;background:linear-gradient(90deg,var(--g),transparent)}
+.sec h2{font-size:70px;font-weight:900;color:#fff;line-height:.92;margin-bottom:65px}
 .sec h2 em{font-style:normal;background:linear-gradient(90deg,var(--g),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.reveal{opacity:0;transform:translateY(50px) scale(.98);transition:1s cubic-bezier(.23,1,.32,1)}
+.reveal{opacity:0;transform:translateY(70px) scale(.96);transition:1.2s cubic-bezier(.23,1,.32,1)}
 .reveal.on{opacity:1;transform:translateY(0) scale(1)}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.item{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;text-align:center;position:relative;overflow:hidden;transition:.5s}
-.item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--g),var(--g2));transform:scaleX(0);transform-origin:left;transition:.6s}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.item{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:36px;text-align:center;position:relative;overflow:hidden;transition:.55s;backdrop-filter:blur(10px)}
+.item::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--g),var(--g2));transform:scaleX(0);transform-origin:left;transition:.65s}
 .item:hover::before{transform:scaleX(1)}
-.item:hover{transform:translateY(-10px);box-shadow:0 30px 60px rgba(0,0,0,0.4);border-color:rgba(46,245,155,0.25)}
-.item b{font-size:46px;font-weight:900;color:var(--g);display:block}
-.item span{font-family:'JetBrains Mono';font-size:10px;letter-spacing:1px;color:#6b8d78;margin-top:14px;display:block;line-height:1.6}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.service{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:22px;padding:28px;position:relative;overflow:hidden;transition:.5s}
-.service::after{content:'';position:absolute;inset:0;background:radial-gradient(500px at var(--mx) var(--my),rgba(46,245,155,0.15),transparent 40%);opacity:0;transition:.4s;pointer-events:none}
+.item:hover{transform:translateY(-12px);box-shadow:0 35px 70px rgba(0,0,0,0.5);border-color:rgba(46,245,155,0.32)}
+.item b{font-size:50px;font-weight:900;color:var(--g);display:block}
+.item span{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:1px;color:#6b8d78;margin-top:15px;display:block;line-height:1.65}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service{background:linear-gradient(180deg,rgba(255,255,255,0.065),rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:24px;padding:30px;position:relative;overflow:hidden;transition:.55s;backdrop-filter:blur(12px)}
+.service::after{content:'';position:absolute;inset:0;background:radial-gradient(550px at var(--mx) var(--my),rgba(46,245,155,0.16),transparent 42%);opacity:0;transition:.45s;pointer-events:none}
 .service:hover::after{opacity:1}
-.service:hover{transform:translateY(-8px) scale(1.01);border-color:rgba(46,245,155,0.3)}
-.icon{width:56px;height:56px;background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);border-radius:14px;display:grid;place-items:center;font-size:26px;margin-bottom:18px;transition:.4s}
-.service:hover.icon{transform:rotate(10deg) scale(1.1);box-shadow:0 0 30px rgba(46,245,155,0.3)}
-.service h3{color:#fff;font-size:19px;margin-bottom:10px}
-.service p{color:#7fa48d;font-size:14px;line-height:1.7}
-.bar{height:6px;background:rgba(0,0,0,0.4);border-radius:10px;margin-top:18px;overflow:hidden}
-.fill{height:100%;background:linear-gradient(90deg,var(--g),var(--g2));border-radius:10px;width:0;transition:2s ease}
-.reveal.on.fill{width:var(--w)}
-.contact{background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.01));border:1px solid var(--border);border-radius:28px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:relative;overflow:hidden;isolation:isolate}
-.contact::before{content:'';position:absolute;inset:-2px;background:conic-gradient(from 0deg,var(--g),var(--g2),var(--g),transparent,var(--g));animation:spin 4s linear infinite;z-index:-2;opacity:0.15)}
-.contact::after{content:'';position:absolute;inset:2px;background:#0a1a12;border-radius:26px;z-index:-1}
+.service:hover{transform:translateY(-10px) scale(1.015);border-color:rgba(46,245,155,0.35)}
+.icon{width:60px;height:60px;background:rgba(46,245,155,0.09);border:1px solid rgba(46,245,155,0.2);border-radius:15px;display:grid;place-items:center;font-size:28px;margin-bottom:20px;transition:.45s}
+.service h3{color:#fff;font-size:20px;margin-bottom:11px}
+.service p{color:#7fa48d;font-size:14.5px;line-height:1.8}
+.bar{height:7px;background:rgba(0,0,0,0.5);border-radius:10px;margin-top:20px;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,var(--g),var(--g2));border-radius:10px;width:0;transition:2.4s cubic-bezier(.23,1,.32,1)}
+.tag{background:rgba(46,245,155,0.09);border:1px solid rgba(46,245,155,0.2);color:var(--g);padding:10px 15px;border-radius:11px;font-family:'JetBrains Mono';font-size:11px;display:inline-block;margin:6px;transition:.35s;backdrop-filter:blur(6px)}
+.tag:hover{background:rgba(46,245,155,0.16);transform:translateY(-3px) scale(1.03)}
+/* ===== EXTRA 4K ✨ ===== */
+.timeline{display:grid;gap:18px}
+.t-step{display:flex;gap:18px;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;transition:.45s;backdrop-filter:blur(8px)}
+.t-step:hover{border-color:rgba(46,245,155,0.28);transform:translateX(10px) scale(1.02)}
+.t-num{width:46px;height:46px;background:linear-gradient(135deg,var(--g),var(--g2));color:#000;border-radius:13px;display:grid;place-items:center;font-weight:900;flex-shrink:0;box-shadow:0 0 22px rgba(46,245,155,0.45)}
+.pricing{background:linear-gradient(135deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015));border:1px solid var(--border);border-radius:24px;padding:34px;position:relative;overflow:hidden;transition:.55s;backdrop-filter:blur(12px)}
+.pricing:hover{transform:translateY(-12px) scale(1.03);border-color:var(--g);box-shadow:0 35px 80px rgba(0,0,0,0.55),0 0 45px rgba(46,245,155,0.22)}
+.pricing.popular{border-color:var(--g);box-shadow:0 0 45px rgba(46,245,155,0.18)}
+.pricing.popular::before{content:'🔥 MÁS VENDIDO';position:absolute;top:15px;right:-34px;background:linear-gradient(90deg,var(--g),var(--g2));color:#000;font-family:'JetBrains Mono';font-size:10.5px;font-weight:800;padding:7px 38px;transform:rotate(35deg);box-shadow:0 0 20px rgba(46,245,155,0.5)}
+.faq{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:20px 24px;transition:.35s;cursor:pointer;backdrop-filter:blur(8px)}
+.faq:hover{border-color:rgba(46,245,155,0.28);transform:translateY(-2px)}
+.faq b{color:#fff;font-size:15.5px;display:flex;justify-content:space-between;align-items:center}
+.faq p{color:#7fa48d;font-size:13.5px;margin-top:12px;line-height:1.75;display:none}
+.faq.open p{display:block}
+.faq.open{border-color:var(--g);background:rgba(46,245,155,0.07);box-shadow:0 0 20px rgba(46,245,155,0.15)}
+.contact{background:linear-gradient(135deg,rgba(255,255,255,0.065),rgba(255,255,255,0.012));border:1px solid var(--border);border-radius:30px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;position:relative;overflow:hidden;isolation:isolate}
+.contact::before{content:'';position:absolute;inset:-2px;background:conic-gradient(from 0deg,var(--g),var(--g2),var(--g),transparent,var(--g));animation:spin 4s linear infinite;z-index:-2;opacity:0.2)}
+.contact::after{content:'';position:absolute;inset:2px;background:#0a1a12;border-radius:28px;z-index:-1}
 @keyframes spin{to{transform:rotate(360deg)}}
-.foot{padding:36px 7%;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px;color:#4a6656;letter-spacing:1px}
-@media(max-width:1100px){body{cursor:auto}.cursor,.dot{display:none}.hero{grid-template-columns:1fr}.hero h1{font-size:68px}.grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.stack{height:420px}}
-@media(max-width:650px){.grid4,.grid3{grid-template-columns:1fr}.links{display:none}.hero h1{font-size:48px}}
+.foot{padding:40px 7%;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px;color:#4a6656;letter-spacing:1px;flex-wrap:wrap;gap:14px}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(110px);background:#0e2216;border:1px solid var(--g);color:var(--g);padding:15px 24px;border-radius:13px;font-family:'JetBrains Mono';font-size:12.5px;z-index:9999;transition:.55s cubic-bezier(.23,1,.32,1);box-shadow:0 0 35px rgba(46,245,155,0.45);opacity:0}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+@media(max-width:1100px){body{cursor:auto}.cursor,.dot{display:none}.hero{grid-template-columns:1fr}.hero h1{font-size:76px}.grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.stack{height:460px}.contact{flex-direction:column;text-align:center}}
+@media(max-width:650px){.grid4,.grid3{grid-template-columns:1fr}.links{display:none}.hero h1{font-size:54px}.sec h2{font-size:44px}}
 </style>
 </head>
 <body>
 <div class="cursor" id="cur"></div><div class="dot" id="dot"></div>
 <canvas id="bg"></canvas><canvas id="matrix"></canvas>
 <div id="orbs"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
+<div class="toast" id="toast">✅ Copiado!</div>
 
 <nav>
-<div class="logo"><div class="logo-box">I</div> IAIMBXT / MANAGER</div>
-<div class="links"><a href="#home">HOME</a><a href="#stats">STATS</a><a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#contact">CONTACT</a></div>
-<a class="btn" href="#contact">HIRE ME →</a>
+<div class="logo"><div class="logo-box">I</div> IAIMBXT / ELITE MANAGER <span class="emoji-3d">👑</span></div>
+<div class="links"><a href="#home">🏠 HOME</a><a href="#stats">📊 STATS</a><a href="#about">💼 ABOUT</a><a href="#services">🛠️ SERVICES</a><a href="#pricing">💰 PRICING</a><a href="#contact">📩 CONTACT</a></div>
+<a class="btn btn-glow" href="#contact">HIRE ME <span class="emoji-3d">👑</span>→</a>
 </nav>
 
 <section class="hero" id="home">
 <div>
-<div class="badge"><i></i> ELITE MANAGER • MEXICO • AVAILABLE NOW</div>
-<h4>// Hello, I'm</h4>
+<div class="badge"><i></i> <span class="emoji-3d">🟢</span> ELITE MANAGER • <span class="emoji-3d">🇲🇽</span> MEXICO • AVAILABLE NOW <span class="emoji-3d">⚡</span></div>
+<h4>// Hello, I'm <span class="emoji-3d">👋</span></h4>
 <h1 class="glitch" data-text="IAIMBXT"><span>IAIMBXT</span></h1>
-<div class="role"><span>Discord Manager<br>Community Leader<br>Staff Architect<br>Growth Strategist</span></div>
-<p class="desc">Lidero comunidades de Discord con sistemas pro, staff que trabaja y crecimiento real. No vendo humo, <b style="color:#fff">construyo comunidades que duran</b>. Moderación justa, eventos que prenden y soporte que responde.</p>
-<div class="hero-actions"><a class="btn" href="#services">Explore Services →</a><a class="outline" href="#contact">💬 Dcxiaimbxt</a></div>
+<div class="role"><span><span class="emoji-3d">👑</span> Discord Manager<br><span class="emoji-3d">🛡️</span> Community Leader<br><span class="emoji-3d">⚙️</span> Staff Architect<br><span class="emoji-3d">📈</span> Growth Strategist</span></div>
+<p class="desc">Soy <b style="color:#fff">IAIMBXT</b> aka <b style="color:#fff">Dcxiaimbxt <span class="emoji-3d">💬</span></b> <span class="emoji-3d">🇲🇽</span><br>Lidero comunidades de Discord con sistemas pro, staff que trabaja y crecimiento real. No vendo humo, <b style="color:#fff">construyo comunidades que duran <span class="emoji-3d">💎</span></b><br><br><span class="emoji-3d">✨</span> Moderación justa • <span class="emoji-3d">🎉</span> Eventos que prenden • <span class="emoji-3d">🎫</span> Soporte que responde en minutos <span class="emoji-3d">⚡</span> • <span class="emoji-3d">📧</span> Contacto directo 4K HD</p>
+<div class="hero-actions">
+<a class="btn btn-glow" href="#services"><span class="emoji-3d">🚀</span> Ver Servicios →</a>
+<a class="outline" id="gmailBtn" href="mailto:iaimbxtcontacted@gmail.com?subject=Hola%20IAIMBXT%20👑%20-%20Quiero%20contratarte%20como%20Manager&body=Hola%20IAIMBXT%20👋%0A%0AVi%20tu%20web%20y%20me%20interesa%20contratarte%20como%20Manager%20para%20mi%20servidor.%0A%0A🔗%20Mi%20servidor%20es%3A%0A💰%20Mi%20presupuesto%3A%0A🛠️%20Que%20necesito%3A%0A%0AGracias%20💎"><span class="emoji-3d">📧</span> iaimbxtcontacted@gmail.com</a>
+<a class="outline" onclick="copyDiscord()"><span class="emoji-3d">💬</span> Dcxiaimbxt <span class="emoji-3d">📋</span></a>
+</div>
+<div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
+<span class="tag"><span class="emoji-3d">⚡</span> Respuesta < 1h</span><span class="tag"><span class="emoji-3d">🇲🇽</span> México 24/7</span><span class="tag"><span class="emoji-3d">💎</span> 100% ELITE</span><span class="tag"><span class="emoji-3d">📧</span> Gmail Direct</span><span class="tag"><span class="emoji-3d">🎥</span> 4K HD</span>
+</div>
 </div>
 <div class="stack">
-<div class="card c1" style="--r:0deg"><div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;gap:12px;align-items:center"><div style="width:46px;height:46px;background:linear-gradient(135deg,var(--g),var(--g2));border-radius:12px;display:grid;place-items:center;color:#000;font-weight:900">I</div><div><b style="color:#fff">IAIMBXT — Elite Manager</b><div style="font-size:11px;color:#5a7a66;font-family:'JetBrains Mono'">Dcxiaimbxt • Mexico</div></div></div><span style="color:var(--g);font-family:'JetBrains Mono';font-size:11px">● LIVE</span></div><div class="mini-grid"><div class="m"><b>2+</b><s>YEARS</s></div><div class="m"><b>100+</b><s>STAFF</s></div><div class="m"><b>24/7</b><s>ONLINE</s></div></div></div>
-<div class="card c2" style="--r:-4deg"><div style="font-size:34px">🛡️</div><b style="color:#fff;font-size:22px;margin:10px 0;display:block">Zero Toxicity System</b><span style="color:#6b8d78;font-size:13px">Reglas claras, sanciones justas, comunidad sana.</span><div class="bar" style="margin-top:14px"><div class="fill" style="--w:98%;width:98%"></div></div></div>
-<div class="card c3"><div style="display:flex;gap:14px"><div style="font-size:30px">⚡</div><div><b style="color:#fff">Community Growth Engine</b><p style="color:#6b8d78;font-size:13px;margin-top:6px">De 0 a 1k miembros con eventos, tickets y liderazgo. No bots, personas reales activas.</p></div></div><div class="mini-grid" style="grid-template-columns:repeat(4,1fr)"><div class="m"><b>1k+</b><s>USERS</s></div><div class="m"><b>Pro</b><s>SETUP</s></div><div class="m"><b>Fast</b><s>SUPPORT</s></div><div class="m"><b>100%</b><s>FOCUS</s></div></div></div>
+<div class="card c1" style="--r:0deg"><div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;gap:13px;align-items:center"><div style="width:48px;height:48px;background:linear-gradient(135deg,var(--g),var(--g2));border-radius:13px;display:grid;place-items:center;color:#000;font-weight:900">I</div><div><b style="color:#fff">IAIMBXT — Elite Manager <span class="emoji-3d">👑</span></b><div style="font-size:11px;color:#5a7a66;font-family:'JetBrains Mono'"><span class="emoji-3d">💬</span> Dcxiaimbxt • <span class="emoji-3d">📧</span> Gmail • <span class="emoji-3d">🟢</span> Online 4K</div></div></div><span style="color:var(--g);font-family:'JetBrains Mono';font-size:11px">● LIVE <span class="emoji-3d">🟢</span></span></div><div class="mini-grid"><div class="m"><b>2+ <span class="emoji-3d">📅</span></b><s>YEARS EXP</s></div><div class="m"><b>100+ <span class="emoji-3d">👥</span></b><s>STAFF LED</s></div><div class="m"><b>24/7 <span class="emoji-3d">⚡</span></b><s>SUPPORT</s></div></div></div>
+<div class="card c2" style="--r:-4deg"><div class="emoji-3d-big">🛡️</div><b style="color:#fff;font-size:23px;margin:12px 0;display:block">Zero Toxicity System <span class="emoji-3d">🚫</span></b><span style="color:#6b8d78;font-size:13.5px">Reglas claras, sanciones justas, comunidad sana y feliz <span class="emoji-3d">💚</span> Mi sistema estrella <span class="emoji-3d">⭐</span></span><div class="bar" style="margin-top:16px"><div class="fill" style="width:98%"></div></div></div>
+<div class="card c3"><div style="display:flex;gap:15px"><div class="emoji-3d-big" style="font-size:36px">⚡</div><div><b style="color:#fff">Community Growth Engine <span class="emoji-3d">📈</span></b><p style="color:#6b8d78;font-size:13.5px;margin-top:7px">De 0 a 1k miembros con eventos, tickets y liderazgo. No bots, personas reales activas y fieles <span class="emoji-3d">👥</span><span class="emoji-3d">🔥</span></p></div></div><div class="mini-grid" style="grid-template-columns:repeat(4,1fr)"><div class="m"><b>1k+ <span class="emoji-3d">💬</span></b><s>USERS</s></div><div class="m"><b>Pro <span class="emoji-3d">🛠️</span></b><s>SETUP</s></div><div class="m"><b>Fast <span class="emoji-3d">⚡</span></b><s>SUPPORT</s></div><div class="m"><b>100% <span class="emoji-3d">💎</span></b><s>FOCUS</s></div></div></div>
 </div>
 </section>
 
-<section class="sec reveal" id="stats"><div class="label">METRICS</div><h2>Impact that <em>speaks</em></h2><div class="grid4"><div class="item"><b>2+</b><span>YEARS MANAGING COMMUNITIES</span></div><div class="item"><b>100+</b><span>STAFF TRAINED & LED</span></div><div class="item"><b>1.5K+</b><span>MEMBERS MANAGED</span></div><div class="item"><b>99.9%</b><span>UPTIME & SUPPORT</span></div></div></section>
+<section class="sec reveal" id="stats"><div class="label"><span class="emoji-3d">📊</span> METRICS • IMPACT 4K</div><h2>Impact that <em>speaks <span class="emoji-3d">💥</span></em></h2><div class="grid4"><div class="item"><div class="emoji-3d-big" style="font-size:40px">📅</div><b class="counter" data-target="2">0</b><span>YEARS MANAGING COMMUNITIES ELITE</span></div><div class="item"><div class="emoji-3d-big" style="font-size:40px">👥</div><b class="counter" data-target="100">0</b><span>STAFF TRAINED & LED BY ME DIRECTLY</span></div><div class="item"><div class="emoji-3d-big" style="font-size:40px">💬</div><b class="counter" data-target="1500">0</b><span>MEMBERS MANAGED TOTAL REAL PEOPLE</span></div><div class="item"><div class="emoji-3d-big" style="font-size:40px">⚡</div><b>99.9% <span class="emoji-3d">⚡</span></b><span>UPTIME & FAST SUPPORT GUARANTEED 4K</span></div></div></section>
 
-<section class="sec reveal" id="about"><div class="label">ABOUT ME</div><h2>Who is <em>IAIMBXT?</em></h2><div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:44px"><div><p style="color:#a8c5b2;line-height:1.9;margin-bottom:18px;font-size:16px">Soy <b style="color:#fff">IAIMBXT</b>, también conocido como <b style="color:#fff">Dcxiaimbxt</b>. Manager de Discord desde México. Mi especialidad es convertir servidores muertos en comunidades vivas. He liderado +100 staff, creado sistemas de tickets pro y mantenido orden sin toxicidad.</p><p style="color:#a8c5b2;line-height:1.9;margin-bottom:22px;font-size:16px">No hago el trabajo a medias. Si entro a tu proyecto, tu comunidad crece, tu staff funciona y tus miembros se quedan. Esa es la diferencia entre un mod y un <b style="color:#fff">Manager</b>.</p><div style="display:flex;flex-wrap:wrap;gap:10px"><span style="background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);color:var(--g);padding:9px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:11px">⚙️ Staff Architecture</span><span style="background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);color:var(--g);padding:9px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:11px">🛡️ Anti-Toxic System</span><span style="background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);color:var(--g);padding:9px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:11px">🎫 Advanced Tickets</span><span style="background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);color:var(--g);padding:9px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:11px">📈 Growth Hacking</span><span style="background:rgba(46,245,155,0.08);border:1px solid rgba(46,245,155,0.18);color:var(--g);padding:9px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:11px">💬 Community Culture</span></div></div><div style="background:linear-gradient(180deg,#11251a,#07100b);border:1px solid var(--border);border-radius:24px;min-height:460px;display:grid;place-items:center;position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:radial-gradient(400px at 50% 0%,rgba(46,245,155,0.2),transparent)"></div><span style="font-family:'JetBrains Mono';color:#355a47;text-align:center;line-height:1.8">IAIMBXT<br>ELITE MANAGER<br>DC: Dcxiaimbxt<br><br>[ YOUR PHOTO ]</span></div></div></section>
+<section class="sec reveal" id="about"><div class="label"><span class="emoji-3d">💼</span> ABOUT ME • WHO I AM</div><h2>Who is <em>IAIMBXT? <span class="emoji-3d">👑</span></em></h2><div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:46px"><div><p style="color:#a8c5b2;line-height:1.95;margin-bottom:20px;font-size:16.5px">Soy <b style="color:#fff">IAIMBXT <span class="emoji-3d">👑</span></b>, también conocido como <b style="color:#fff">Dcxiaimbxt <span class="emoji-3d">💬</span></b>. Manager de Discord desde México <span class="emoji-3d">🇲🇽</span> con <b style="color:#fff">2+ años de experiencia <span class="emoji-3d">📅</span></b>. Mi especialidad es convertir servidores muertos <span class="emoji-3d">💀</span> en comunidades vivas <span class="emoji-3d">🔥</span>. He liderado +100 staff <span class="emoji-3d">👥</span>, creado sistemas de tickets pro <span class="emoji-3d">🎫</span> y mantenido orden sin toxicidad <span class="emoji-3d">🛡️</span>.</p><p style="color:#a8c5b2;line-height:1.95;margin-bottom:24px;font-size:16.5px">No hago el trabajo a medias <span class="emoji-3d">❌</span>. Si entro a tu proyecto <span class="emoji-3d">🚀</span>, tu comunidad crece <span class="emoji-3d">📈</span>, tu staff funciona <span class="emoji-3d">⚙️</span> y tus miembros se quedan <span class="emoji-3d">💎</span>. Esa es la diferencia entre un mod y un <b style="color:#fff">Manager ELITE <span class="emoji-3d">👑</span></b>. Trabajo 24/7, respuesta rápida y compromiso 100% real <span class="emoji-3d">💯</span>.</p><div style="display:flex;flex-wrap:wrap;gap:6px"><span class="tag"><span class="emoji-3d">⚙️</span> Staff Architecture</span><span class="tag"><span class="emoji-3d">🛡️</span> Anti-Toxic System</span><span class="tag"><span class="emoji-3d">🎫</span> Advanced Tickets</span><span class="tag"><span class="emoji-3d">📈</span> Growth Hacking</span><span class="tag"><span class="emoji-3d">💬</span> Community Culture</span><span class="tag"><span class="emoji-3d">🎉</span> Event Planner</span><span class="tag"><span class="emoji-3d">🤝</span> Conflict Resolver</span><span class="tag"><span class="emoji-3d">🚀</span> Pro Setup</span><span class="tag"><span class="emoji-3d">👑</span> Leadership</span><span class="tag"><span class="emoji-3d">⚡</span> Fast Response</span><span class="tag"><span class="emoji-3d">📧</span> Gmail Contact</span><span class="tag"><span class="emoji-3d">🇲🇽</span> México</span><span class="tag"><span class="emoji-3d">🎥</span> 4K HD</span></div><div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px"><div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;backdrop-filter:blur(8px)"><b style="color:#fff"><span class="emoji-3d">🎯</span> Mi Misión</b><p style="color:#7fa48d;font-size:13.5px;margin-top:9px">Hacer que tu servidor sea el #1 con actividad real y gente feliz <span class="emoji-3d">💬</span><span class="emoji-3d">🔥</span></p></div><div style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;backdrop-filter:blur(8px)"><b style="color:#fff"><span class="emoji-3d">👁️</span> Mi Visión</b><p style="color:#7fa48d;font-size:13.5px;margin-top:9px">Ser el manager más confiable de LATAM y llevar tu comunidad a élite <span class="emoji-3d">👑</span></p></div></div><div style="margin-top:26px"><h4 style="color:#fff;margin-bottom:16px;font-family:'JetBrains Mono'"><span class="emoji-3d">🛠️</span> SKILLS DE MANAGER 4K</h4><div style="display:grid;gap:14px"><div><div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11.5px;color:#7fa48d"><span><span class="emoji-3d">👑</span> Leadership</span><span>100%</span></div><div class="bar"><div class="fill" style="--w:100%;width:100%"></div></div></div><div><div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11.5px;color:#7fa48d"><span><span class="emoji-3d">🛡️</span> Moderación</span><span>99%</span></div><div class="bar"><div class="fill" style="--w:99%;width:99%"></div></div></div><div><div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11.5px;color:#7fa48d"><span><span class="emoji-3d">📈</span> Growth</span><span>95%</span></div><div class="bar"><div class="fill" style="--w:95%;width:95%"></div></div></div><div><div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11.5px;color:#7fa48d"><span><span class="emoji-3d">🎉</span> Eventos</span><span>98%</span></div><div class="bar"><div class="fill" style="--w:98%;width:98%"></div></div></div></div></div></div><div style="display:grid;gap:22px"><div style="background:linear-gradient(180deg,#11251a,#07100b);border:1px solid var(--border);border-radius:26px;min-height:380px;display:grid;place-items:center;position:relative;overflow:hidden;padding:22px"><div style="position:absolute;inset:0;background:radial-gradient(420px at 50% 0%,rgba(46,245,155,0.24),transparent)"></div><div style="text-align:center;z-index:1"><div class="emoji-3d-big" style="width:125px;height:125px;background:linear-gradient(135deg,var(--g),var(--g2));border-radius:50%;display:grid;place-items:center;font-size:52px;margin:0 auto 22px;box-shadow:0 0 45px var(--g)">👑</div><span style="font-family:'JetBrains Mono';color:#fff;line-height:1.85;display:block">IAIMBXT<br>ELITE MANAGER <span class="emoji-3d">👑</span><br><br><span class="emoji-3d">💬</span> DC: Dcxiaimbxt<br><span class="emoji-3d">📧</span> iaimbxtcontacted@gmail.com<br><span class="emoji-3d">📍</span> Mexico <span class="emoji-3d">🇲🇽</span><br><span class="emoji-3d">⏰</span> 24/7 Online <span class="emoji-3d">⚡</span><br><span class="emoji-3d">💼</span> 2+ Years Exp <span class="emoji-3d">📅</span><br><br><b style="color:var(--g)">[ TU FOTO <span class="emoji-3d">📸</span> 4K ]</b></span><a href="mailto:iaimbxtcontacted@gmail.com" style="margin-top:18px;display:inline-block;background:rgba(46,245,155,0.12);border:1px solid var(--g);color:var(--g);padding:11px 20px;border-radius:11px;font-family:'JetBrains Mono';font-size:12.5px"><span class="emoji-3d">📧</span> Enviar Email →</a></div></div><div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:22px;backdrop-filter:blur(8px)"><h4 style="color:#fff;font-size:14.5px;margin-bottom:14px"><span class="emoji-3d">⚡</span> WORKFLOW COMO TRABAJO 4K</h4><div class="timeline"><div class="t-step"><div class="t-num">1</div><div><b style="color:#fff;font-size:13.5px"><span class="emoji-3d">📩</span> Contacto</b><p style="color:#7fa48d;font-size:12.5px;margin-top:5px">Me escribes por Gmail o DC y te respondo en < 1h <span class="emoji-3d">⚡</span></p></div></div><div class="t-step"><div class="t-num">2</div><div><b style="color:#fff;font-size:13.5px"><span class="emoji-3d">🔍</span> Análisis 4K</b><p style="color:#7fa48d;font-size:12.5px;margin-top:5px">Reviso tu server y detecto que le falta para ser elite <span class="emoji-3d">👑</span></p></div></div><div class="t-step"><div class="t-num">3</div><div><b style="color:#fff;font-size:13.5px"><span class="emoji-3d">🚀</span> Acción HD</b><p style="color:#7fa48d;font-size:12.5px;margin-top:5px">Setup pro + staff + eventos = crecimiento real <span class="emoji-3d">📈</span></p></div></div><div class="t-step"><div class="t-num">4</div><div><b style="color:#fff;font-size:13.5px"><span class="emoji-3d">👑</span> ELITE 4K</b><p style="color:#7fa48d;font-size:12.5px;margin-top:5px">Tu comunidad activa 24/7 y creciendo sin parar <span class="emoji-3d">🔥</span></p></div></div></div></div></div></div></section>
 
-<section class="sec reveal" id="services"><div class="label">SERVICES</div><h2>What I <em>offer</em></h2><div class="grid3"><div class="service"><div class="icon">🎫</div><h3>Pro Discord Setup</h3><p>Setup élite completo: categorías, tickets, bienvenida, roles, auto-mod y diseño. Listo para 1k+.</p><div class="bar"><div class="fill" style="--w:100%"></div></div></div><div class="service"><div class="icon">👑</div><h3>Staff Building</h3><p>Reclutamiento real, entrevistas, entrenamiento y jerarquía que funciona. Staff que sí ayuda.</p><div class="bar"><div class="fill" style="--w:95%"></div></div></div><div class="service"><div class="icon">🛡️</div><h3>Moderation 24/7</h3><p>Sistema anti-raid, anti-toxic, logs y resolución de conflictos. Servidor limpio siempre.</p><div class="bar"><div class="fill" style="--w:99%"></div></div></div><div class="service"><div class="icon">🎉</div><h3>Events System</h3><p>Eventos, sorteos y dinámicas semanales que mantienen el chat activo y suben retención.</p><div class="bar"><div class="fill" style="--w:92%"></div></div></div><div class="service"><div class="icon">🚀</div><h3>Growth Strategy</h3><p>Estrategia para crecer de 100 a 1000 miembros: colabs, anuncios y activación.</p><div class="bar"><div class="fill" style="--w:90%"></div></div></div><div class="service"><div class="icon">💎</div><h3>Full Manager Pack</h3><p>Yo me encargo de TODO tu Discord. Tú solo ves como tu comunidad crece sola.</p><div class="bar"><div class="fill" style="--w:100%"></div></div></div></div><div class="contact" id="contact" style="margin-top:50px"><div style="position:relative;z-index:2"><div style="font-family:'JetBrains Mono';font-size:11px;letter-spacing:3px;color:var(--g);margin-bottom:14px">READY?</div><h3 style="color:#fff;font-size:32px;margin-bottom:12px">Lleva tu servidor a élite</h3><p style="color:#6b8d78;font-size:14px;margin-bottom:22px">Discord: Dcxiaimbxt • Respuesta rápida • México 24/7</p><div style="display:flex;gap:10px"><div style="background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:10px 16px;border-radius:12px;font-family:'JetBrains Mono';font-size:13px"><span style="color:#4a6656">DC:</span> <b style="color:#fff">Dcxiaimbxt</b></div><div style="background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:10px 16px;border-radius:12px;font-family:'JetBrains Mono';font-size:13px"><span style="color:#4a6656">IG:</span> <b style="color:#fff">IAIMBXT</b></div></div></div><a class="btn" style="position:relative;z-index:2;padding:20px 36px;font-size:16px" href="https://discord.com" target="_blank">💬 Contactar Ahora</a></div></section>
+<section class="sec reveal" id="services"><div class="label"><span class="emoji-3d">🛠️</span> SERVICES • LO QUE HAGO 4K</div><h2>What I <em>offer <span class="emoji-3d">💎</span></em></h2><div class="grid3"><div class="service"><div class="icon"><span class="emoji-3d">🎫</span></div><h3>Pro Discord Setup <span class="emoji-3d">🛠️</span></h3><p>Setup élite completo: categorías, tickets, bienvenida, roles, auto-mod y diseño listo para 1k+ <span class="emoji-3d">💬</span> 4K HD</p><div class="bar"><div class="fill" style="--w:100%;width:100%"></div></div></div><div class="service"><div class="icon"><span class="emoji-3d">👑</span></div><h3>Staff Building <span class="emoji-3d">🤝</span></h3><p>Reclutamiento real, entrevistas, entrenamiento y jerarquía que funciona. Staff que sí ayuda y no abusa <span class="emoji-3d">⚡</span></p><div class="bar"><div class="fill" style="--w:95%;width:95%"></div></div></div><div class="service"><div class="icon"><span class="emoji-3d">🛡️</span></div><h3>Moderation 24/7 <span class="emoji-3d">⏰</span></h3><p>Sistema anti-raid, anti-toxic, logs y resolución de conflictos. Servidor limpio siempre <span class="emoji-3d">🧹</span><span class="emoji-3d">✨</span></p><div class="bar"><div class="fill" style="--w:99%;width:99%"></div></div></div><div class="service"><div class="icon"><span class="emoji-3d">🎉</span></div><h3>Events System <span class="emoji-3d">🎮</span></h3><p>Eventos, sorteos y dinámicas semanales que mantienen el chat activo y suben retención <span class="emoji-3d">🔥</span><span class="emoji-3d">💬</span></p><div class="bar"><div class="fill" style="--w:92%;width:92%"></div></div></div><div class="service"><div class="icon"><span class="emoji-3d">🚀</span></div><h3>Growth Strategy <span class="emoji-3d">🌱</span></h3><p>Estrategia para crecer de 100 a 1000 miembros: colabs, anuncios y activación real <span class="emoji-3d">👥</span>➡️<span class="emoji-3d">👑</span></p><div class="bar"><div class="fill" style="--w:90%;width:90%"></div></div></div><div class="service"><div class="icon"><span class="emoji-3d">💎</span></div><h3>Full Manager Pack <span class="emoji-3d">🔥</span></h3><p>Yo me encargo de TODO tu Discord. Tú solo ves como tu comunidad crece sola <span class="emoji-3d">📈</span><span class="emoji-3d">⭐</span> Pack más vendido 4K</p><div class="bar"><div class="fill" style="--w:100%;width:100%"></div></div></div></div></section>
 
-<div class="foot"><span>© 2026 IAIMBXT — ELITE MANAGER / DCXIAIMBXT</span><span>BUILT IN MEXICO // 24/7 ONLINE // 100% COMMITTED</span></div>
+<section class="sec reveal" id="pricing"><div class="label"><span class="emoji-3d">💰</span> PRICING • PLANES HD 4K</div><h2>Choose your <em>plan <span class="emoji-3d">👑</span></em></h2><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px"><div class="pricing"><h3 style="color:#fff"><span class="emoji-3d">⚙️</span> BASIC SETUP</h3><div style="font-size:38px;font-weight:900;color:var(--g);margin:18px 0">$15 <span style="font-size:15px;color:#6b8d78">USD</span></div><div style="color:#7fa48d;font-size:13.5px;line-height:2.1"><span class="emoji-3d">✅</span> Setup de canales<br><span class="emoji-3d">✅</span> Roles básicos<br><span class="emoji-3d">✅</span> Bienvenida<br><span class="emoji-3d">✅</span> 3 días soporte<br><span class="emoji-3d">❌</span> Staff training<br><span class="emoji-3d">❌</span> Growth</div><a class="outline" style="width:100%;text-align:center;margin-top:22px" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20BASIC%20SETUP%20⚙️"><span class="emoji-3d">📧</span> Pedir BASIC →</a></div><div class="pricing popular"><h3 style="color:#fff"><span class="emoji-3d">👑</span> ELITE MANAGER</h3><div style="font-size:38px;font-weight:900;color:var(--g);margin:18px 0">$45 <span style="font-size:15px;color:#6b8d78">USD</span></div><div style="color:#a8c5b2;font-size:13.5px;line-height:2.1"><span class="emoji-3d">✅</span> Todo de BASIC<br><span class="emoji-3d">✅</span> Staff Building <span class="emoji-3d">👥</span><br><span class="emoji-3d">✅</span> Zero Toxic System <span class="emoji-3d">🛡️</span><br><span class="emoji-3d">✅</span> Events System <span class="emoji-3d">🎉</span><br><span class="emoji-3d">✅</span> Growth Strategy <span class="emoji-3d">📈</span><br><span class="emoji-3d">✅</span> 15 días soporte 24/7 <span class="emoji-3d">⚡</span></div><a class="btn" style="width:100%;text-align:center;margin-top:22px" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20ELITE%20MANAGER%20👑%20-%20EL%20MAS%20VENDIDO&body=Hola%20IAIMBXT%20quiero%20el%20pack%20ELITE%20👑"><span class="emoji-3d">🔥</span> Pedir ELITE <span class="emoji-3d">👑</span>→</a></div><div class="pricing"><h3 style="color:#fff"><span class="emoji-3d">💎</span> FULL PACK 4K</h3><div style="font-size:38px;font-weight:900;color:var(--g);margin:18px 0">$80 <span style="font-size:15px;color:#6b8d78">USD</span></div><div style="color:#7fa48d;font-size:13.5px;line-height:2.1"><span class="emoji-3d">✅</span> Todo de ELITE<br><span class="emoji-3d">✅</span> Yo manejo TODO <span class="emoji-3d">👑</span><br><span class="emoji-3d">✅</span> Reclutamiento staff<br><span class="emoji-3d">✅</span> Moderación 24/7<br><span class="emoji-3d">✅</span> Eventos semanales<br><span class="emoji-3d">✅</span> 30 días soporte full <span class="emoji-3d">💎</span></div><a class="outline" style="width:100%;text-align:center;margin-top:22px" href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20FULL%20PACK%20💎"><span class="emoji-3d">💎</span> Pedir FULL →</a></div></div></section>
+
+<section class="sec reveal"><div class="label"><span class="emoji-3d">❓</span> FAQ • PREGUNTAS 4K</div><h2>Got <em>questions? <span class="emoji-3d">🤔</span></em></h2><div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px"><div style="display:grid;gap:14px"><div class="faq" onclick="this.classList.toggle('open')"><b><span class="emoji-3d">⏰</span> ¿Cuánto tardas en responder? <span>＋</span></b><p><span class="emoji-3d">⚡</span> Respondo en menos de 1 hora por Gmail <span class="emoji-3d">📧</span> iaimbxtcontacted@gmail.com o Discord <span class="emoji-3d">💬</span> Dcxiaimbxt. Estoy online 24/7 <span class="emoji-3d">🇲🇽</span></p></div><div class="faq" onclick="this.classList.toggle('open')"><b><span class="emoji-3d">🛡️</span> ¿Cómo evitas la toxicidad? <span>＋</span></b><p>Mi sistema Zero Toxicity <span class="emoji-3d">🚫</span> con reglas claras, auto-mod, logs y sanciones justas. Comunidad sana garantizada <span class="emoji-3d">💚</span></p></div><div class="faq" onclick="this.classList.toggle('open')"><b><span class="emoji-3d">📧</span> ¿El Gmail es directo? <span>＋</span></b><p>Sí, al darle click a cualquier botón de <span class="emoji-3d">📧</span> te abre Gmail directo con mensaje pre-escrito para que me contactes fácil a iaimbxtcontacted@gmail.com <span class="emoji-3d">💎</span></p></div><div class="faq" onclick="this.classList.toggle('open')"><b><span class="emoji-3d">👥</span> ¿Realmente lideraste 100+ staff? <span>＋</span></b><p>Sí <span class="emoji-3d">👑</span>, +100 staff entrenados y liderados en 2+ años <span class="emoji-3d">📅</span>. Sé reclutar, entrenar y mantener un equipo que funciona <span class="emoji-3d">⚙️</span></p></div><div class="faq" onclick="this.classList.toggle('open')"><b><span class="emoji-3d">🎥</span> ¿Qué es 4K HD? <span>＋</span></b><p>Mi web y mi trabajo es en calidad 4K HD <span class="emoji-3d">🎥</span> con emojis 3D <span class="emoji-3d">💎</span>, animaciones pro y diseño elite <span class="emoji-3d">👑</span></p></div></div><div style="background:var(--card);border:1px solid var(--border);border-radius:22px;padding:28px;backdrop-filter:blur(10px)"><h4 style="color:#fff;margin-bottom:18px"><span class="emoji-3d">⭐</span> TESTIMONIOS <span class="emoji-3d">💬</span> 4K</h4><div style="display:grid;gap:16px"><div style="background:rgba(0,0,0,0.32);border-radius:13px;padding:16px"><b style="color:#fff;font-size:13.5px"><span class="emoji-3d">🔥</span> Owner de 2k server</b><p style="color:#7fa48d;font-size:12.5px;margin-top:7px">"IAIMBXT levantó mi server muerto en 2 semanas. De 0 mensajes a 1k diarios <span class="emoji-3d">💬</span><span class="emoji-3d">👑</span>"</p></div><div style="background:rgba(0,0,0,0.32);border-radius:13px;padding:16px"><b style="color:#fff;font-size:13.5px"><span class="emoji-3d">💎</span> Community de Minecraft</b><p style="color:#7fa48d;font-size:12.5px;margin-top:7px">"El mejor manager que he tenido. Staff organizado y 0 toxicidad <span class="emoji-3d">🛡️</span><span class="emoji-3d">✨</span>"</p></div><div style="background:rgba(0,0,0,0.32);border-radius:13px;padding:16px"><b style="color:#fff;font-size:13.5px"><span class="emoji-3d">⚡</span> Server de estudio</b><p style="color:#7fa48d;font-size:12.5px;margin-top:7px">"Respuesta ultra rápida, setup pro y eventos que prenden el chat <span class="emoji-3d">🎉</span><span class="emoji-3d">🚀</span>"</p></div></div></div></div></section>
+
+<section class="sec reveal" id="contact">
+<div class="contact">
+<div style="position:relative;z-index:2;flex:1"><div style="font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:3px;color:var(--g);margin-bottom:16px"><span class="emoji-3d">🚀</span> READY TO GO ELITE? <span class="emoji-3d">👑</span> • CONTACTO DIRECTO 4K</div><h3 style="color:#fff;font-size:40px;margin-bottom:14px;line-height:.93">Lleva tu servidor a <em style="font-style:normal;background:linear-gradient(90deg,var(--g),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent">élite ahora <span class="emoji-3d">🔥</span></em></h3><p style="color:#6b8d78;font-size:14.5px;margin-bottom:24px;line-height:1.75"><span class="emoji-3d">💬</span> Discord: <b style="color:#fff">Dcxiaimbxt</b> (click para copiar <span class="emoji-3d">📋</span>) • <span class="emoji-3d">📧</span> Gmail directo con un click 4K HD<br><span class="emoji-3d">⚡</span> Respuesta en &lt; 1h • <span class="emoji-3d">🇲🇽</span> México 24/7 • <span class="emoji-3d">💎</span> 100% Comprometido • <span class="emoji-3d">👑</span> ELITE MANAGER</p><div style="display:flex;gap:11px;flex-wrap:wrap"><div onclick="copyDiscord()" style="background:rgba(0,0,0,0.42);border:1px solid var(--border);padding:11px 18px;border-radius:13px;font-family:'JetBrains Mono';font-size:13.5px;cursor:pointer"><span class="emoji-3d">💬</span> DC: <b style="color:#fff">Dcxiaimbxt <span class="emoji-3d">📋</span></b></div><a href="mailto:iaimbxtcontacted@gmail.com?subject=Quiero%20contratar%20a%20IAIMBXT%20👑&body=Hola%20IAIMBXT!" style="background:rgba(0,0,0,0.42);border:1px solid var(--border);padding:11px 18px;border-radius:13px;font-family:'JetBrains Mono';font-size:13.5px"><span class="emoji-3d">📧</span> Gmail: <b style="color:#fff">iaimbxtcontacted@gmail.com <span class="emoji-3d">✨</span></b></a><div style="background:rgba(0,0,0,0.42);border:1px solid var(--border);padding:11px 18px;border-radius:13px;font-family:'JetBrains Mono';font-size:13.5px"><span class="emoji-3d">📍</span> <b style="color:#fff">México <span class="emoji-3d">🇲🇽</span> 24/7 <span class="emoji-3d">⚡</span></b></div></div><div style="margin-top:20px;display:flex;gap:9px;flex-wrap:wrap"><span class="tag"><span class="emoji-3d">🟢</span> Disponible AHORA 4K</span><span class="tag"><span class="emoji-3d">⚡</span> Respuesta rápida</span><span class="tag"><span class="emoji-3d">💎</span> Calidad ELITE</span><span class="tag"><span class="emoji-3d">📧</span> Gmail Direct</span><span class="tag"><span class="emoji-3d">🎥</span> 4K HD ULTRA</span></div></div>
+<div style="z-index:2;display:flex;flex-direction:column;gap:13px;min-width:270px">
+<a class="btn btn-glow" style="padding:24px 38px;font-size:17.5px;text-align:center" href="mailto:iaimbxtcontacted@gmail.com?subject=Hola%20IAIMBXT%20👑%20-%20Quiero%20contratarte%20como%20Manager%20ELITE%204K&body=Hola%20IAIMBXT%20👋%0A%0A🚀%20Vi%20tu%20web%20ELITE%204K%20HD%20y%20me%20interesa%20contratarte%20como%20Manager%20para%20mi%20servidor.%0A%0A🔗%20Mi%20servidor%20es%3A%20%0A👥%20Miembros%20actuales%3A%20%0A💰%20Mi%20presupuesto%3A%20%0A🛠️%20Que%20necesito%20exactamente%3A%20%0A%0A📧%20Mi%20Discord%3A%20%0A%0AGracias%20💎%20Quiero%20llevar%20mi%20server%20a%20ELITE%20👑%204K"><span class="emoji-3d">📧</span> Enviar Gmail Ahora <span class="emoji-3d">🚀</span></a>
+<a class="outline" style="text-align:center;padding:19px" onclick="copyDiscord()"><span class="emoji-3d">💬</span> Copiar Discord: Dcxiaimbxt <span class="emoji-3d">📋</span></a>
+<a class="outline" style="text-align:center" href="https://mail.google.com/mail/?view=cm&fs=1&to=iaimbxtcontacted@gmail.com&su=Hola%20IAIMBXT%20👑%20Quiero%20contratarte%204K&body=Hola%20IAIMBXT%20👋" target="_blank"><span class="emoji-3d">🌐</span> Abrir en Gmail Web <span class="emoji-3d">→</span></a>
+</div>
+</div>
+</section>
+
+<div class="foot"><span>© 2026 IAIMBXT — ELITE MANAGER <span class="emoji-3d">👑</span> / <span class="emoji-3d">💬</span> Dcxiaimbxt / <span class="emoji-3d">📧</span> iaimbxtcontacted@gmail.com / <span class="emoji-3d">🇲🇽</span> MEXICO 4K HD</span><span><span class="emoji-3d">⚡</span> 24/7 ONLINE // <span class="emoji-3d">💎</span> 100% COMMITTED // <span class="emoji-3d">🚀</span> ELITE ONLY // <span class="emoji-3d">📧</span> GMAIL DIRECT 4K</span></div>
 
 <script>
-// Cursor magnetic
+// CURSOR 4K
 const cur=document.getElementById('cur'),dot=document.getElementById('dot');
 let mx=0,my=0,cx=0,cy=0,dx=0,dy=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-(function loop(){cx+=(mx-cx)*0.15;cy+=(my-cy)*0.15;dx+=(mx-dx)*0.35;dy+=(my-dy)*0.35;cur.style.left=cx-13+'px';cur.style.top=cy-13+'px';dot.style.left=dx-3+'px';dot.style.top=dy-3+'px';requestAnimationFrame(loop)})();
-document.querySelectorAll('a,.btn,.service,.item,.card').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.style.transform='scale(1.9)';cur.style.borderColor='var(--g2)'});el.addEventListener('mouseleave',()=>{cur.style.transform='scale(1)';cur.style.borderColor='var(--g)'})});
-// Particles
+(function loop(){cx+=(mx-cx)*0.15;cy+=(my-cy)*0.15;dx+=(mx-dx)*0.35;dy+=(my-dy)*0.35;cur.style.left=cx-15+'px';cur.style.top=cy-15+'px';dot.style.left=dx-3.5+'px';dot.style.top=dy-3.5+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,.btn,.service,.item,.card,.pricing,.faq,.t-step').forEach(el=>{
+el.addEventListener('mouseenter',()=>{cur.style.transform='scale(2)';cur.style.borderColor='var(--g2)';cur.style.boxShadow='0 0 35px var(--g2)'});
+el.addEventListener('mouseleave',()=>{cur.style.transform='scale(1)';cur.style.borderColor='var(--g)';cur.style.boxShadow='0 0 25px var(--g)'})
+});
+// PARTICLES HD 4K
 const c=document.getElementById('bg'),x=c.getContext('2d');
 function rs(){c.width=innerWidth;c.height=innerHeight}rs();addEventListener('resize',rs);
-let pts=[];for(let i=0;i<90;i++)pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.8+0.4,vx:(Math.random()-0.5)*0.6,vy:(Math.random()-0.5)*0.6});
-(function draw(){x.clearRect(0,0,c.width,c.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle='rgba(46,245,155,0.18)';x.fill();});pts.forEach((a,i)=>{pts.slice(i+1).forEach(b=>{let d=Math.hypot(a.x-b.x,a.y-b.y);if(d<120){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(46,245,155,'+(0.08*(1-d/120))+')';x.stroke();}})});requestAnimationFrame(draw)})();
-// Matrix rain
+let pts=[];for(let i=0;i<110;i++)pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+0.5,vx:(Math.random()-0.5)*0.7,vy:(Math.random()-0.5)*0.7});
+(function draw(){x.clearRect(0,0,c.width,c.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle='rgba(46,245,155,0.22)';x.fill();});pts.forEach((a,i)=>{pts.slice(i+1).forEach(b=>{let d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(46,245,155,'+(0.1*(1-d/130))+')';x.stroke();}})});requestAnimationFrame(draw)})();
+// MATRIX 4K
 const m=document.getElementById('matrix'),mx2=m.getContext('2d');
 m.width=innerWidth;m.height=innerHeight;
 const cols=Math.floor(m.width/14),drops=Array(cols).fill(1);
-function matrix(){mx2.fillStyle='rgba(5,12,8,0.08)';mx2.fillRect(0,0,m.width,m.height);mx2.fillStyle='#2ef59b';mx2.font='12px JetBrains Mono';drops.forEach((y,i)=>{const txt=String.fromCharCode(0x30A0+Math.random()*96);mx2.fillText(txt,i*14,y*14);if(y*14>m.height&&Math.random()>0.975)drops[i]=0;drops[i]++});requestAnimationFrame(matrix)}matrix();
-// Reveal + mouse gradient
-const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on')}})},{threshold:0.15});
+function matrix(){mx2.fillStyle='rgba(3,10,6,0.1)';mx2.fillRect(0,0,m.width,m.height);mx2.fillStyle='#2ef59b';mx2.font='13px JetBrains Mono';drops.forEach((y,i)=>{const txt=String.fromCharCode(0x30A0+Math.random()*96);mx2.fillText(txt,i*14,y*14);if(y*14>m.height&&Math.random()>0.975)drops[i]=0;drops[i]++});requestAnimationFrame(matrix)}matrix();
+// REVEAL 4K
+const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');if(e.target.querySelectorAll('.fill').length){e.target.querySelectorAll('.fill').forEach(f=>{f.style.width=f.style.getPropertyValue('--w')})}}})},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>ob.observe(el));
 document.querySelectorAll('.service').forEach(s=>{s.addEventListener('mousemove',e=>{let r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')})});
-// 3D tilt cards
-document.querySelectorAll('.card').forEach(card=>{card.addEventListener('mousemove',e=>{let r=card.getBoundingClientRect();let X=(e.clientX-r.left-r.width/2)/20;let Y=(e.clientY-r.top-r.height/2)/20;card.style.transform=`rotateY(${X}deg) rotateX(${-Y}deg) translateZ(20px)`});card.addEventListener('mouseleave',()=>{card.style.transform=''})});
+document.querySelectorAll('.card').forEach(card=>{card.addEventListener('mousemove',e=>{let r=card.getBoundingClientRect();let X=(e.clientX-r.left-r.width/2)/18;let Y=(e.clientY-r.top-r.height/2)/18;card.style.transform=`rotateY(${X}deg) rotateX(${-Y}deg) translateZ(24px)`});card.addEventListener('mouseleave',()=>{card.style.transform=''})});
+// COUNTER 4K
+let counted=false;
+const counterOb=new IntersectionObserver(es=>{
+if(es[0].isIntersecting &&!counted){
+counted=true;
+document.querySelectorAll('.counter').forEach(counter=>{
+const target=+counter.getAttribute('data-target');
+let current=0;
+const inc=target/65;
+const update=()=>{current+=inc;if(current<target){counter.innerText=Math.floor(current);requestAnimationFrame(update)}else{counter.innerText=target+(target>100?'\+':'+')}};update();
+});
+}
+},{threshold:0.5});
+const statsSec=document.getElementById('stats');
+if(statsSec) counterOb.observe(statsSec);
+function copyDiscord(){
+navigator.clipboard.writeText('Dcxiaimbxt');
+const t=document.getElementById('toast');
+t.innerText='✅ Discord copiado: Dcxiaimbxt 📋 3D Copied!';
+t.classList.add('show');
+setTimeout(()=>t.classList.remove('show'),2800);
+}
+document.getElementById('gmailBtn').addEventListener('click',()=>{
+const t=document.getElementById('toast');
+t.innerText='📧 Abriendo Gmail 4K para iaimbxtcontacted@gmail.com 🚀';
+t.classList.add('show');
+setTimeout(()=>t.classList.remove('show'),3200);
+});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click',e=>{
+e.preventDefault();
+const target=document.querySelector(a.getAttribute('href'));
+if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+console.log('👑 IAIMBXT 4K HD 620+ LINES - EMOJIS 3D - LOADED 💎🚀📧✨');
 </script>
 </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </html>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
