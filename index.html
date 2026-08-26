@@ -9,7 +9,7 @@
 body{background:#080505;color:#f0e6e6;font-family:'Sora',sans-serif;font-weight:700;overflow-x:hidden}
 .vintage{font-family:'Cinzel Decorative',serif;font-weight:900}.serif-i{font-family:'Instrument Serif',serif;font-style:italic;font-weight:700}.mono{font-family:'JetBrains Mono',monospace;font-weight:800}
 #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#ff0000,#ff8a8a);z-index:9999;width:0%}
-#viewCounter{position:fixed;bottom:16px;right:16px;background:rgba(10,5,5,0.92);border:1px solid rgba(255,0,0,0.2);backdrop-filter:blur(12px);padding:8px 14px;border-radius:999px;font-family:'JetBrains Mono';font-size:10px;font-weight:900;color:#ff5a5a;z-index:999;display:flex;gap:6px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,0.5)}
+#viewCounter{position:fixed;bottom:16px;right:16px;background:rgba(10,5,5,0.92);border:1px solid rgba(255,0,0,0.2);backdrop-filter:blur(12px);padding:8px 14px;border-radius:999px;font-family:'JetBrains Mono';font-size:10px;font-weight:900;color:#ff5a5a;z-index:999;display:flex;gap:6px;align-items:center}
 #viewCounter b{color:#fff}
 nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:12px 2%;background:rgba(10,5,5,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,0,0,0.14)}
 .logo{display:flex;gap:8px;align-items:center;font-weight:900;color:#fff;font-size:14px}.logo-box{width:32px;height:32px;background:linear-gradient(135deg,#ff0000,#7a0000);border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:900;font-family:'Cinzel Decorative';font-size:14px}
@@ -28,6 +28,11 @@ nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:spa
 .stack{position:relative;height:520px}.card{position:absolute;background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,0,0,0.12);backdrop-filter:blur(16px);border-radius:18px;padding:14px;transition:.6s;box-shadow:0 15px 50px rgba(0,0,0,0.5)}
 .c1{top:0;left:0;width:84%;z-index:3}.c2{top:125px;right:0;width:70%;z-index:2;transform:rotate(-2deg)}.c3{bottom:0;left:5%;width:90%;z-index:1}
 .port-img{width:100%;height:140px;border-radius:12px;background:#150a0a;object-fit:cover}
+.discord-card{background:linear-gradient(135deg,rgba(30,15,15,0.9),rgba(20,10,10,0.9));border:1px solid rgba(255,0,0,0.18);border-radius:20px;padding:18px;display:flex;gap:14px;align-items:center;backdrop-filter:blur(12px);box-shadow:0 12px 40px rgba(0,0,0,0.5)}
+.discord-avatar{position:relative;width:68px;height:68px;border-radius:50%;border:2px solid #ff0a0a;overflow:hidden;flex-shrink:0}
+.discord-avatar img{width:100%;height:100%;object-fit:cover}
+.status-dot{position:absolute;bottom:2px;right:2px;width:16px;height:16px;border-radius:50%;border:3px solid #1a0a0a;background:#808080;transition:.3s}
+.status-dot.online{background:#23a55d}.status-dot.idle{background:#f0b132}.status-dot.dnd{background:#f23f43}.status-dot.offline{background:#808080}
 .sec{padding:70px 3%}.label{font-family:'JetBrains Mono';font-size:10px;font-weight:900;letter-spacing:3px;color:#ff5a5a;display:flex;gap:8px;align-items:center;margin-bottom:14px;text-transform:uppercase}
 .sec h2{font-size:44px;color:#fff;line-height:.9;margin-bottom:22px;font-weight:900}.sec h2 i{font-family:'Instrument Serif';font-style:italic;color:#ff0a0a;font-weight:700}
 .reveal{opacity:0;transform:translateY(30px);transition:.8s}.reveal.on{opacity:1;transform:translateY(0)}
@@ -39,7 +44,6 @@ nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:spa
 .pedido-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,0,0,0.12);border-radius:18px;padding:18px;transition:.4s}
 .pedido-card:hover{transform:translateY(-4px);border-color:#ff0a0a;background:rgba(255,0,0,0.06)}
 .pedido-bottom{background:rgba(255,255,255,0.05);border:1px solid rgba(255,0,0,0.12);border-radius:18px;padding:18px;display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:20px}
-.service{background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,0,0,0.02));border:1px solid rgba(255,0,0,0.1);border-radius:16px;padding:18px;transition:.5s}.service:hover{transform:translateY(-4px);border-color:#ff0a0a}
 .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.review-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,0,0,0.1);border-radius:16px;padding:14px;transition:.4s}.review-card:hover{transform:translateY(-4px);border-color:#ff0a0a}
 .review-head{display:flex;gap:8px;align-items:center;margin-bottom:8px}.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#ff0000,#7a0000);display:grid;place-items:center;color:#fff;font-weight:900;overflow:hidden;border:1px solid rgba(255,0,0,0.2);font-size:14px}.avatar img{width:100%;height:100%;object-fit:cover}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity.3s}
@@ -68,14 +72,14 @@ nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:spa
 </head>
 <body>
 <div id="progress"></div>
-<div id="viewCounter">👁️ <b id="viewCountNum">0</b> personas vieron el portfolio</div>
+<div id="viewCounter">👁️ <b id="viewCountNum">0</b> vistas</div>
 <div class="toast" id="toast"></div>
 
 <!-- AUTH -->
 <div class="modal-overlay" id="authModal" onclick="closeModal('authModal')">
 <div class="modal" style="max-width:500px" onclick="event.stopPropagation()">
 <div class="modal-close" onclick="closeModal('authModal')">✕</div>
-<div style="text-align:center;margin-bottom:14px"><div style="width:52px;height:52px;background:linear-gradient(135deg,#ff0000,#7a0000);border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;margin:0 auto" class="vintage">K</div><h3 style="color:#fff;font-size:22px;margin-top:8px" class="vintage">KRAVEX STUDIO</h3><p style="color:#9a7a7a;font-size:10px;font-weight:800" class="mono">Portfolio de Carlos</p></div>
+<div style="text-align:center;margin-bottom:14px"><img src="https://cdn.discordapp.com/attachments/1541689668972838912/1542125422286872636/ssstik.io_1787642909659.webp?ex=6a9017b7&is=6a8ec637&hm=a086e9781b98fcd1313fffed70269610ecd15a3d14a1453335229ac32ac13c6a&" style="width:72px;height:72px;border-radius:50%;border:2px solid #ff0a0a;object-fit:cover;margin:0 auto"><h3 style="color:#fff;font-size:22px;margin-top:8px" class="vintage">KRAVEX STUDIO</h3><p style="color:#9a7a7a;font-size:10px;font-weight:800" class="mono">Portfolio de Carlos</p></div>
 <div class="tabs"><button class="tab active" id="tabLogin" onclick="switchAuth('login')">Iniciar Sesión</button><button class="tab" id="tabReg" onclick="switchAuth('reg')">Registrarse</button></div>
 <div id="loginForm">
 <input id="loginEmail" class="input" placeholder="Correo electrónico">
@@ -84,7 +88,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:spa
 </div>
 <div id="regForm" style="display:none">
 <div class="avatar-upload">
-<div id="avatarPreview" class="avatar-preview">C</div>
+<div id="avatarPreview" class="avatar-preview"><img src="https://cdn.discordapp.com/attachments/1541689668972838912/1542125422286872636/ssstik.io_1787642909659.webp?ex=6a9017b7&is=6a8ec637&hm=a086e9781b98fcd1313fffed70269610ecd15a3d14a1453335229ac32ac13c6a&" style="width:100%;height:100%;object-fit:cover"></div>
 <div style="flex:1"><label style="font-size:9px;color:#ff5a5a;font-weight:900" class="mono">FOTO DE PERFIL</label><input id="regPhoto" type="file" accept="image/*" class="input" style="padding:6px" onchange="previewPhoto(event)"><p style="font-size:8px;color:#9a7a7a;margin-top:3px;font-weight:600">JPG, PNG max 2MB</p></div>
 </div>
 <input id="regName" class="input" placeholder="Nombre completo *">
@@ -192,7 +196,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:spa
 <div id="systemInfo" style="font-size:10px;color:#9a7a7a;margin-top:6px;font-weight:600"></div>
 <div style="margin-top:8px;display:flex;gap:6px">
 <button class="outline" style="padding:6px 10px;font-size:9px" onclick="resetViews()">Resetear visitas</button>
-<button class="outline" style="padding:6px 10px;font-size:9px" onclick="addViews()">+100 visitas fake</button>
+<button class="outline" style="padding:6px 10px;font-size:9px" onclick="addViews()">+100 visitas</button>
 </div>
 </div>
 </div>
@@ -203,33 +207,76 @@ nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:spa
 
 <nav><div class="logo"><div class="logo-box">K</div> <span class="vintage">KRAVEX</span> x <span style="color:#ff0a0a">CARLOS</span></div><div class="links"><a href="#inicio">Inicio</a><a href="#sobre">Sobre mí</a><a href="#stats">Stats</a><a href="#portfolio">Portfolio</a><a href="#reviews">Reseñas</a><a href="#studio">Mi Studio</a><a href="#contacto">Contacto</a></div><div style="display:flex;gap:6px;align-items:center"><div id="userChip" class="user-chip" style="display:none"></div><button class="outline" id="authBtn" onclick="openModal('authModal')">Iniciar sesión</button><button class="outline" onclick="openModal('adminModal')">ADMIN</button><a class="btn" href="#pedidos">Pedido →</a></div></nav>
 
-<section class="hero" id="inicio"><div class="hero-bg"></div><div><div class="badge">KRAVEX STUDIO x CARLOS • DESDE $2</div><h1 class="vintage">KRAVEX<br><i class="serif-i">x CARLOS</i></h1><p class="desc">Soy <b style="color:#fff">Carlos</b> fundador de <b style="color:#ff0a0a">KRAVEX STUDIO</b> — <span class="vintage">Portafolios, Presentaciones y Diseños</span> elite.<br>Desde <b style="color:#fff">$2 a $10 USD</b> • Entrega 24h</p><div style="display:flex;gap:6px;flex-wrap:wrap"><a class="btn" href="#portfolio">Ver proyectos →</a><a class="outline" href="#studio">Mi Studio</a><a class="outline" onclick="copyDiscord()">DC: carlos</a></div></div><div class="stack"><div class="card c1"><img class="port-img" src="https://cdn.discordapp.com/attachments/1541397398562017320/1541399951240859659/IMG-20260818-WA0149.jpg" style="height:200px"><div style="margin-top:6px"><b style="color:#fff;font-size:12px" class="vintage">Carlos • Founder</b><p style="color:#9a7a7a;font-size:9px;font-weight:800">KRAVEX STUDIO • México</p></div></div><div class="card c2"><img class="port-img" src="https://cdn.discordapp.com/attachments/1541397475418574858/1541400521099710515/IMG-20260823-WA5491.jpg" style="height:140px"><div style="margin-top:6px"><b style="color:#fff;font-size:11px" class="vintage">Banner KRAVEX</b></div></div><div class="card c3"><img class="port-img" src="https://cdn.discordapp.com/attachments/1540977309199114307/1541537289224593549/c7bd27d9-ad60-49e0-bad0-59108fc21d7a.jpg" style="height:120px"><div style="margin-top:6px;display:flex;justify-content:space-between"><b style="color:#fff;font-size:11px" class="vintage">Web Portfolio</b><span style="color:#ff0a0a;font-size:10px;font-weight:900">$7</span></div></div></div></section>
+<section class="hero" id="inicio"><div class="hero-bg"></div>
+<div>
+<div class="badge">KRAVEX STUDIO x CARLOS • DESDE $2</div>
+<h1 class="vintage">KRAVEX<br><i class="serif-i">x CARLOS</i></h1>
+<p class="desc">Soy <b style="color:#fff">Carlos</b> fundador de <b style="color:#ff0a0a">KRAVEX STUDIO</b> — Portafolios, Presentaciones y Diseños elite.<br>Desde <b style="color:#fff">$2 a $10 USD</b> • Entrega 24h</p>
 
-<section class="sec reveal" id="sobre" style="background:rgba(255,0,0,0.02);border-top:1px solid rgba(255,0,0,0.08);border-bottom:1px solid rgba(255,0,0,0.08)"><div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:24px;align-items:center"><div><div class="label">SOBRE MÍ</div><h2 class="vintage">Sobre <i>Carlos</i></h2><p style="color:#b8a0a0;line-height:1.7;font-size:13px;max-width:520px;font-weight:600">Soy <b style="color:#fff">Carlos</b>, fundador de <span class="vintage" style="color:#ff0a0a">Kravex Studio</span>. 2 años creando identidades visuales.<br><br>• 12+ clientes felices • 98% satisfacción • Entrega 24h • Soporte 24/7</p></div><div><div style="background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,0,0,0.04));border:1px solid rgba(255,0,0,0.12);border-radius:20px;padding:20px"><div style="display:flex;gap:10px;align-items:center"><img src="https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg" style="width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid #ff0a0a"><div><b style="color:#fff;font-size:16px" class="vintage">Carlos</b><p style="color:#9a7a7a;font-size:10px;font-weight:800" class="mono">Founder • KRAVEX STUDIO</p></div></div></div></div></div></section>
+<!-- DISCORD PRESENCE CARD CONECTADA A TU DISCORD REAL -->
+<div class="discord-card" style="margin:18px 0;max-width:440px">
+<div class="discord-avatar">
+<img id="discordAvatar" src="https://cdn.discordapp.com/attachments/1541689668972838912/1542125422286872636/ssstik.io_1787642909659.webp?ex=6a9017b7&is=6a8ec637&hm=a086e9781b98fcd1313fffed70269610ecd15a3d14a1453335229ac32ac13c6a&" alt="Carlos">
+<div id="discordStatusDot" class="status-dot offline"></div>
+</div>
+<div style="flex:1">
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><b style="color:#fff;font-size:16px" class="vintage">CARLOS</b><span id="discordStatusText" style="font-size:9px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,0,0,0.12);font-weight:800" class="mono">● CARGANDO...</span></div>
+<p style="font-size:11px;color:#9a7a7a;font-weight:700;margin-top:2px" class="mono">Founder • KRAVEX STUDIO</p>
+<p style="font-size:10px;color:#b0b0b0;margin-top:4px;font-weight:600" class="mono">Discord: <b style="color:#fff" id="discordUsername">carlos</b> • <span id="discordActivity">Conectando...</span></p>
+<p style="font-size:9px;color:#7a7a7a;margin-top:2px" class="mono">ID: 1484659327716294657</p>
+<div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><a class="btn" style="padding:6px 10px;font-size:9px" href="https://discord.gg/bHHX2FtfP" target="_blank">Unirse a mi Discord</a><button class="outline" style="padding:6px 10px;font-size:9px" onclick="copyDiscord()">Copiar usuario</button></div>
+</div>
+</div>
+
+<div style="display:flex;gap:6px;flex-wrap:wrap"><a class="btn" href="#portfolio">Ver proyectos →</a><a class="outline" href="#studio">Mi Studio</a><a class="outline" onclick="copyDiscord()">DC: carlos</a></div>
+</div>
+
+<div class="stack">
+<div class="card c1"><img class="port-img" src="https://cdn.discordapp.com/attachments/1541689668972838912/1542125422286872636/ssstik.io_1787642909659.webp?ex=6a9017b7&is=6a8ec637&hm=a086e9781b98fcd1313fffed70269610ecd15a3d14a1453335229ac32ac13c6a&" style="height:200px"><div style="margin-top:6px"><b style="color:#fff;font-size:12px" class="vintage">Carlos • Founder</b><p style="color:#9a7a7a;font-size:9px;font-weight:800">KRAVEX STUDIO • México</p></div></div>
+<div class="card c2"><div style="height:140px;background:linear-gradient(135deg,#1a0a0a,#2a0a0a);border-radius:12px;display:grid;place-items:center;color:#ff5a5a;font-weight:900" class="vintage">KRAVEX BANNER<br><span style="font-size:10px" class="mono">Tú lo agregas</span></div><div style="margin-top:6px"><b style="color:#fff;font-size:11px" class="vintage">Banner KRAVEX</b></div></div>
+<div class="card c3"><div style="height:120px;background:linear-gradient(135deg,#1a0a0a,#2a0a0a);border-radius:12px;display:grid;place-items:center;color:#ff5a5a;font-weight:900" class="vintage">PORTFOLIO WEB<br><span style="font-size:10px" class="mono">Agrega desde ADMIN</span></div><div style="margin-top:6px;display:flex;justify-content:space-between"><b style="color:#fff;font-size:11px" class="vintage">Web Portfolio</b><span style="color:#ff0a0a;font-size:10px;font-weight:900">$7</span></div></div>
+</div>
+</section>
+
+<section class="sec reveal" id="sobre" style="background:rgba(255,0,0,0.02);border-top:1px solid rgba(255,0,0,0.08);border-bottom:1px solid rgba(255,0,0,0.08)"><div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:24px;align-items:center"><div><div class="label">SOBRE MÍ</div><h2 class="vintage">Sobre <i>Carlos</i></h2><p style="color:#b8a0a0;line-height:1.7;font-size:13px;max-width:520px;font-weight:600">Soy <b style="color:#fff">Carlos</b>, fundador de <span class="vintage" style="color:#ff0a0a">Kravex Studio</span>. 2 años creando identidades visuales.<br><br>• 12+ clientes felices • 98% satisfacción • Entrega 24h • Soporte 24/7</p></div><div><div style="background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,0,0,0.04));border:1px solid rgba(255,0,0,0.12);border-radius:20px;padding:20px"><div style="display:flex;gap:10px;align-items:center"><img src="https://cdn.discordapp.com/attachments/1541689668972838912/1542125422286872636/ssstik.io_1787642909659.webp?ex=6a9017b7&is=6a8ec637&hm=a086e9781b98fcd1313fffed70269610ecd15a3d14a1453335229ac32ac13c6a&" style="width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid #ff0a0a"><div><b style="color:#fff;font-size:16px" class="vintage">Carlos</b><p style="color:#9a7a7a;font-size:10px;font-weight:800" class="mono">Founder • KRAVEX STUDIO</p><p style="color:#5a5a5a;font-size:9px;font-weight:600" class="mono">1484659327716294657</p></div></div></div></div></div></section>
 
 <section class="sec reveal" id="stats"><div class="label">ESTADÍSTICAS</div><h2 class="vintage">En <i>números</i></h2><div class="grid4"><div class="item"><b id="statLogosDisplay">6+</b><span>LOGOS CREADOS</span></div><div class="item"><b id="statBannersDisplay">7+</b><span>BANNERS</span></div><div class="item"><b class="counter" data-target="12" id="statClientsDisplay">0</b><span>CLIENTES</span></div><div class="item"><b class="counter" data-target="98" id="statSatDisplay">0</b><span>% SATISFACCIÓN</span></div></div></section>
 
-<section class="sec reveal" id="portfolio"><div class="label">PORTFOLIO REAL</div><h2 class="vintage">Portfolio <i>real</i></h2><div class="filter-bar"><button class="filter-btn active" data-filter="all">Todo (9)</button><button class="filter-btn" data-filter="logo">Logos (2)</button><button class="filter-btn" data-filter="banner">Banners (4)</button><button class="filter-btn" data-filter="web">Webs (3)</button></div><div class="gallery" id="galleryContainer"></div></section>
+<section class="sec reveal" id="portfolio"><div class="label">PORTFOLIO - TÚ LO LLENAS</div><h2 class="vintage">Portfolio <i>vacío</i></h2><p style="color:#9a7a7a;font-size:12px;margin-bottom:16px;font-weight:600">Sin webs por defecto. Agrega tus proyectos desde el panel admin.</p><div class="filter-bar"><button class="filter-btn active" data-filter="all">Todo</button><button class="filter-btn" data-filter="logo">Logos</button><button class="filter-btn" data-filter="banner">Banners</button><button class="filter-btn" data-filter="web">Webs</button></div><div class="gallery" id="galleryContainer"></div>
+</section>
 
 <section class="sec reveal" id="reviews" style="background:rgba(255,0,0,0.02);border-top:1px solid rgba(255,0,0,0.08);border-bottom:1px solid rgba(255,0,0,0.08)"><div class="label">RESEÑAS REALES CON FOTO</div><div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px;margin-bottom:20px"><h2 class="vintage" style="margin-bottom:0">Lo que dicen<br><i>de Carlos</i></h2><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn" onclick="openModal('reviewModal')">Enviar reseña</button><button class="outline" onclick="openModal('authModal')">Crear cuenta con foto</button></div></div><div class="review-grid" id="reviewGrid"></div></section>
 
-<section class="sec reveal" id="studio"><div class="label">MI STUDIO</div><h2 class="vintage">Kravex <i>Studio</i></h2><div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:18px;align-items:start"><div><p style="color:#b8a0a0;line-height:1.7;font-size:13px;font-weight:600">KRAVEX STUDIO nació para dar portfolios que parecen de agencia de $500 pero por $10. Soy Carlos, cada proyecto lleva tipografía bold, login con foto, reseñas verificadas y acabado profesional.</p></div><div><div style="background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,0,0,0.04));border:1px solid rgba(255,0,0,0.12);border-radius:18px;padding:18px"><b style="color:#fff" class="vintage">FAQ</b><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>¿Entrega en 24h real?</span><span>▼</span></div><div class="faq-a">Sí, 90% en menos de 24h.</div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>¿Foto en reseña?</span><span>▼</span></div><div class="faq-a">Sí! Inicia sesión con foto.</div></div></div></div></div></section>
+<section class="sec reveal" id="studio"><div class="label">MI STUDIO</div><h2 class="vintage">Kravex <i>Studio</i></h2><div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:18px;align-items:start"><div><p style="color:#b8a0a0;line-height:1.7;font-size:13px;font-weight:600">KRAVEX STUDIO nació para dar portfolios que parecen de agencia de $500 pero por $10. Soy Carlos, cada proyecto lleva tipografía bold, login con foto, reseñas verificadas y acabado profesional. Mi Discord está conectado en vivo con Lanyard.</p></div><div><div style="background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,0,0,0.04));border:1px solid rgba(255,0,0,0.12);border-radius:18px;padding:18px"><b style="color:#fff" class="vintage">FAQ</b><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>¿Entrega en 24h real?</span><span>▼</span></div><div class="faq-a">Sí, 90% en menos de 24h.</div></div><div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>¿Foto en reseña?</span><span>▼</span></div><div class="faq-a">Sí! Inicia sesión con foto.</div></div></div></div></div></section>
 
 <section class="sec reveal pedido-section" id="pedidos"><div class="label">HACÉ TU PEDIDO</div><h2 class="vintage">Hacé tu <i>pedido</i></h2>
 <div class="pedido-grid">
-<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Portafolios Web</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Diseño a medida.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:carlos.kravex@gmail.com?subject=PORTAFOLIO%20$3" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
-<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Logos 3D Pro</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Logo 3D HD 4K.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:carlos.kravex@gmail.com?subject=LOGO%20$3" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
-<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Banners</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Banner 4K HD.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:carlos.kravex@gmail.com?subject=BANNER%20$5" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
-<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Pack Full</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Logo + Banner + Web VIP.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:carlos.kravex@gmail.com?subject=PACK%20FULL%20$10" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
+<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Portafolios Web</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Diseño a medida.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:iaimbxtcontacted@gmail.com?subject=PORTAFOLIO%20$3" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
+<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Logos 3D Pro</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Logo 3D HD 4K.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:iaimbxtcontacted@gmail.com?subject=LOGO%20$3" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
+<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Banners</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Banner 4K HD.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:iaimbxtcontacted@gmail.com?subject=BANNER%20$5" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
+<div class="pedido-card"><b style="color:#fff;font-size:14px" class="vintage">Pack Full</b><p style="color:#9a7a7a;font-size:11px;margin-top:6px;font-weight:700">Logo + Banner + Web VIP.</p><div style="margin-top:10px;display:flex;gap:5px"><a href="#portfolio" class="outline" style="flex:1;text-align:center;padding:7px;font-size:10px;font-weight:800">VER</a><a href="mailto:iaimbxtcontacted@gmail.com?subject=PACK%20FULL%20$10" class="btn" style="flex:1;text-align:center;padding:7px;font-size:10px">Compra el tuyo</a></div></div>
 </div>
-<div class="pedido-bottom"><div><p style="color:#f0d6d6;font-size:13px;font-weight:800" class="vintage">¿Ya sabés qué necesitás? Escribime, soy Carlos</p></div><a href="https://discord.gg/wxDvR7zGb" target="_blank" class="btn" style="padding:14px 20px">Pedir por Discord</a></div>
+<div class="pedido-bottom"><div><p style="color:#f0d6d6;font-size:13px;font-weight:800" class="vintage">¿Ya sabés qué necesitás? Soy Carlos</p><p style="font-size:10px;color:#9a7a7a;margin-top:4px" class="mono">Discord: carlos • ID: 1484659327716294657</p></div><a href="https://discord.gg/bHHX2FtfP" target="_blank" class="btn" style="padding:14px 20px">Pedir por Discord</a></div>
 </section>
 
-<section class="sec reveal" id="contacto"><div class="contact"><div style="flex:1"><h3 style="color:#fff;font-size:28px;line-height:.9;margin-bottom:8px" class="vintage">Hablemos de tu <i style="color:#ff0a0a;font-family:'Instrument Serif';font-weight:800">portfolio</i></h3><p style="color:#9a7a7a;font-size:11px;margin-bottom:12px;font-weight:800" class="mono">Carlos • carlos.kravex@gmail.com</p></div><div style="display:flex;flex-direction:column;gap:6px;min-width:220px"><a class="btn" style="padding:14px 20px;text-align:center" href="mailto:carlos.kravex@gmail.com">Comprar por Gmail</a><a class="outline" style="text-align:center" href="https://discord.gg/wxDvR7zGb" target="_blank">Unirse al Discord</a></div></div></section>
+<section class="sec reveal" id="contacto"><div class="contact"><div style="flex:1"><h3 style="color:#fff;font-size:28px;line-height:.9;margin-bottom:8px" class="vintage">Hablemos de tu <i style="color:#ff0a0a;font-family:'Instrument Serif';font-weight:800">portfolio</i></h3><p style="color:#9a7a7a;font-size:11px;margin-bottom:12px;font-weight:800" class="mono">Carlos • iaimbxtcontacted@gmail.com • discord.gg/bHHX2FtfP</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+<a href="https://discord.gg/bHHX2FtfP" target="_blank" style="display:flex;gap:10px;align-items:center;background:rgba(88,101,242,0.1);border:1px solid rgba(88,101,242,0.2);padding:10px 14px;border-radius:12px">
+<img src="https://cdn.discordapp.com/attachments/1541689668972838912/1542125422286872636/ssstik.io_1787642909659.webp?ex=6a9017b7&is=6a8ec637&hm=a086e9781b98fcd1313fffed70269610ecd15a3d14a1453335229ac32ac13c6a&" style="width:36px;height:36px;border-radius:50%">
+<div><b style="color:#fff;font-size:12px">Carlos en Discord</b><p style="font-size:10px;color:#9a7a7a" class="mono" id="contactDiscordStatus">● Cargando estado...</p></div>
+</a>
+</div>
+</div><div style="display:flex;flex-direction:column;gap:6px;min-width:220px"><a class="btn" style="padding:14px 20px;text-align:center" href="mailto:iaimbxtcontacted@gmail.com">Comprar por Gmail</a><a class="outline" style="text-align:center" href="https://discord.gg/bHHX2FtfP" target="_blank">Unirse a mi Discord</a></div></div></section>
 
-<div class="foot"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="vintage">© 2026 KRAVEX STUDIO x CARLOS • $2-$10</span><span class="secret-btn" style="font-weight:800" onclick="openModal('adminModal')">PANEL PRIVADO</span></div><span style="font-weight:800">KRAVEX • CARLOS</span></div>
+<div class="foot"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="vintage">© 2026 KRAVEX STUDIO x CARLOS • $2-$10</span><span class="secret-btn" style="font-weight:800" onclick="openModal('adminModal')">PANEL PRIVADO</span></div><span style="font-weight:800">KRAVEX • CARLOS • 1484659327716294657</span></div>
 
 <script>
+const DISCORD_ID = "1484659327716294657";
+const DISCORD_USERNAME = "carlos";
+const DISCORD_INVITE = "https://discord.gg/bHHX2FtfP";
+const EMAIL = "iaimbxtcontacted@gmail.com";
+const PHOTO_URL = "https://cdn.discordapp.com/attachments/1541689668972838912/1542125422286872636/ssstik.io_1787642909659.webp?ex=6a9017b7&is=6a8ec637&hm=a086e9781b98fcd1313fffed70269610ecd15a3d14a1453335229ac32ac13c6a&";
+
 let views = parseInt(localStorage.getItem('kravex_views_carlos')||'0');
 views++;
 localStorage.setItem('kravex_views_carlos', views.toString());
@@ -237,20 +284,70 @@ document.getElementById('viewCountNum').innerText = views;
 function resetViews(){views=0;localStorage.setItem('kravex_views_carlos','0');document.getElementById('viewCountNum').innerText='0';showToast('Visitas reseteadas');updateSystemInfo();}
 function addViews(){views+=100;localStorage.setItem('kravex_views_carlos',views.toString());document.getElementById('viewCountNum').innerText=views;showToast('+100 visitas');updateSystemInfo();}
 
-let defaultPortfolio=[
-{id:1,title:"LOGO 1",cat:"logo",price:"$3",img:"https://cdn.discordapp.com/attachments/1541397398562017320/1541399951240859659/IMG-20260818-WA0149.jpg",desc:"Logo 3D HD"},
-{id:2,title:"LOGO 2",cat:"logo",price:"$3",img:"https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg",desc:"Logo minimalista"},
-{id:3,title:"BANNER 1",cat:"banner",price:"$5",img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541400521099710515/IMG-20260823-WA5491.jpg",desc:"Banner 4K"},
-{id:4,title:"BANNER 2",cat:"banner",price:"$5",img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541400638779428864/IMG-20260818-WA8363.jpg",desc:"Banner gaming"},
-{id:5,title:"BANNER 3",cat:"banner",price:"$5",img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541687193519529984/IMG-20260824-WA9184.jpg",desc:"Banner Elite 3"},
-{id:6,title:"BANNER 4",cat:"banner",price:"$5",img:"https://cdn.discordapp.com/attachments/1541397475418574858/1541687205272092743/IMG-20260824-WA4538.jpg",desc:"Banner Elite 4"},
-{id:7,title:"STAFF TEAM - BOT",cat:"web",price:"$7",img:"https://cdn.discordapp.com/attachments/1538817358716731404/1541538969521487994/IMG-20260823-WA5491.jpg",desc:"Bot System",link:"https://carloscalet7.github.io/Bot/"},
-{id:8,title:"COORDINADOR",cat:"web",price:"$7",img:"https://cdn.discordapp.com/attachments/1540977309199114307/1541537289224593549/c7bd27d9-ad60-49e0-bad0-59108fc21d7a.jpg",desc:"Morgan Portfolio",link:"https://carloscalet7.github.io/Morgan/"},
-{id:9,title:"PERSONAL",cat:"web",price:"$7",img:"https://cdn.discordapp.com/attachments/1538817358716731404/1541279682106753065/ee243e3e468599e8e1e764b2596a2694.jpg",desc:"Portfolio Personal",link:"https://carloscalet7.github.io/portafolio/"}
-];
-let realPortfolio=JSON.parse(localStorage.getItem('kravex_portfolio_carlos')||JSON.stringify(defaultPortfolio));
+async function fetchDiscordPresence(){
+  try{
+    const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
+    const data = await res.json();
+    if(data.success){
+      const status = data.data.discord_status;
+      const dot = document.getElementById('discordStatusDot');
+      const text = document.getElementById('discordStatusText');
+      const activity = document.getElementById('discordActivity');
+      const avatar = document.getElementById('discordAvatar');
+      const contactStatus = document.getElementById('contactDiscordStatus');
+
+      dot.className = "status-dot " + status;
+
+      if(status === "online"){ text.innerText = "● ONLINE"; text.style.background = "rgba(35,165,93,0.15)"; text.style.borderColor = "#23a55d"; text.style.color = "#23a55d"; contactStatus.innerText = "● Online - Disponible"; }
+      else if(status === "idle"){ text.innerText = "● AUSENTE"; text.style.background = "rgba(240,177,50,0.15)"; text.style.borderColor = "#f0b132"; text.style.color = "#f0b132"; contactStatus.innerText = "● Ausente"; }
+      else if(status === "dnd"){ text.innerText = "● NO MOLESTAR"; text.style.background = "rgba(242,63,67,0.15)"; text.style.borderColor = "#f23f43"; text.style.color = "#f23f43"; contactStatus.innerText = "● No molestar"; }
+      else{ text.innerText = "● OFFLINE"; text.style.background = "rgba(255,255,255,0.08)"; text.style.borderColor = "rgba(255,0,0,0.12)"; text.style.color = "#9a7a7a"; contactStatus.innerText = "● Offline - Te respondo pronto"; }
+
+      if(data.data.discord_user.avatar){
+        avatar.src = `https://cdn.discordapp.com/avatars/${DISCORD_ID}/${data.data.discord_user.avatar}.webp?size=128`;
+      }
+      document.getElementById('discordUsername').innerText = data.data.discord_user.username;
+
+      if(data.data.activities && data.data.activities.length > 0){
+        const act = data.data.activities.find(a=>a.type===0) || data.data.activities[0];
+        activity.innerText = act.name || act.state || "En línea";
+      }else{
+        activity.innerText = status === "online"? "En línea" : "Desconectado";
+      }
+    }
+  }catch(e){
+    console.log("Lanyard error", e);
+    document.getElementById('discordStatusText').innerText = "● OFFLINE";
+    document.getElementById('discordActivity').innerText = "Desconectado";
+    document.getElementById('contactDiscordStatus').innerText = "● Offline";
+  }
+}
+fetchDiscordPresence();
+setInterval(fetchDiscordPresence, 30000);
+
+let defaultPortfolio=[];
+let realPortfolio=JSON.parse(localStorage.getItem('kravex_portfolio_carlos_v2')||JSON.stringify(defaultPortfolio));
 let currentFilter="all";
-function renderPortfolio(){const c=document.getElementById('galleryContainer');c.innerHTML="";let f=currentFilter==="all"?realPortfolio:realPortfolio.filter(p=>p.cat===currentFilter);f.forEach((item,i)=>{const el=document.createElement('div');el.className='gal-card';const link=item.link||item.img;el.style.transitionDelay=(i*0.05)+'s';el.innerHTML=`<img loading="lazy" src="${item.img}"><div class="gal-info"><div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#fff;font-size:10px;font-weight:900" class="vintage">${item.title}</b><span style="background:#ff0a0a;color:#fff;padding:2px 7px;border-radius:999px;font-size:9px;font-weight:900">${item.price}</span></div><p style="color:#9a7a7a;font-size:9px;margin-top:4px;font-weight:700">${item.desc}</p><div style="display:flex;gap:5px;margin-top:8px"><a href="${link}" target="_blank" class="outline" style="flex:1;text-align:center;padding:6px;font-size:9px;font-weight:800">VER</a><a href="mailto:carlos.kravex@gmail.com?subject=Quiero%20${encodeURIComponent(item.title)}%20${item.price}" class="btn" style="flex:1;text-align:center;padding:6px;font-size:9px">Compra el tuyo</a></div></div>`;c.appendChild(el);});requestAnimationFrame(()=>{setTimeout(()=>{document.querySelectorAll('.gal-card').forEach(card=>card.classList.add('in'))},60)});renderProjectsAdmin();}
+function renderPortfolio(){
+  const c=document.getElementById('galleryContainer');
+  if(!c)return;
+  c.innerHTML="";
+  if(realPortfolio.length===0){
+    c.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:20px;color:#9a7a7a;font-size:11px" class="mono">Portfolio vacío - Agrega proyectos desde ADMIN<br><br><button class="btn" onclick="openModal(\'adminModal\')">Abrir ADMIN</button></div>';
+    renderProjectsAdmin();
+    return;
+  }
+  let f=currentFilter==="all"?realPortfolio:realPortfolio.filter(p=>p.cat===currentFilter);
+  f.forEach((item,i)=>{
+    const el=document.createElement('div');el.className='gal-card';
+    const link=item.link||item.img;
+    el.style.transitionDelay=(i*0.05)+'s';
+    el.innerHTML=`<img loading="lazy" src="${item.img}"><div class="gal-info"><div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#fff;font-size:10px;font-weight:900" class="vintage">${item.title}</b><span style="background:#ff0a0a;color:#fff;padding:2px 7px;border-radius:999px;font-size:9px;font-weight:900">${item.price}</span></div><p style="color:#9a7a7a;font-size:9px;margin-top:4px;font-weight:700">${item.desc}</p><div style="display:flex;gap:5px;margin-top:8px"><a href="${link}" target="_blank" class="outline" style="flex:1;text-align:center;padding:6px;font-size:9px;font-weight:800">VER</a><a href="mailto:${EMAIL}?subject=Quiero%20${encodeURIComponent(item.title)}%20${item.price}" class="btn" style="flex:1;text-align:center;padding:6px;font-size:9px">Compra el tuyo</a></div></div>`;
+    c.appendChild(el);
+  });
+  requestAnimationFrame(()=>{setTimeout(()=>{document.querySelectorAll('.gal-card').forEach(card=>card.classList.add('in'))},60)});
+  renderProjectsAdmin();
+}
 document.querySelectorAll('.filter-btn').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');currentFilter=b.dataset.filter;renderPortfolio();});});
 
 let users=JSON.parse(localStorage.getItem('kravex_users_carlos')||'[]');
@@ -288,16 +385,16 @@ function toggleBan(i){users[i].banned=!users[i].banned;localStorage.setItem('kra
 function deleteUser(i){if(confirm('¿Borrar usuario '+users[i].name+'?')){users.splice(i,1);localStorage.setItem('kravex_users_carlos',JSON.stringify(users));renderUsersAdmin();showToast('Usuario borrado');}}
 function clearAllUsers(){if(confirm('¿Borrar TODOS los usuarios?')){users=[];localStorage.setItem('kravex_users_carlos',JSON.stringify(users));renderUsersAdmin();showToast('Todos borrados');}}
 function exportUsers(){const data=JSON.stringify(users,null,2);const blob=new Blob([data],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='kravex_users_carlos.json';a.click();showToast('Exportado');}
-function addProject(){const title=document.getElementById('projTitle').value.trim();const price=document.getElementById('projPrice').value.trim()||'$5';const cat=document.getElementById('projCat').value.trim().toLowerCase()||'banner';const desc=document.getElementById('projDesc').value.trim()||'Nuevo proyecto';const img=document.getElementById('projImg').value.trim()||'https://cdn.discordapp.com/attachments/1541397398562017320/1541400372634198057/IMG-20260823-WA8499.jpg';const link=document.getElementById('projLink').value.trim();if(!title){showToast('Título requerido');return;}realPortfolio.unshift({id:Date.now(),title,price,cat,desc,img,link});localStorage.setItem('kravex_portfolio_carlos',JSON.stringify(realPortfolio));renderPortfolio();document.getElementById('projTitle').value='';document.getElementById('projPrice').value='';document.getElementById('projCat').value='';document.getElementById('projDesc').value='';document.getElementById('projImg').value='';document.getElementById('projLink').value='';showToast('Proyecto agregado: '+title);}
-function renderProjectsAdmin(){const c=document.getElementById('projectsListAdmin');if(!c)return;c.innerHTML='';realPortfolio.forEach((p,i)=>{const d=document.createElement('div');d.className='code-box';d.innerHTML=`<div style="display:flex;gap:8px;align-items:center"><img src="${p.img}" style="width:36px;height:36px;border-radius:8px;object-fit:cover"><div><div style="color:#fff;font-size:11px;font-weight:900">${p.title} • ${p.price} • ${p.cat}</div><div style="font-size:9px;color:#9a7a7a">${p.desc}</div></div></div><button class="outline" style="padding:5px 8px;font-size:9px;color:#ff5a5a" onclick="deleteProject(${i})">Borrar</button>`;c.appendChild(d);});}
-function deleteProject(i){realPortfolio.splice(i,1);localStorage.setItem('kravex_portfolio_carlos',JSON.stringify(realPortfolio));renderPortfolio();showToast('Proyecto borrado');}
+function addProject(){const title=document.getElementById('projTitle').value.trim();const price=document.getElementById('projPrice').value.trim()||'$5';const cat=document.getElementById('projCat').value.trim().toLowerCase()||'banner';const desc=document.getElementById('projDesc').value.trim()||'Nuevo proyecto';const img=document.getElementById('projImg').value.trim()||PHOTO_URL;const link=document.getElementById('projLink').value.trim();if(!title){showToast('Título requerido');return;}realPortfolio.unshift({id:Date.now(),title,price,cat,desc,img,link});localStorage.setItem('kravex_portfolio_carlos_v2',JSON.stringify(realPortfolio));renderPortfolio();document.getElementById('projTitle').value='';document.getElementById('projPrice').value='';document.getElementById('projCat').value='';document.getElementById('projDesc').value='';document.getElementById('projImg').value='';document.getElementById('projLink').value='';showToast('Proyecto agregado: '+title);}
+function renderProjectsAdmin(){const c=document.getElementById('projectsListAdmin');if(!c)return;c.innerHTML='';if(realPortfolio.length===0){c.innerHTML='<p style="color:#9a7a7a;font-size:10px">Portfolio vacío, agrega tu primer proyecto arriba</p>';return;}realPortfolio.forEach((p,i)=>{const d=document.createElement('div');d.className='code-box';d.innerHTML=`<div style="display:flex;gap:8px;align-items:center"><img src="${p.img}" style="width:36px;height:36px;border-radius:8px;object-fit:cover"><div><div style="color:#fff;font-size:11px;font-weight:900">${p.title} • ${p.price} • ${p.cat}</div><div style="font-size:9px;color:#9a7a7a">${p.desc}</div></div></div><button class="outline" style="padding:5px 8px;font-size:9px;color:#ff5a5a" onclick="deleteProject(${i})">Borrar</button>`;c.appendChild(d);});}
+function deleteProject(i){realPortfolio.splice(i,1);localStorage.setItem('kravex_portfolio_carlos_v2',JSON.stringify(realPortfolio));renderPortfolio();showToast('Proyecto borrado');}
 function saveStats(){stats={logos:parseInt(document.getElementById('statLogos').value)||6,banners:parseInt(document.getElementById('statBanners').value)||7,clients:parseInt(document.getElementById('statClients').value)||12,sat:parseInt(document.getElementById('statSat').value)||98};localStorage.setItem('kravex_stats_carlos',JSON.stringify(stats));updateStatsDisplay();showToast('Stats guardados');}
 function resetStats(){stats={logos:6,banners:7,clients:12,sat:98};localStorage.setItem('kravex_stats_carlos',JSON.stringify(stats));updateStatsDisplay();document.getElementById('statLogos').value=6;document.getElementById('statBanners').value=7;document.getElementById('statClients').value=12;document.getElementById('statSat').value=98;showToast('Stats reseteados');}
 function updateStatsDisplay(){document.getElementById('statLogosDisplay').innerText=stats.logos+'+';document.getElementById('statBannersDisplay').innerText=stats.banners+'+';document.getElementById('statClientsDisplay').setAttribute('data-target',stats.clients);document.getElementById('statSatDisplay').setAttribute('data-target',stats.sat);document.getElementById('statClientsDisplay').innerText='0';document.getElementById('statSatDisplay').innerText='0';}
 function exportAllData(){const all={users,reviews,pending,codes,portfolio:realPortfolio,stats,views,exportedAt:new Date().toISOString(),owner:'Carlos'};const blob=new Blob([JSON.stringify(all,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='kravex_backup_carlos_'+Date.now()+'.json';a.click();showToast('Backup exportado');}
 function clearAllData(){if(confirm('¿Borrar TODO?')){localStorage.clear();location.reload();}}
 function addFakeReviews(){const fakes=[{name:'Alex Pro',photo:null,stars:5,text:'Carlos es un crack, mi portfolio quedó pro en 24h!',date:new Date().toLocaleDateString()},{name:'Maria Designs',photo:null,stars:5,text:'El logo 3D superó mis expectativas, 100% recomendado Carlos.',date:new Date().toLocaleDateString()},{name:'JuanDev',photo:null,stars:4,text:'Muy buen servicio de Carlos, rápido y barato.',date:new Date().toLocaleDateString()}];reviews.unshift(...fakes);localStorage.setItem('kravex_reviews_carlos',JSON.stringify(reviews));renderReviews();renderApproved();showToast('3 reseñas demo agregadas');}
-function updateSystemInfo(){const info=document.getElementById('systemInfo');if(!info)return;info.innerHTML=`Dueño: Carlos | Usuarios: ${users.length} | Reseñas: ${reviews.length} | Pendientes: ${pending.length} | Claves: ${codes.length} | Proyectos: ${realPortfolio.length} | Visitas: ${views}<br>Storage: ${Math.round(JSON.stringify(localStorage).length/1024)} KB<br>Versión: FINAL CARLOS`;}
+function updateSystemInfo(){const info=document.getElementById('systemInfo');if(!info)return;info.innerHTML=`Dueño: Carlos | ID: ${DISCORD_ID} | Usuarios: ${users.length} | Reseñas: ${reviews.length} | Pendientes: ${pending.length} | Claves: ${codes.length} | Proyectos: ${realPortfolio.length} | Visitas: ${views}<br>Storage: ${Math.round(JSON.stringify(localStorage).length/1024)} KB<br>Discord: ${DISCORD_INVITE} | Email: ${EMAIL}`;}
 function unlockAdmin(){
   const p=document.getElementById('adminPass').value;
   if(btoa(p) === "Q2FybG9zMQ=="){
@@ -319,9 +416,9 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelec
 const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:0.15});document.querySelectorAll('.reveal').forEach(el=>ob.observe(el));
 let counted=false;const cOb=new IntersectionObserver(es=>{if(es[0].isIntersecting&&!counted){counted=true;document.querySelectorAll('.counter').forEach(c=>{const t=+c.dataset.target;let cur=0;const inc=t/70;const up=()=>{cur+=inc;if(cur<t){c.innerText=Math.floor(cur);requestAnimationFrame(up);}else{c.innerText=t+(t<100?'%':'+');}};up();});}},{threshold:0.3});const s=document.getElementById('stats');if(s)cOb.observe(s);
 function showToast(m){const t=document.getElementById('toast');t.innerText=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
-function copyDiscord(){navigator.clipboard.writeText('carlos').then(()=>showToast('DC copiado: carlos'));}
+function copyDiscord(){navigator.clipboard.writeText(DISCORD_USERNAME).then(()=>showToast('DC copiado: '+DISCORD_USERNAME));}
 window.addEventListener('scroll',()=>{const p=document.getElementById('progress');const sc=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;p.style.width=sc+'%';},{passive:true});
 renderPortfolio();renderReviews();updateUserUI();updateStatsDisplay();
 </script>
 </body>
-  </html>
+</html>
